@@ -1,0 +1,14 @@
+wokwi
+outputs
+managed_components
+data_ok
+build
+.vscode
+__pycache__
+*.sh
+main/bak
+main/pending
+scripts/output
+**.7z
+tempCodeRunnerFile.py
+*.bin

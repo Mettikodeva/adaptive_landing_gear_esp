@@ -1,0 +1,9 @@
+[submodule "components/vl53l0x"]
+	path = components/vl53l0x
+	url = https://github.com/Mettikodeva/vl53l0x-arduino-esp-idf-component
+[submodule "components/sbus"]
+	path = components/sbus
+	url = https://github.com/Mettikodeva/sbus
+[submodule "components/arduino"]
+	path = components/arduino
+	url = https://github.com/Mettikodeva/arduino-esp32

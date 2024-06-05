@@ -1,0 +1,314 @@
+# menu "OTA Configuration"
+
+#     config EXAMPLE_FIRMWARE_UPGRADE_URL
+#         string "firmware upgrade url endpoint"
+#         default "https://10.16.122.137:8070/app.bin"
+#         help
+#             URL of server which hosts the firmware
+#             image.
+
+#     config EXAMPLE_USE_CERT_BUNDLE
+#         bool "Enable certificate bundle"
+#         default y
+#         depends on MBEDTLS_CERTIFICATE_BUNDLE
+#         help
+#             Enable trusted root certificate bundle. This approach allows to have
+#             OTA updates functional with any public server without requirement
+#             to explicitly add its server certificate.
+
+#     config EXAMPLE_FIRMWARE_UPGRADE_URL_FROM_STDIN
+#         bool
+#         default y if EXAMPLE_FIRMWARE_UPGRADE_URL = "FROM_STDIN"
+
+#     config EXAMPLE_SKIP_COMMON_NAME_CHECK
+#         bool "Skip server certificate CN fieldcheck"
+#         default n
+#         help
+#             This allows you to skip the validation of OTA server certificate CN field.
+
+#     config EXAMPLE_FIRMWARE_UPGRADE_BIND_IF
+#         bool "Support firmware upgrade bind specified interface"
+#         default n
+#         help
+#             This allows you to bind specified interface in OTA example.
+
+#     choice EXAMPLE_FIRMWARE_UPGRADE_BIND_IF_TYPE
+#         prompt "Choose OTA data bind interface"
+#         default EXAMPLE_FIRMWARE_UPGRADE_BIND_IF_STA
+#         depends on EXAMPLE_FIRMWARE_UPGRADE_BIND_IF
+#         help
+#             Select which interface type of OTA data go through.
+
+#         config EXAMPLE_FIRMWARE_UPGRADE_BIND_IF_STA
+#             bool "Bind wifi station interface"
+#             depends on EXAMPLE_CONNECT_WIFI
+#             help
+#                 Select wifi station interface to pass the OTA data.
+
+#         config EXAMPLE_FIRMWARE_UPGRADE_BIND_IF_ETH
+#             bool "Bind ethernet interface"
+#             depends on EXAMPLE_CONNECT_ETHERNET
+#             help
+#                 Select ethernet interface to pass the OTA data.
+#     endchoice
+# endmenu
+
+
+menu "Landing Gear Configuration"
+    config USE_BT
+        bool "print ESP LOG via BT Serial"
+        default n
+        help
+            Enable ESP_LOG via BT Serial
+    if USE_BT
+        config BT_DEVICE_NAME
+            string "BT Device Name"
+            default "LandingGear"
+            help
+                BT Device Name
+        config USE_BT_PIN
+            bool "Use BT Pin"
+            default n
+            help
+                Enable BT Pin
+        if USE_BT_PIN
+            config BT_PIN
+                string "BT Pin"
+                default "1234"
+                help
+                    BT Pin
+        endif
+        
+    endif
+    
+
+    config LOG_DATA_TO_SERIAL
+        bool "Log data to serial"
+        default n
+        help
+            Enable logging data to serial port
+    if LOG_DATA_TO_SERIAL
+        config LOG_FK
+            bool "Log FK data"
+            default n
+            help
+                Enable logging FK data to serial port
+        config LOG_LIDAR
+            bool "Log Lidar data"
+            default n
+            help
+                Enable logging Lidar data to serial port
+        config LOG_IMU
+            bool "Log IMU data"
+            default n
+            help
+                Enable logging IMU data to serial port
+        config LOG_SERVO    
+            bool "Log Servo data"
+            default n
+            help
+                Enable logging Servo data to serial port
+        config LOG_PID
+            bool "Log PID data"
+            default n
+            help
+                Enable logging PID data to serial port
+        config LOG_ADC
+            bool "Log ADC data"
+            default n
+            help
+                Enable logging ADC data to serial port
+    endif
+    menu "Lidar configuration"
+        config LIDAR_MIN
+            int "Lidar min value"
+            default 30
+            help
+                Min value for lidar
+        config LIDAR_MAX
+            int "Lidar max value"
+            default 1200
+            help
+                Max value for lidar
+
+        config LIDAR1_OFFSET
+            int "Lidar 1 offset"
+            default 0
+            help
+                Lidar 1 offset
+        config LIDAR2_OFFSET
+            int "Lidar 2 offset"
+            default 0
+            help
+                Lidar 2 offset
+        config LIDAR3_OFFSET
+            int "Lidar 3 offset"
+            default 0
+            help
+                Lidar 3 offset
+
+        config LIDAR_LPF_ALPHA
+            int "LPF Alpha value /100"
+            default 80
+            help
+                Low pass filter alpha value
+    endmenu
+
+    menu "IMU configuration"
+    endmenu
+
+    menu "Servo configuration"
+        config SERVO_ANGLE_MIN
+            int "Servo min angle"
+            default 0
+            help
+                Min angle for servo
+        config SERVO_ANGLE_MAX
+            int "Servo max angle"
+            default 90
+            help
+                Max angle for servo
+
+        config MAX_STEP
+            int "Max step for servo PWM value (uS)"
+            default 10
+            help
+                Max servo increasing or decreasing PWM value each update in (us)
+
+
+        config ADC_LPF_ALPHA
+            int "LPF Alpha value /100"
+            default 80
+            help
+                Low pass filter alpha value
+        
+        comment "Servo 1"
+        config SERVO1_MIN
+            int "Servo 1 min value"
+            default 1050
+            help
+                Min value for servo 1
+        config SERVO1_MAX
+            int "Servo 1 max value"
+            default 2370
+            help
+                Max value for servo 1
+        
+        config SERVO1_ADC_MIN
+            int "Servo 1 ADC value for MIN deg"
+            default 3983
+            help
+                Min value for servo 1 ADC
+
+        config SERVO1_ADC_MAX
+            int "Servo 1 ADC max value for MAX deg"
+            default 2071
+            help
+                Max value for servo 1 ADC
+        comment "Servo 2"
+                    config SERVO2_MIN
+            int "Servo 2 min value"
+            default 1090
+            help
+                Min value for servo 2
+        config SERVO2_MAX
+            int "Servo 2 max value"
+            default 2460
+            help
+                Max value for servo 2
+        
+        config SERVO2_ADC_MIN
+            int "Servo 2 ADC value for MIN deg"
+            default 3934
+            help
+                Min value for servo 2 ADC
+        config SERVO2_ADC_MAX
+            int "Servo 2 ADC max value for MAX deg"
+            default 1904
+            help
+                Max value for servo 2 ADC
+        comment "Servo 3"
+        config SERVO3_MIN
+            int "Servo 3 min value"
+            default 1070
+            help
+                Min value for servo 3
+        config SERVO3_MAX
+            int "Servo 3 max value"
+            default 2500
+            help
+                Max value for servo 3
+        config SERVO3_ADC_MIN
+            int "Servo 3 ADC value for MIN deg"
+            default 3807
+            help
+                Min value for servo 3 ADC
+        config SERVO3_ADC_MAX
+            int "Servo 3 ADC max value for MAX deg"
+            default 1956
+            help
+                Max value for servo 3 ADC
+        
+    endmenu
+
+    menu "Control configuration"
+        comment "LIDAR"
+        config KP_VAL_LIDAR
+            int "KP value for lidar /100"
+            default 1
+            help
+                Proportional gain for lidar
+        config KI_VAL_LIDAR
+            int "KI value for lidar /100"
+            default 0
+            help
+                Integral gain for lidar
+        config KD_VAL_LIDAR
+            int "KD value for lidar /100"
+            default 0
+            help
+                Integral gain for lidar
+        config LIMIT_INTEGRATOR_LIDAR
+            bool "limit integrator?"
+            default 0
+            help 
+                limit integral value 
+        if LIMIT_INTEGRATOR_LIDAR
+            config INT_SAT_LIDAR_VAL
+                int "Integral limit for lidar /100"
+                default 0
+                help
+                    Integral saturation for lidar based controller
+        endif
+        comment "IMU"
+        config KP_VAL_IMU
+            int "KP value for IMU /100"
+            default 1
+            help
+                Proportional gain for IMU
+        config KI_VAL_IMU
+            int "KI value for IMU /100"
+            default 0
+            help
+                Integral gain for IMU
+        config KD_VAL_IMU
+            int "KD value for IMU /100"
+            default 0
+            help
+                Integral gain for IMU
+        config LIMIT_INTEGRATOR_IMU
+            bool "limit integrator?"
+            default 0
+            help 
+                limit integral value 
+        if LIMIT_INTEGRATOR_IMU
+            config INT_SAT_IMU_VAL
+                int "Integral limit for IMU /100"
+                default 0
+                help
+                    Integral saturation for IMU
+        endif
+    endmenu
+endmenu
+
+
