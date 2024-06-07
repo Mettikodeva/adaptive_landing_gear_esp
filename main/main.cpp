@@ -33,13 +33,14 @@ extern "C" {
 
 extern void initializeTask(void *);
 extern TaskHandle_t TaskHandle_servoWrite;
-extern TaskHandle_t TaskHandle_standby;
+extern TaskHandle_t TaskHandle_suspended;
 extern TaskHandle_t TaskHandle_IMU;
 extern TaskHandle_t TaskHandle_initServo;
 extern TaskHandle_t TaskHandle_sweepServo;
 extern TaskHandle_t TaskHandle_lidar;
 extern TaskHandle_t TaskHandle_lidarControl;
 extern TaskHandle_t TaskHandle_imuControl;
+extern TaskHandle_t TaskHandle_terrain;
 
 State_LG_t landing_gear_state = INIT;
 
@@ -49,20 +50,6 @@ extern void startIMU();
 bfs::SbusRx sbus_rx(&Serial1,16,17,true);
 // bfs::SbusTx sbus_tx(&Serial1,16,17,true);
 bfs::SbusData data_sbus;
-
-void check_stack_size(void *arg){
-	for (;;){
-		printf("SS lidar: %ld\n", uxTaskGetStackHighWaterMark2(TaskHandle_lidar));
-		printf("SS lidarControl: %ld\n", uxTaskGetStackHighWaterMark2(TaskHandle_lidarControl));
-		printf("SS imu: %ld\n", uxTaskGetStackHighWaterMark2(TaskHandle_IMU));
-		printf("SS imuControl: %ld\n", uxTaskGetStackHighWaterMark2(TaskHandle_imuControl));
-		printf("SS initServo: %ld\n", uxTaskGetStackHighWaterMark2(TaskHandle_initServo));
-		printf("SS sweepServo: %ld\n", uxTaskGetStackHighWaterMark2(TaskHandle_sweepServo));
-		printf("SS servoWrite: %ld\n", uxTaskGetStackHighWaterMark2(TaskHandle_servoWrite));
-		printf("SS standby: %ld\n", uxTaskGetStackHighWaterMark2(TaskHandle_standby));
-		vTaskDelay(100 / portTICK_PERIOD_MS);
-	}
-}
 
 
 void app_main(void)
@@ -98,33 +85,57 @@ void app_main(void)
 	xTaskCreatePinnedToCore(initializeTask, "init task", 4096, NULL, 6, NULL, 1);
 	
 	vTaskDelay(1000 / portTICK_PERIOD_MS);
+	ESP_LOGI("LOG_STATE","T,state");
 	TickType_t last_time = xTaskGetTickCount();
 	for (;;)
 	{
 		vTaskDelayUntil(&last_time, 200 / portTICK_PERIOD_MS);
+		ESP_LOGI("LOG_STATE","%d",landing_gear_state);
 		if (sbus_rx.Read())
 		{
 			data_sbus = sbus_rx.data();
 			vTaskDelay(5 / portTICK_PERIOD_MS);
 			printf("Data SBUS: %d",data_sbus.ch[7]);
+
 			if(data_sbus.ch[7] > 1500){
 				if(landing_gear_state == INIT){
 					continue;
 				}
-				landing_gear_state = STANDBY;
-				vTaskSuspend(TaskHandle_servoWrite);
-				vTaskDelay(5 / portTICK_PERIOD_MS);
-				vTaskResume(TaskHandle_standby);
+				else if (landing_gear_state == TOUCHDOWN || landing_gear_state == STANDBY){
+					ESP_LOGW(TAG, "Can't enter suspended while touchdown or standby");
+				}
+				else{
+					landing_gear_state = SUSPENDED;
+				}
 			}
 			if(data_sbus.ch[7] < 1500){
 				if(landing_gear_state == INIT){
 					continue;
 				}
-				landing_gear_state = ACTIVE;
-				vTaskSuspend(TaskHandle_standby);
-				vTaskDelay(5 / portTICK_PERIOD_MS);
-				vTaskResume(TaskHandle_servoWrite);
+				if(landing_gear_state == SUSPENDED){
+					landing_gear_state = DESCENDING;
+				}
 			}
+
+			/*
+			mode init -> initializing system, do not accept any command
+			
+			*/
+			switch (landing_gear_state)
+			{
+			case SUSPENDED:
+				ESP_LOGD(TAG, "Suspended");
+				vTaskResume(TaskHandle_suspended);
+				break;
+			case DESCENDING:
+				ESP_LOGD(TAG, "Descending");
+				// vTaskResume(TaskHandle_lidarControl);
+				break;
+
+			default:
+				break;
+			}
+
 			vTaskDelay(5 / portTICK_PERIOD_MS);
 		}
 		
