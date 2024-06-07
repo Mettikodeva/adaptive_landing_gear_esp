@@ -2,7 +2,10 @@
 #define FIR_H
 #include <stdlib.h>
 #include <math.h>
+#include <vector>
 
+
+#define IIR_WINDOW 10
 
 class Fir{
     private:
@@ -41,17 +44,21 @@ float Fir::filter(float input){
 }
 
 class Iir{
-    private:
+    protected:
         float alpha;
         float prev_output;
-
-
+        int WINDOW = 20;
+        std::vector<int16_t> buffer;
+        std::vector<int16_t> median_tmp;
     public:
         Iir(float alpha);
         float filter(float input);
         int16_t filter(int16_t input);
-    
+        int16_t getMedian();
+        
+
 };
+
 Iir::Iir(float alpha)
 {
     // currently only first order
@@ -59,9 +66,30 @@ Iir::Iir(float alpha)
     this->prev_output = 0;
 }
 
+int16_t Iir::getMedian(){
+    
+    median_tmp.clear();
+
+    auto it = std::next(buffer.begin(), buffer.size());
+    std::move(buffer.begin(), it, std::back_inserter(median_tmp));
+
+    buffer.erase(buffer.begin(), it);
+    std::sort(median_tmp.begin(), median_tmp.end());
+
+    return median_tmp.at(median_tmp.size()/2);
+}
+
 int16_t Iir::filter(int16_t input){
-    prev_output = alpha*input + (1-alpha)*prev_output;
-    return int16_t(prev_output);
+    buffer.push_back(input);
+    while(buffer.size() > WINDOW){
+        buffer.erase(buffer.begin());
+    }
+
+    size_t size = buffer.size();
+    for(size_t i = 1; i < size; ++i){
+        buffer.push_back(alpha * buffer[i] + (1 - alpha) * buffer[i - 1]);
+    }
+    return getMedian();
 }
 
 float Iir::filter(float input){
