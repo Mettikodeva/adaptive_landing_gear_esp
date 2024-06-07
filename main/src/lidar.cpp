@@ -73,19 +73,19 @@ void lidarTask(void *pvParameter){
         }
         else if (dist > CONFIG_LIDAR_MAX)
         {
-          distance[i] = 0;
+          distance[i] = CONFIG_LIDAR_MAX+1;
         }
         else
         {
           distance[i] = (uint16_t)((1 - alpha) * dist + alpha * distance[i]);
         }
         // duration[i] = xTaskGetTickCount() - start;    
-        vTaskDelay(9 / portTICK_PERIOD_MS);
+        vTaskDelay(5 / portTICK_PERIOD_MS);
       }
         // printf("Distance %d\t%d\t %d,t: %ld\n", distance[0], distance[1], distance[2], (xTaskGetTickCount()-lastTime)*portTICK_PERIOD_MS);
         // printf("Distance %d %ld \t%d %ld \t %d %ld , t: %ld\n", distance[0],duration[0], distance[1],duration[1], distance[2],duration[2], (xTaskGetTickCount()-lastTime)*portTICK_PERIOD_MS);
         lastTime = xTaskGetTickCount();
-        vTaskDelay(5 / portTICK_PERIOD_MS);
+        vTaskDelay(20 / portTICK_PERIOD_MS);
     }
     vTaskDelete(NULL);
 }
