@@ -118,6 +118,11 @@ menu "Landing Gear Configuration"
             default n
             help
                 Enable logging ADC data to serial port
+        config LOG_ADC_RAW
+            bool "Log RAW ADC data"
+            default n
+            help
+                Enable logging RAW ADC data to serial port
     endif
     menu "Lidar configuration"
         config LIDAR_MIN
