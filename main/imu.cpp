@@ -62,7 +62,10 @@ void imuTask(void *args){
 	        mpu.resetFIFO();
 		}else if (mpuIntStatus & 0x02) {
 			// read a packet from FIFO
-			while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
+			while (fifoCount < packetSize){
+				fifoCount = mpu.getFIFOCount();
+				vTaskDelay(1 / portTICK_PERIOD_MS);
+			};
 			mpu.dmpGetCurrentFIFOPacket(fifoBuffer); // Get the Latest packet
 			mpu.dmpGetQuaternion(&q, fifoBuffer);
 			mpu.dmpGetGravity(&gravity, &q);
