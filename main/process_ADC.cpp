@@ -84,6 +84,7 @@ void startAdcTask(void *args){
     vTaskDelay(100 / portTICK_PERIOD_MS);
     TickType_t last_time;
     // int16_t *arr = (int16_t*)malloc(WINDOW * sizeof(int16_t));
+    #ifdef CONFIG_LOG_ADC_RAW
         ESP_LOGI("LOG_RAW_ADC","T,a1,a2,a3");
     #endif
     
