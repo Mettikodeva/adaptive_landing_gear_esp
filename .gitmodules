@@ -4,6 +4,3 @@
 [submodule "components/sbus"]
 	path = components/sbus
 	url = https://github.com/Mettikodeva/sbus
-[submodule "components/arduino"]
-	path = components/arduino
-	url = https://github.com/Mettikodeva/arduino-esp32
