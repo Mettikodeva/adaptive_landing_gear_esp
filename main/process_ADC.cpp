@@ -36,26 +36,40 @@ float getAngle(int8_t servo){
     float adc = adc_value_filtered[servo-1];
     float deg = 0;
     if (servo == 1){
+        if (adc > CONFIG_SERVO1_ADC_MIN){
+            ESP_LOGW(TAG,"1: value out of range");
+            adc = CONFIG_SERVO1_ADC_MIN;
+        }
+        else if (adc < CONFIG_SERVO1_ADC_MAX){
+            ESP_LOGW(TAG,"1: value out of range");
+            adc = CONFIG_SERVO1_ADC_MAX;
+        }
         deg = MAP(adc, (int16_t)CONFIG_SERVO1_ADC_MIN, (int16_t)CONFIG_SERVO1_ADC_MAX, (float)CONFIG_SERVO_ANGLE_MIN, (float)CONFIG_SERVO_ANGLE_MAX);
     }
     else if (servo == 2){
+        if (adc > CONFIG_SERVO2_ADC_MIN){
+            ESP_LOGW(TAG,"2: value out of range");
+            adc = CONFIG_SERVO2_ADC_MIN;
+        }
+        else if (adc < CONFIG_SERVO2_ADC_MAX){
+            ESP_LOGW(TAG,"2: value out of range");
+            adc = CONFIG_SERVO2_ADC_MAX;
+        }
         deg = MAP(adc, (int16_t)CONFIG_SERVO2_ADC_MIN, (int16_t)CONFIG_SERVO2_ADC_MAX, (float)CONFIG_SERVO_ANGLE_MIN, (float)CONFIG_SERVO_ANGLE_MAX);
     }
     else if (servo == 3){
+        if (adc > CONFIG_SERVO3_ADC_MIN){
+            ESP_LOGW(TAG,"3: value out of range");
+            adc = CONFIG_SERVO3_ADC_MIN;
+        }
+        else if (adc < CONFIG_SERVO3_ADC_MAX){
+            ESP_LOGW(TAG,"3: value out of range");
+            adc = CONFIG_SERVO3_ADC_MAX;
+        }
         deg = MAP(adc, (int16_t)CONFIG_SERVO3_ADC_MIN, (int16_t)CONFIG_SERVO3_ADC_MAX, (float)CONFIG_SERVO_ANGLE_MIN, (float)CONFIG_SERVO_ANGLE_MAX);
     }
     // printf("Servo %d: %f, %f\n", servo,adc, deg);w
     return deg;
-}
-
-bool IRAM_ATTR onTimer(gptimer_handle_t timer, const gptimer_alarm_event_data_t *event_data, void * user_data){
-    BaseType_t high_prio_task = pdFALSE;
-    for (int i = 0; i < 3; i++)
-    {
-        adc_value[i] = analogRead(pin[i]);
-    }
-    vTaskNotifyGiveFromISR(TaskHandle_ADC, &high_prio_task);
-    return (high_prio_task == pdTRUE);
 }
 
 void startAdcTask(void *args){
@@ -70,7 +84,6 @@ void startAdcTask(void *args){
     vTaskDelay(100 / portTICK_PERIOD_MS);
     TickType_t last_time;
     // int16_t *arr = (int16_t*)malloc(WINDOW * sizeof(int16_t));
-    #ifdef CONFIG_LOG_ADC_RAW
         ESP_LOGI("LOG_RAW_ADC","T,a1,a2,a3");
     #endif
     

@@ -47,7 +47,7 @@ class Iir{
     protected:
         float alpha;
         float prev_output;
-        int WINDOW = 20;
+        int WINDOW = 13;
         std::vector<int16_t> buffer;
         std::vector<int16_t> median_tmp;
     public:
@@ -66,10 +66,8 @@ Iir::Iir(float alpha)
     this->prev_output = 0;
 }
 
-int16_t Iir::getMedian(){
-    
+int16_t IRAM_ATTR Iir::getMedian(){
     median_tmp.clear();
-
     auto it = std::next(buffer.begin(), buffer.size());
     std::move(buffer.begin(), it, std::back_inserter(median_tmp));
 
@@ -79,7 +77,7 @@ int16_t Iir::getMedian(){
     return median_tmp.at(median_tmp.size()/2);
 }
 
-int16_t Iir::filter(int16_t input){
+int16_t IRAM_ATTR Iir::filter(int16_t input){
     buffer.push_back(input);
     while(buffer.size() > WINDOW){
         buffer.erase(buffer.begin());
