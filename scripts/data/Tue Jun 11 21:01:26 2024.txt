@@ -1,0 +1,3767 @@
+D (5407) IMU: IMU Initialized[0m
+D (5407) main: IMU Initialized[0m
+Starting SBUS
+[0;32mI (6407) uart: queue free spaces: 20[0m
+D (6407) intr_alloc: Connected src 35 to int 17 (cpu 0)[0m
+D (6408) main: Initialize task[0m
+D (6409) lg: Initializing Tasks[0m
+D (6413) lg: Initializing Servos[0m
+D (6416) lg: Initializing LiDAR[0m
+[0;32mI (6416) lg: Initializing Servos[0m
+[0;32mI (6420) VL53L0X: Lidar Task Started![0m
+D (6419) lg: Initializing ADC[0m
+[0;32mI (6430) ADC: ADC Task
+[0m
+[0;32mI (6434) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6443) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6452) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+D (6462) SERVO: Create timer and operator[0m
+D (6466) mcpwm: new group(0) at 0x3ffb991c[0m
+D (6470) mcpwm: group (0) calc prescale:2, module calc prescale:80[0m
+D (6476) mcpwm: group (0) clock resolution:80000000Hz[0m
+D (6481) mcpwm: new timer(0,0) at 0x3ffb9888, resolution:1000000Hz, peak:20000, count_mod:U[0m
+D (6490) SERVO: Create operator[0m
+D (6493) mcpwm: new operator (0,0) at 0x3ffb9978[0m
+D (6498) mcpwm: new operator (0,1) at 0x3ffb4318[0m
+D (6502) mcpwm: connect operator (0) and timer (0) in group (0)[0m
+D (6508) mcpwm: connect operator (1) and timer (0) in group (0)[0m
+[0;32mI (6514) SERVO: Create comparator and generator from the operator[0m
+D (6521) SERVO: Create comparator and generator from the operator[0m
+D (6527) mcpwm: new comparator (0,0,0) at 0x3ffb99d8[0m
+D (6532) mcpwm: new comparator (0,0,1) at 0x3ffb99fc[0m
+D (6537) mcpwm: new comparator (0,1,0) at 0x3ffb54d4[0m
+[0;32mI (6543) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+D (6552) mcpwm: new generator (0,0,0) at 0x3ffb54f8, GPIO 25[0m
+[0;32mI (6558) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (6562) LOG_RAW_ADC: T,a1,a2,a3[0m
+D (6571) mcpwm: new generator (0,0,1) at 0x3ffb5510, GPIO 26[0m
+[0;32mI (6577) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+D (6586) mcpwm: new generator (0,1,0) at 0x3ffb5528, GPIO 27[0m
+D (6592) SERVO: set generator action on timer and compare event[0m
+D (6598) SERVO: Enable and start timer[0m
+D (6604) adc_oneshot: new adc unit0 is created[0m
+[0;32mI (6607) LOG_RAW_ADC: 3390,2894,3738[0m
+D (6631) lg: Initializing IMU[0m
+D (6631) lg: Starting Control Tasks[0m
+IMU Task
+[0;32mI (6632) VL53L0X: Sensor 0 initialized[0m
+[0;32mI (6636) VL53L0X: 0[0m
+[0;32mI (6636) VL53L0X: Measurement timing budget: 32908[0m
+[0;32mI (6637) LOG_RAW_ADC: 3361,2870,3653[0m
+[0;32mI (6670) LOG_RAW_ADC: 3438,2917,3583[0m
+[0;32mI (6696) VL53L0X: Sensor 1 initialized[0m
+[0;32mI (6700) VL53L0X: 1[0m
+[0;32mI (6700) VL53L0X: Measurement timing budget: 32908[0m
+[0;32mI (6703) LOG_RAW_ADC: 3437,2927,3657[0m
+[0;32mI (6731) LOG_SERVO: T,pwm1,pwm2,pwm3[0m
+[0;32mI (6731) LOG_PID: T,pci,rci[0m
+[0;32mI (6731) LOG_IMU: T,yaw,pitch,roll[0m
+[0;32mI (6732) LOG_LIDAR: T,L1,L2,L3[0m
+[0;32mI (6735) LOG_ADC: T,a1,a2,a3[0m
+[0;32mI (6736) LOG_RAW_ADC: 3679,2851,4031[0m
+[0;32mI (6739) LOG_FK: T,x1,y1,z1,x2,y2,z2,x3,y3,z3,pitch,roll[0m
+[0;32mI (6749) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (6750) VL53L0X: Sensor 2 initialized[0m
+[0;32mI (6755) LOG_LIDAR: 0, 0, 0[0m
+[0;32mI (6763) VL53L0X: 2[0m
+[0;32mI (6763) LOG_ADC: 3679, 2851, 4031[0m
+[0;32mI (6769) LOG_RAW_ADC: 3375,2865,3327[0m
+[0;32mI (6766) VL53L0X: Measurement timing budget: 32908[0m
+[0;32mI (6770) LOG_IMU: -0.02, 0.02, 0.02[0m
+[0;32mI (6784) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (6788) LOG_PID: 0.00,0.00[0m
+[0;32mI (6802) LOG_RAW_ADC: 3104,2881,3227[0m
+[0;32mI (6835) LOG_RAW_ADC: 2911,2915,3152[0m
+[0;32mI (6868) LOG_RAW_ADC: 2850,2810,2921[0m
+[0;32mI (6891) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (6891) LOG_LIDAR: 146, 145, 101[0m
+[0;32mI (6891) LOG_ADC: 2850, 2810, 2921[0m
+[0;32mI (6893) LOG_IMU: -0.02, -0.01, 0.02[0m
+[0;32mI (6898) LOG_SERVO: 2025,1975,200[0m
+[0;32mI (6901) LOG_RAW_ADC: 2790,2864,2928[0m
+[0;32mI (6902) LOG_PID: 0.00,0.00[0m
+[0;32mI (6934) LOG_RAW_ADC: 2773,2843,2835[0m
+[0;32mI (6967) LOG_RAW_ADC: 2803,3034,2864[0m
+[0;32mI (7000) LOG_RAW_ADC: 2839,2949,2881[0m
+[0;32mI (7009) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7009) LOG_LIDAR: 229, 223, 215[0m
+[0;32mI (7009) LOG_ADC: 2839, 2949, 2881[0m
+[0;32mI (7011) LOG_IMU: -0.03, -0.02, 0.01[0m
+[0;32mI (7016) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7020) LOG_PID: 0.00,0.00[0m
+[0;32mI (7033) LOG_RAW_ADC: 2799,2799,2864[0m
+[0;32mI (7066) LOG_RAW_ADC: 2837,2866,2935[0m
+[0;32mI (7099) LOG_RAW_ADC: 2802,2958,3025[0m
+[0;32mI (7123) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7123) LOG_LIDAR: 271, 255, 245[0m
+[0;32mI (7123) LOG_ADC: 2802, 2958, 3025[0m
+[0;32mI (7125) LOG_IMU: -0.03, -0.03, 0.01[0m
+[0;32mI (7130) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7132) LOG_RAW_ADC: 2848,2879,2818[0m
+[0;32mI (7134) LOG_PID: 0.00,0.00[0m
+[0;32mI (7165) LOG_RAW_ADC: 2794,2896,2830[0m
+[0;32mI (7198) LOG_RAW_ADC: 2815,2992,2863[0m
+[0;32mI (7231) LOG_RAW_ADC: 2819,2891,2826[0m
+[0;32mI (7242) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7242) LOG_LIDAR: 291, 280, 271[0m
+[0;32mI (7242) LOG_ADC: 2819, 2891, 2826[0m
+[0;32mI (7244) LOG_IMU: -0.03, -0.02, 0.04[0m
+[0;32mI (7249) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7253) LOG_PID: 0.00,0.00[0m
+[0;32mI (7264) LOG_RAW_ADC: 2793,2859,2705[0m
+[0;32mI (7297) LOG_RAW_ADC: 2848,2887,2395[0m
+[0;32mI (7330) LOG_RAW_ADC: 2832,2850,2945[0m
+[0;32mI (7356) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7356) LOG_LIDAR: 300, 296, 286[0m
+[0;32mI (7356) LOG_ADC: 2832, 2850, 2945[0m
+[0;32mI (7359) LOG_IMU: -0.04, -0.02, 0.05[0m
+[0;32mI (7363) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7363) LOG_RAW_ADC: 2818,2915,2967[0m
+[0;32mI (7367) LOG_PID: 0.00,0.00[0m
+[0;32mI (7396) LOG_RAW_ADC: 2791,2858,2928[0m
+[0;32mI (7429) LOG_RAW_ADC: 2787,2855,2866[0m
+[0;32mI (7462) LOG_RAW_ADC: 2862,2970,2812[0m
+[0;32mI (7475) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7475) LOG_LIDAR: 303, 302, 295[0m
+[0;32mI (7475) LOG_ADC: 2862, 2970, 2812[0m
+[0;32mI (7477) LOG_IMU: -0.04, -0.01, 0.05[0m
+[0;32mI (7482) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7486) LOG_PID: 0.00,0.00[0m
+[0;32mI (7495) LOG_RAW_ADC: 2860,2879,2838[0m
+[0;32mI (7528) LOG_RAW_ADC: 2800,3008,2845[0m
+[0;32mI (7561) LOG_RAW_ADC: 2844,2897,2793[0m
+[0;32mI (7589) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7589) LOG_LIDAR: 305, 306, 298[0m
+[0;32mI (7589) LOG_ADC: 2844, 2897, 2793[0m
+[0;32mI (7591) LOG_IMU: -0.04, -0.02, 0.04[0m
+[0;32mI (7594) LOG_RAW_ADC: 2835,2926,2882[0m
+[0;32mI (7596) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7604) LOG_PID: 0.00,0.00[0m
+[0;32mI (7627) LOG_RAW_ADC: 2832,2893,2907[0m
+[0;32mI (7660) LOG_RAW_ADC: 2843,2865,2909[0m
+[0;32mI (7693) LOG_RAW_ADC: 2794,2689,2839[0m
+[0;32mI (7708) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7708) LOG_LIDAR: 308, 308, 301[0m
+[0;32mI (7708) LOG_ADC: 2794, 2689, 2839[0m
+[0;32mI (7710) LOG_IMU: -0.04, -0.02, 0.03[0m
+[0;32mI (7715) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7719) LOG_PID: 0.00,0.00[0m
+[0;32mI (7726) LOG_RAW_ADC: 2825,2823,2784[0m
+[0;32mI (7759) LOG_RAW_ADC: 2839,2944,2863[0m
+[0;32mI (7792) LOG_RAW_ADC: 2817,2891,2813[0m
+[0;32mI (7822) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7822) LOG_LIDAR: 309, 307, 302[0m
+[0;32mI (7822) LOG_ADC: 2817, 2891, 2813[0m
+[0;32mI (7824) LOG_IMU: -0.05, -0.02, 0.03[0m
+[0;32mI (7825) LOG_RAW_ADC: 2881,2911,2839[0m
+[0;32mI (7829) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7837) LOG_PID: 0.00,0.00[0m
+[0;32mI (7858) LOG_RAW_ADC: 2831,2960,2815[0m
+[0;32mI (7891) LOG_RAW_ADC: 2826,2862,2881[0m
+[0;32mI (7924) LOG_RAW_ADC: 2867,2839,2863[0m
+[0;32mI (7941) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (7941) LOG_LIDAR: 310, 309, 304[0m
+[0;32mI (7941) LOG_ADC: 2867, 2839, 2863[0m
+[0;32mI (7943) LOG_IMU: -0.05, -0.02, 0.05[0m
+[0;32mI (7948) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (7952) LOG_PID: 0.00,0.00[0m
+[0;32mI (7957) LOG_RAW_ADC: 2865,2895,2827[0m
+[0;32mI (7990) LOG_RAW_ADC: 2916,2863,2876[0m
+[0;32mI (8023) LOG_RAW_ADC: 2809,3172,2864[0m
+[0;32mI (8055) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8055) LOG_LIDAR: 304, 311, 305[0m
+[0;32mI (8055) LOG_ADC: 2809, 3172, 2864[0m
+[0;32mI (8056) LOG_RAW_ADC: 2928,2814,2905[0m
+[0;32mI (8057) LOG_IMU: -0.05, -0.01, 0.05[0m
+[0;32mI (8066) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8070) LOG_PID: 0.00,0.00[0m
+[0;32mI (8089) LOG_RAW_ADC: 2896,2843,2875[0m
+[0;32mI (8122) LOG_RAW_ADC: 2862,2871,2813[0m
+[0;32mI (8155) LOG_RAW_ADC: 2897,2791,2890[0m
+[0;32mI (8174) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8174) LOG_LIDAR: 300, 312, 307[0m
+[0;32mI (8174) LOG_ADC: 2897, 2791, 2890[0m
+[0;32mI (8176) LOG_IMU: -0.06, -0.00, 0.06[0m
+[0;32mI (8181) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8185) LOG_PID: 0.00,0.00[0m
+[0;32mI (8188) LOG_RAW_ADC: 2927,2802,2857[0m
+[0;32mI (8221) LOG_RAW_ADC: 2950,3008,2896[0m
+[0;32mI (8254) LOG_RAW_ADC: 2895,2795,2864[0m
+[0;32mI (8287) LOG_RAW_ADC: 2903,2859,2843[0m
+[0;32mI (8288) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8288) LOG_LIDAR: 299, 310, 308[0m
+[0;32mI (8290) LOG_ADC: 2903, 2859, 2843[0m
+[0;32mI (8294) LOG_IMU: -0.06, 0.00, 0.04[0m
+[0;32mI (8298) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8303) LOG_PID: 0.00,0.00[0m
+[0;32mI (8320) LOG_RAW_ADC: 2909,2815,2832[0m
+[0;32mI (8353) LOG_RAW_ADC: 3041,2768,2848[0m
+[0;32mI (8386) LOG_RAW_ADC: 2933,2742,2883[0m
+[0;32mI (8406) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8406) LOG_LIDAR: 300, 309, 308[0m
+[0;32mI (8406) LOG_ADC: 2933, 2742, 2883[0m
+[0;32mI (8408) LOG_IMU: -0.06, -0.00, 0.02[0m
+[0;32mI (8413) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8417) LOG_PID: 0.00,0.00[0m
+[0;32mI (8419) LOG_RAW_ADC: 2910,2839,2837[0m
+[0;32mI (8452) LOG_RAW_ADC: 2905,2767,2854[0m
+[0;32mI (8485) LOG_RAW_ADC: 2915,2809,2891[0m
+[0;32mI (8518) LOG_RAW_ADC: 2879,2846,2880[0m
+[0;32mI (8520) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8520) LOG_LIDAR: 301, 308, 306[0m
+[0;32mI (8521) LOG_ADC: 2879, 2846, 2880[0m
+[0;32mI (8525) LOG_IMU: -0.07, -0.01, 0.01[0m
+[0;32mI (8530) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8534) LOG_PID: 0.00,0.00[0m
+[0;32mI (8551) LOG_RAW_ADC: 2898,2917,2857[0m
+[0;32mI (8584) LOG_RAW_ADC: 2923,2818,2843[0m
+[0;32mI (8617) LOG_RAW_ADC: 2866,2857,2928[0m
+[0;32mI (8637) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8637) LOG_LIDAR: 303, 308, 304[0m
+[0;32mI (8637) LOG_ADC: 2866, 2857, 2928[0m
+[0;32mI (8639) LOG_IMU: -0.07, -0.02, 0.02[0m
+[0;32mI (8644) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8648) LOG_PID: 0.00,0.00[0m
+[0;32mI (8650) LOG_RAW_ADC: 2881,2833,2832[0m
+[0;32mI (8683) LOG_RAW_ADC: 2960,2826,2752[0m
+[0;32mI (8716) LOG_RAW_ADC: 2861,2832,2955[0m
+[0;32mI (8749) LOG_RAW_ADC: 2898,2783,2716[0m
+[0;32mI (8751) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8751) LOG_LIDAR: 305, 310, 304[0m
+[0;32mI (8752) LOG_ADC: 2898, 2783, 2716[0m
+[0;32mI (8756) LOG_IMU: -0.07, -0.01, 0.03[0m
+[0;32mI (8761) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8765) LOG_PID: 0.00,0.00[0m
+[0;32mI (8782) LOG_RAW_ADC: 2935,2773,2992[0m
+[0;32mI (8815) LOG_RAW_ADC: 2921,2790,2848[0m
+[0;32mI (8848) LOG_RAW_ADC: 2875,2813,2905[0m
+[0;32mI (8868) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8868) LOG_LIDAR: 304, 312, 305[0m
+[0;32mI (8868) LOG_ADC: 2875, 2813, 2905[0m
+[0;32mI (8870) LOG_IMU: -0.08, -0.01, 0.04[0m
+[0;32mI (8875) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8879) LOG_PID: 0.00,0.00[0m
+[0;32mI (8881) LOG_RAW_ADC: 2906,2784,2866[0m
+[0;32mI (8914) LOG_RAW_ADC: 2864,2755,2891[0m
+[0;32mI (8947) LOG_RAW_ADC: 2896,2782,2913[0m
+[0;32mI (8980) LOG_RAW_ADC: 2877,2831,2791[0m
+[0;32mI (8982) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (8982) LOG_LIDAR: 303, 312, 305[0m
+[0;32mI (8983) LOG_ADC: 2877, 2831, 2791[0m
+[0;32mI (8987) LOG_IMU: -0.08, -0.01, 0.03[0m
+[0;32mI (8992) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (8996) LOG_PID: 0.00,0.00[0m
+[0;32mI (9013) LOG_RAW_ADC: 2923,2806,2894[0m
+[0;32mI (9046) LOG_RAW_ADC: 2890,3000,2754[0m
+[0;32mI (9079) LOG_RAW_ADC: 2899,2752,2877[0m
+[0;32mI (9099) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (9099) LOG_LIDAR: 304, 310, 305[0m
+[0;32mI (9099) LOG_ADC: 2899, 2752, 2877[0m
+[0;32mI (9102) LOG_IMU: -0.08, -0.01, 0.02[0m
+[0;32mI (9106) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (9110) LOG_PID: 0.00,0.00[0m
+[0;32mI (9112) LOG_RAW_ADC: 2866,2939,2843[0m
+[0;32mI (9145) LOG_RAW_ADC: 2928,2765,2815[0m
+[0;32mI (9178) LOG_RAW_ADC: 2900,2813,2815[0m
+[0;32mI (9211) LOG_RAW_ADC: 2896,2912,2847[0m
+[0;32mI (9213) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (9213) LOG_LIDAR: 306, 307, 306[0m
+[0;32mI (9214) LOG_ADC: 2896, 2912, 2847[0m
+[0;32mI (9218) LOG_IMU: -0.09, -0.02, 0.01[0m
+[0;32mI (9223) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (9227) LOG_PID: 0.00,0.00[0m
+[0;32mI (9244) LOG_RAW_ADC: 2875,2759,2843[0m
+[0;32mI (9277) LOG_RAW_ADC: 2884,2903,2654[0m
+[0;32mI (9310) LOG_RAW_ADC: 2854,2791,2847[0m
+[0;32mI (9330) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (9330) LOG_LIDAR: 307, 306, 304[0m
+[0;32mI (9330) LOG_ADC: 2854, 2791, 2847[0m
+[0;32mI (9332) LOG_IMU: -0.09, -0.03, 0.02[0m
+[0;32mI (9337) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (9341) LOG_PID: 0.00,0.00[0m
+[0;32mI (9343) LOG_RAW_ADC: 2923,2880,2901[0m
+[0;32mI (9376) LOG_RAW_ADC: 2847,2832,2815[0m
+[0;32mI (9409) LOG_RAW_ADC: 2865,2855,2819[0m
+[0;32mI (9442) LOG_RAW_ADC: 2896,2836,2950[0m
+[0;32mI (9444) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (9444) LOG_LIDAR: 306, 306, 305[0m
+[0;32mI (9445) LOG_ADC: 2896, 2836, 2950[0m
+[0;32mI (9449) LOG_IMU: -0.10, -0.03, 0.04[0m
+[0;32mI (9454) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (9458) LOG_PID: 0.00,0.00[0m
+[0;32mI (9475) LOG_RAW_ADC: 2901,2873,2885[0m
+[0;32mI (9508) LOG_RAW_ADC: 2913,2833,2945[0m
+[0;32mI (9541) LOG_RAW_ADC: 2865,2982,2923[0m
+[0;32mI (9561) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (9561) LOG_LIDAR: 305, 309, 307[0m
+[0;32mI (9561) LOG_ADC: 2865, 2982, 2923[0m
+[0;32mI (9563) LOG_IMU: -0.10, -0.02, 0.05[0m
+[0;32mI (9568) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (9572) LOG_PID: 0.00,0.00[0m
+[0;32mI (9574) LOG_RAW_ADC: 2931,2787,2861[0m
+[0;32mI (9607) LOG_RAW_ADC: 2906,2873,2894[0m
+[0;32mI (9640) LOG_RAW_ADC: 2878,2823,2854[0m
+[0;32mI (9673) LOG_RAW_ADC: 2853,2843,2823[0m
+[0;32mI (9675) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (9675) LOG_LIDAR: 304, 311, 310[0m
+[0;32mI (9676) LOG_ADC: 2853, 2843, 2823[0m
+[0;32mI (9680) LOG_IMU: -0.10, -0.01, 0.06[0m
+[0;32mI (9685) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (9689) LOG_PID: 0.00,0.00[0m
+[0;32mI (9706) LOG_RAW_ADC: 2862,2798,2891[0m
+[0;32mI (9739) LOG_RAW_ADC: 2879,2800,2992[0m
+[0;32mI (9772) LOG_RAW_ADC: 2905,2825,2891[0m
+[0;32mI (9792) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (9792) LOG_LIDAR: 301, 311, 314[0m
+[0;32mI (9792) LOG_ADC: 2905, 2825, 2891[0m
+[0;32mI (9794) LOG_IMU: -0.11, -0.01, 0.04[0m
+[0;32mI (9799) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (9803) LOG_PID: 0.00,0.00[0m
+[0;32mI (9805) LOG_RAW_ADC: 2897,2722,2843[0m
+[0;32mI (9838) LOG_RAW_ADC: 2861,2834,2851[0m
+[0;32mI (9871) LOG_RAW_ADC: 2883,2851,2858[0m
+[0;32mI (9904) LOG_RAW_ADC: 2894,2849,2871[0m
+[0;32mI (9906) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (9906) LOG_LIDAR: 302, 311, 314[0m
+[0;32mI (9907) LOG_ADC: 2894, 2849, 2871[0m
+[0;32mI (9911) LOG_IMU: -0.11, -0.01, 0.03[0m
+[0;32mI (9916) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (9920) LOG_PID: 0.00,0.00[0m
+[0;32mI (9937) LOG_RAW_ADC: 2928,2859,2861[0m
+[0;32mI (9970) LOG_RAW_ADC: 2918,2845,2875[0m
+[0;32mI (10003) LOG_RAW_ADC: 2917,2809,2795[0m
+[0;32mI (10023) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10023) LOG_LIDAR: 302, 309, 314[0m
+[0;32mI (10023) LOG_ADC: 2917, 2809, 2795[0m
+[0;32mI (10026) LOG_IMU: -0.11, -0.01, 0.03[0m
+[0;32mI (10030) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10034) LOG_PID: 0.00,0.00[0m
+[0;32mI (10036) LOG_RAW_ADC: 2857,2853,2827[0m
+[0;32mI (10031) LOG_STATE: T,state[0m
+[0;32mI (10056) LOG_STATE: 3[0m
+[0;32mI (10069) LOG_RAW_ADC: 2886,2729,2911[0m
+[0;32mI (10102) LOG_RAW_ADC: 2914,2807,2740[0m
+[0;32mI (10135) LOG_RAW_ADC: 2903,2940,2868[0m
+[0;32mI (10138) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10138) LOG_LIDAR: 301, 309, 313[0m
+[0;32mI (10138) LOG_ADC: 2903, 2940, 2868[0m
+[0;32mI (10143) LOG_IMU: -0.12, -0.01, 0.03[0m
+[0;32mI (10147) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10151) LOG_PID: 0.00,0.00[0m
+[0;32mI (10168) LOG_RAW_ADC: 2925,2747,2919[0m
+[0;32mI (10201) LOG_RAW_ADC: 2859,2834,2833[0m
+[0;32mI (10234) LOG_RAW_ADC: 2827,2891,2849[0m
+[0;32mI (10255) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10255) LOG_LIDAR: 301, 310, 315[0m
+[0;32mI (10255) LOG_ADC: 2827, 2891, 2849[0m
+[0;32mI (10258) LOG_IMU: -0.12, -0.01, 0.04[0m
+[0;32mI (10262) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10266) LOG_PID: 0.00,0.00[0m
+[0;32mI (10267) LOG_RAW_ADC: 2909,2829,2877[0m
+[0;32mI (10300) LOG_RAW_ADC: 2877,2787,2864[0m
+[0;32mI (10333) LOG_RAW_ADC: 2892,2875,2837[0m
+[0;32mI (10366) LOG_RAW_ADC: 2888,2800,2832[0m
+[0;32mI (10370) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10370) LOG_LIDAR: 300, 310, 316[0m
+[0;32mI (10370) LOG_ADC: 2888, 2800, 2832[0m
+[0;32mI (10374) LOG_IMU: -0.13, -0.00, 0.04[0m
+[0;32mI (10378) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10382) LOG_PID: 0.00,0.00[0m
+[0;32mI (10399) LOG_RAW_ADC: 2935,2801,2909[0m
+[0;32mI (10432) LOG_RAW_ADC: 2906,2848,2896[0m
+[0;32mI (10465) LOG_RAW_ADC: 2867,2858,2921[0m
+[0;32mI (10486) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10486) LOG_LIDAR: 300, 308, 316[0m
+[0;32mI (10486) LOG_ADC: 2867, 2858, 2921[0m
+[0;32mI (10489) LOG_IMU: -0.13, -0.00, 0.03[0m
+[0;32mI (10493) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10497) LOG_PID: 0.00,0.00[0m
+[0;32mI (10498) LOG_RAW_ADC: 2850,2900,2832[0m
+[0;32mI (10531) LOG_RAW_ADC: 2898,2735,2880[0m
+[0;32mI (10564) LOG_RAW_ADC: 2921,2881,2815[0m
+[0;32mI (10597) LOG_RAW_ADC: 2906,2867,2829[0m
+[0;32mI (10601) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10601) LOG_LIDAR: 302, 307, 315[0m
+[0;32mI (10601) LOG_ADC: 2906, 2867, 2829[0m
+[0;32mI (10605) LOG_IMU: -0.13, -0.01, 0.02[0m
+[0;32mI (10609) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10613) LOG_PID: 0.00,0.00[0m
+[0;32mI (10630) LOG_RAW_ADC: 2896,2882,2880[0m
+[0;32mI (10663) LOG_RAW_ADC: 2881,2924,2692[0m
+[0;32mI (10696) LOG_RAW_ADC: 2917,2881,2814[0m
+[0;32mI (10717) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10717) LOG_LIDAR: 304, 305, 313[0m
+[0;32mI (10717) LOG_ADC: 2917, 2881, 2814[0m
+[0;32mI (10720) LOG_IMU: -0.14, -0.02, 0.01[0m
+[0;32mI (10724) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10728) LOG_PID: 0.00,0.00[0m
+[0;32mI (10729) LOG_RAW_ADC: 2897,2915,2794[0m
+[0;32mI (10762) LOG_RAW_ADC: 2943,2766,2859[0m
+[0;32mI (10795) LOG_RAW_ADC: 2718,2834,2818[0m
+[0;32mI (10828) LOG_RAW_ADC: 2908,2797,2887[0m
+[0;32mI (10832) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10832) LOG_LIDAR: 305, 303, 312[0m
+[0;32mI (10832) LOG_ADC: 2908, 2797, 2887[0m
+[0;32mI (10836) LOG_IMU: -0.14, -0.02, 0.01[0m
+[0;32mI (10840) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10844) LOG_PID: 0.00,0.00[0m
+[0;32mI (10861) LOG_RAW_ADC: 2855,2832,2867[0m
+[0;32mI (10894) LOG_RAW_ADC: 2883,2779,2910[0m
+[0;32mI (10927) LOG_RAW_ADC: 2895,2751,2884[0m
+[0;32mI (10948) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (10948) LOG_LIDAR: 306, 305, 311[0m
+[0;32mI (10948) LOG_ADC: 2895, 2751, 2884[0m
+[0;32mI (10951) LOG_IMU: -0.15, -0.02, 0.03[0m
+[0;32mI (10955) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (10959) LOG_PID: 0.00,0.00[0m
+[0;32mI (10960) LOG_RAW_ADC: 2923,3118,2839[0m
+[0;32mI (10993) LOG_RAW_ADC: 2875,2903,2829[0m
+[0;32mI (11026) LOG_RAW_ADC: 2896,2805,2840[0m
+[0;32mI (11059) LOG_RAW_ADC: 2896,2719,2871[0m
+Data SBUS: 1811D (11060) main: state: 1[0m
+D (11060) main: Suspended[0m
+[0;32mI (11063) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (11065) LOG_LIDAR: 305, 307, 312[0m
+[0;32mI (11069) LOG_ADC: 2896, 2719, 2871[0m
+[0;32mI (11073) LOG_IMU: -0.15, -0.02, 0.04[0m
+[0;32mI (11078) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (11082) LOG_PID: 0.00,0.00[0m
+[0;32mI (11067) LOG_STATE: 1[0m
+Data SBUS: 1811D (11092) main: state: 1[0m
+[0;32mI (11092) LOG_RAW_ADC: 2896,2809,2919[0m
+D (11092) main: Suspended[0m
+[0;32mI (11104) LOG_STATE: 1[0m
+Data SBUS: 1811D (11105) main: state: 1[0m
+D (11106) main: Suspended[0m
+[0;32mI (11114) LOG_STATE: 1[0m
+Data SBUS: 1811D (11115) main: state: 1[0m
+D (11116) main: Suspended[0m
+[0;32mI (11124) LOG_STATE: 1[0m
+Data SBUS: 1811D (11125) main: state: 1[0m
+[0;32mI (11125) LOG_RAW_ADC: 2797,2826,2831[0m
+D (11126) main: Suspended[0m
+[0;32mI (11138) LOG_STATE: 1[0m
+Data SBUS: 1811D (11139) main: state: 1[0m
+D (11139) main: Suspended[0m
+[0;32mI (11147) LOG_STATE: 1[0m
+Data SBUS: 1811D (11148) main: state: 1[0m
+D (11149) main: Suspended[0m
+[0;32mI (11157) LOG_STATE: 1[0m
+Data SBUS: 1811D (11158) main: state: 1[0m
+[0;32mI (11158) LOG_RAW_ADC: 2881,2800,2849[0m
+D (11159) main: Suspended[0m
+[0;32mI (11171) LOG_STATE: 1[0m
+Data SBUS: 1811D (11172) main: state: 1[0m
+D (11173) main: Suspended[0m
+[0;32mI (11180) LOG_STATE: 1[0m
+Data SBUS: 1811D (11181) main: state: 1[0m
+D (11182) main: Suspended[0m
+[0;32mI (11185) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (11191) LOG_LIDAR: 302, 308, 313[0m
+[0;32mI (11191) LOG_RAW_ADC: 2879,2870,2896[0m
+[0;32mI (11195) LOG_ADC: 2879, 2870, 2896[0m
+[0;32mI (11204) LOG_IMU: -0.15, -0.01, 0.04[0m
+[0;32mI (11208) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (11212) LOG_PID: 0.00,0.00[0m
+[0;32mI (11191) LOG_STATE: 1[0m
+Data SBUS: 1811D (11222) main: state: 1[0m
+D (11223) main: Suspended[0m
+[0;32mI (11224) LOG_RAW_ADC: 2879,2893,2862[0m
+[0;32mI (11230) LOG_STATE: 1[0m
+Data SBUS: 1811D (11234) main: state: 1[0m
+D (11237) main: Suspended[0m
+[0;32mI (11244) LOG_STATE: 1[0m
+Data SBUS: 1811D (11245) main: state: 1[0m
+D (11246) main: Suspended[0m
+[0;32mI (11254) LOG_STATE: 1[0m
+Data SBUS: 1811D (11255) main: state: 1[0m
+D (11256) main: Suspended[0m
+[0;32mI (11257) LOG_RAW_ADC: 2951,2781,2922[0m
+[0;32mI (11264) LOG_STATE: 1[0m
+Data SBUS: 1811D (11267) main: state: 1[0m
+D (11270) main: Suspended[0m
+[0;32mI (11277) LOG_STATE: 1[0m
+Data SBUS: 1811D (11278) main: state: 1[0m
+D (11279) main: Suspended[0m
+[0;32mI (11287) LOG_STATE: 1[0m
+Data SBUS: 1811D (11288) main: state: 1[0m
+D (11289) main: Suspended[0m
+[0;32mI (11290) LOG_RAW_ADC: 2922,3087,2810[0m
+[0;32mI (11297) LOG_STATE: 1[0m
+Data SBUS: 1811D (11300) main: state: 1[0m
+D (11303) main: Suspended[0m
+[0;32mI (11311) LOG_STATE: 1[0m
+Data SBUS: 1811D (11312) main: state: 1[0m
+D (11313) main: Suspended[0m
+[0;32mI (11316) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (11321) LOG_LIDAR: 303, 308, 315[0m
+[0;32mI (11323) LOG_RAW_ADC: 2897,2466,2831[0m
+[0;32mI (11321) LOG_STATE: 1[0m
+[0;32mI (11325) LOG_ADC: 2897, 2466, 2831[0m
+[0;32mI (11338) LOG_IMU: -0.16, -0.02, 0.03[0m
+[0;32mI (11341) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (11345) LOG_PID: 0.00,0.00[0m
+Data SBUS: 1811D (11349) main: state: 1[0m
+D (11353) main: Suspended[0m
+[0;32mI (11356) LOG_RAW_ADC: 2891,2834,2842[0m
+[0;32mI (11361) LOG_STATE: 1[0m
+Data SBUS: 1811D (11365) main: state: 1[0m
+D (11367) main: Suspended[0m
+[0;32mI (11375) LOG_STATE: 1[0m
+Data SBUS: 1811D (11376) main: state: 1[0m
+D (11377) main: Suspended[0m
+[0;32mI (11384) LOG_STATE: 1[0m
+[0;32mI (11384) LOG_STATE: 1[0m
+Data SBUS: 1811D (11386) main: state: 1[0m
+[0;32mI (11389) LOG_RAW_ADC: 2889,2837,2896[0m
+D (11389) main: Suspended[0m
+[0;32mI (11401) LOG_STATE: 1[0m
+Data SBUS: 1811D (11402) main: state: 1[0m
+D (11403) main: Suspended[0m
+[0;32mI (11411) LOG_STATE: 1[0m
+Data SBUS: 1811D (11413) main: state: 1[0m
+D (11413) main: Suspended[0m
+[0;32mI (11420) LOG_STATE: 1[0m
+[0;32mI (11420) LOG_STATE: 1[0m
+[0;32mI (11422) LOG_RAW_ADC: 2867,2916,2862[0m
+Data SBUS: 1811D (11426) main: state: 1[0m
+D (11430) main: Suspended[0m
+[0;32mI (11437) LOG_STATE: 1[0m
+Data SBUS: 1811D (11438) main: state: 1[0m
+D (11439) main: Suspended[0m
+[0;32mI (11447) LOG_STATE: 1[0m
+Data SBUS: 1811D (11448) main: state: 1[0m
+D (11449) main: Suspended[0m
+[0;32mI (11449) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (11455) LOG_RAW_ADC: 2887,2857,2880[0m
+[0;32mI (11458) LOG_LIDAR: 303, 306, 316[0m
+[0;32mI (11466) LOG_ADC: 2887, 2857, 2880[0m
+[0;32mI (11470) LOG_IMU: -0.16, -0.02, 0.02[0m
+[0;32mI (11475) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (11479) LOG_PID: 0.00,0.00[0m
+[0;32mI (11458) LOG_STATE: 1[0m
+[0;32mI (11488) LOG_RAW_ADC: 2897,2847,2832[0m
+Data SBUS: 1811D (11490) main: state: 1[0m
+D (11494) main: Suspended[0m
+[0;32mI (11501) LOG_STATE: 1[0m
+Data SBUS: 1811D (11503) main: state: 1[0m
+D (11503) main: Suspended[0m
+[0;32mI (11511) LOG_STATE: 1[0m
+Data SBUS: 1811D (11512) main: state: 1[0m
+D (11513) main: Suspended[0m
+[0;32mI (11521) LOG_STATE: 1[0m
+[0;32mI (11521) LOG_RAW_ADC: 2893,2831,2811[0m
+Data SBUS: 1811D (11523) main: state: 1[0m
+D (11527) main: Suspended[0m
+[0;32mI (11534) LOG_STATE: 1[0m
+Data SBUS: 1811D (11535) main: state: 1[0m
+D (11536) main: Suspended[0m
+[0;32mI (11544) LOG_STATE: 1[0m
+Data SBUS: 1811D (11545) main: state: 1[0m
+D (11546) main: Suspended[0m
+[0;32mI (11554) LOG_STATE: 1[0m
+[0;32mI (11554) LOG_RAW_ADC: 2915,2736,2934[0m
+Data SBUS: 1811D (11556) main: state: 1[0m
+D (11560) main: Suspended[0m
+[0;32mI (11568) LOG_STATE: 1[0m
+Data SBUS: 1811D (11570) main: state: 1[0m
+D (11570) main: Suspended[0m
+[0;32mI (11577) LOG_STATE: 1[0m
+Data SBUS: 1811D (11578) main: state: 1[0m
+D (11579) main: Suspended[0m
+[0;32mI (11582) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (11587) LOG_RAW_ADC: 2865,2832,2917[0m
+[0;32mI (11588) LOG_LIDAR: 304, 306, 317[0m
+[0;32mI (11596) LOG_ADC: 2865, 2832, 2917[0m
+[0;32mI (11588) LOG_STATE: 1[0m
+[0;32mI (11602) LOG_IMU: -0.17, -0.02, 0.03[0m
+[0;32mI (11608) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (11612) LOG_PID: 0.00,0.00[0m
+Data SBUS: 1811D (11616) main: state: 1[0m
+D (11620) main: Suspended[0m
+[0;32mI (11620) LOG_RAW_ADC: 2902,2853,2854[0m
+[0;32mI (11627) LOG_STATE: 1[0m
+Data SBUS: 1811D (11633) main: state: 1[0m
+D (11633) main: Suspended[0m
+[0;32mI (11641) LOG_STATE: 1[0m
+Data SBUS: 1811D (11642) main: state: 1[0m
+D (11643) main: Suspended[0m
+[0;32mI (11651) LOG_STATE: 1[0m
+Data SBUS: 1811D (11652) main: state: 1[0m
+D (11653) main: Suspended[0m
+[0;32mI (11653) LOG_RAW_ADC: 2823,2763,2903[0m
+[0;32mI (11660) LOG_STATE: 1[0m
+Data SBUS: 1811D (11665) main: state: 1[0m
+D (11667) main: Suspended[0m
+[0;32mI (11674) LOG_STATE: 1[0m
+Data SBUS: 1811D (11675) main: state: 1[0m
+D (11676) main: Suspended[0m
+[0;32mI (11684) LOG_STATE: 1[0m
+Data SBUS: 1811D (11685) main: state: 1[0m
+D (11686) main: Suspended[0m
+[0;32mI (11686) LOG_RAW_ADC: 2879,2807,2814[0m
+[0;32mI (11694) LOG_STATE: 1[0m
+Data SBUS: 1811D (11697) main: state: 1[0m
+D (11700) main: Suspended[0m
+[0;32mI (11708) LOG_STATE: 1[0m
+Data SBUS: 1811D (11709) main: state: 1[0m
+D (11710) main: Suspended[0m
+[0;32mI (11716) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (11718) LOG_LIDAR: 301, 308, 318[0m
+[0;32mI (11719) LOG_RAW_ADC: 2891,2813,2864[0m
+[0;32mI (11718) LOG_STATE: 1[0m
+[0;32mI (11722) LOG_ADC: 2891, 2813, 2864[0m
+[0;32mI (11734) LOG_IMU: -0.17, -0.01, 0.05[0m
+[0;32mI (11738) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (11742) LOG_PID: 0.00,0.00[0m
+Data SBUS: 1811D (11746) main: state: 1[0m
+D (11750) main: Suspended[0m
+[0;32mI (11752) LOG_RAW_ADC: 2877,2847,2878[0m
+[0;32mI (11758) LOG_STATE: 1[0m
+Data SBUS: 1811D (11762) main: state: 1[0m
+D (11764) main: Suspended[0m
+[0;32mI (11771) LOG_STATE: 1[0m
+Data SBUS: 1811D (11772) main: state: 1[0m
+D (11773) main: Suspended[0m
+[0;32mI (11781) LOG_STATE: 1[0m
+Data SBUS: 1811D (11782) main: state: 1[0m
+D (11783) main: Suspended[0m
+[0;32mI (11785) LOG_RAW_ADC: 2915,2737,2898[0m
+[0;32mI (11791) LOG_STATE: 1[0m
+Data SBUS: 1811D (11794) main: state: 1[0m
+D (11797) main: Suspended[0m
+[0;32mI (11805) LOG_STATE: 1[0m
+Data SBUS: 1811D (11806) main: state: 1[0m
+D (11807) main: Suspended[0m
+[0;32mI (11814) LOG_STATE: 1[0m
+Data SBUS: 1811D (11815) main: state: 1[0m
+D (11816) main: Suspended[0m
+[0;32mI (11818) LOG_RAW_ADC: 2896,2787,2886[0m
+[0;32mI (11824) LOG_STATE: 1[0m
+Data SBUS: 1811D (11828) main: state: 1[0m
+D (11830) main: Suspended[0m
+[0;32mI (11838) LOG_STATE: 1[0m
+Data SBUS: 1811D (11839) main: state: 1[0m
+D (11840) main: Suspended[0m
+[0;32mI (11846) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (11849) LOG_LIDAR: 300, 309, 319[0m
+[0;32mI (11851) LOG_RAW_ADC: 2822,2802,2874[0m
+[0;32mI (11849) LOG_STATE: 1[0m
+[0;32mI (11853) LOG_ADC: 2822, 2802, 2874[0m
+[0;32mI (11865) LOG_IMU: -0.17, -0.01, 0.05[0m
+Data SBUS: 1811D (11869) main: state: 1[0m
+D (11872) main: Suspended[0m
+[0;32mI (11868) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (11879) LOG_PID: 0.00,0.00[0m
+[0;32mI (11881) LOG_STATE: 1[0m
+[0;32mI (11884) LOG_RAW_ADC: 2911,2868,2864[0m
+Data SBUS: 1811D (11890) main: state: 1[0m
+D (11894) main: Suspended[0m
+[0;32mI (11902) LOG_STATE: 1[0m
+Data SBUS: 1811D (11904) main: state: 1[0m
+D (11904) main: Suspended[0m
+[0;32mI (11911) LOG_STATE: 1[0m
+Data SBUS: 1811D (11912) main: state: 1[0m
+D (11913) main: Suspended[0m
+[0;32mI (11917) LOG_RAW_ADC: 2896,2854,2827[0m
+[0;32mI (11921) LOG_STATE: 1[0m
+Data SBUS: 1811D (11924) main: state: 1[0m
+D (11927) main: Suspended[0m
+[0;32mI (11935) LOG_STATE: 1[0m
+Data SBUS: 1811D (11937) main: state: 1[0m
+D (11937) main: Suspended[0m
+[0;32mI (11945) LOG_STATE: 1[0m
+Data SBUS: 1811D (11946) main: state: 1[0m
+D (11947) main: Suspended[0m
+[0;32mI (11950) LOG_RAW_ADC: 2927,2775,2818[0m
+[0;32mI (11954) LOG_STATE: 1[0m
+Data SBUS: 1811D (11958) main: state: 1[0m
+D (11961) main: Suspended[0m
+[0;32mI (11968) LOG_STATE: 1[0m
+Data SBUS: 1811D (11969) main: state: 1[0m
+D (11970) main: Suspended[0m
+[0;32mI (11978) LOG_STATE: 1[0m
+Data SBUS: 1811D (11979) main: state: 1[0m
+D (11980) main: Suspended[0m
+[0;32mI (11983) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (11983) LOG_RAW_ADC: 2880,2695,2854[0m
+[0;32mI (11988) LOG_LIDAR: 299, 311, 321[0m
+[0;32mI (11997) LOG_ADC: 2880, 2695, 2854[0m
+[0;32mI (12001) LOG_IMU: -0.18, -0.00, 0.04[0m
+[0;32mI (12005) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (12010) LOG_PID: 0.00,0.00[0m
+[0;32mI (11989) LOG_STATE: 1[0m
+[0;32mI (12016) LOG_RAW_ADC: 2838,2826,2877[0m
+Data SBUS: 1811D (12021) main: state: 1[0m
+D (12024) main: Suspended[0m
+[0;32mI (12032) LOG_STATE: 1[0m
+Data SBUS: 1811D (12034) main: state: 1[0m
+D (12034) main: Suspended[0m
+[0;32mI (12042) LOG_STATE: 1[0m
+Data SBUS: 1811D (12043) main: state: 1[0m
+D (12044) main: Suspended[0m
+[0;32mI (12049) LOG_RAW_ADC: 2902,2803,2825[0m
+[0;32mI (12051) LOG_STATE: 1[0m
+Data SBUS: 1811D (12055) main: state: 1[0m
+D (12058) main: Suspended[0m
+[0;32mI (12065) LOG_STATE: 1[0m
+Data SBUS: 1811D (12066) main: state: 1[0m
+D (12067) main: Suspended[0m
+[0;32mI (12075) LOG_STATE: 1[0m
+Data SBUS: 1811D (12076) main: state: 1[0m
+D (12077) main: Suspended[0m
+[0;32mI (12082) LOG_RAW_ADC: 2896,2771,2869[0m
+[0;32mI (12085) LOG_STATE: 1[0m
+Data SBUS: 1811D (12089) main: state: 1[0m
+D (12091) main: Suspended[0m
+[0;32mI (12099) LOG_STATE: 1[0m
+Data SBUS: 1811D (12100) main: state: 1[0m
+D (12100) main: Suspended[0m
+[0;32mI (12108) LOG_STATE: 1[0m
+Data SBUS: 1811D (12109) main: state: 1[0m
+D (12110) main: Suspended[0m
+[0;32mI (12113) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (12115) LOG_RAW_ADC: 2896,2869,2863[0m
+[0;32mI (12119) LOG_LIDAR: 300, 309, 321[0m
+[0;32mI (12127) LOG_ADC: 2896, 2869, 2863[0m
+[0;32mI (12131) LOG_IMU: -0.18, -0.01, 0.03[0m
+[0;32mI (12136) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (12140) LOG_PID: 0.00,0.00[0m
+[0;32mI (12119) LOG_STATE: 1[0m
+[0;32mI (12148) LOG_RAW_ADC: 2911,2783,2778[0m
+Data SBUS: 1811D (12151) main: state: 1[0m
+D (12155) main: Suspended[0m
+[0;32mI (12162) LOG_STATE: 1[0m
+Data SBUS: 1811D (12163) main: state: 1[0m
+D (12164) main: Suspended[0m
+[0;32mI (12172) LOG_STATE: 1[0m
+Data SBUS: 1811D (12173) main: state: 1[0m
+D (12174) main: Suspended[0m
+[0;32mI (12181) LOG_RAW_ADC: 2928,2880,2873[0m
+[0;32mI (12182) LOG_STATE: 1[0m
+Data SBUS: 1811D (12185) main: state: 1[0m
+D (12188) main: Suspended[0m
+[0;32mI (12196) LOG_STATE: 1[0m
+Data SBUS: 1811D (12197) main: state: 1[0m
+D (12198) main: Suspended[0m
+[0;32mI (12205) LOG_STATE: 1[0m
+Data SBUS: 1811D (12206) main: state: 1[0m
+D (12207) main: Suspended[0m
+[0;32mI (12214) LOG_RAW_ADC: 2908,2749,2909[0m
+[0;32mI (12215) LOG_STATE: 1[0m
+Data SBUS: 1811D (12218) main: state: 1[0m
+D (12221) main: Suspended[0m
+[0;32mI (12229) LOG_STATE: 1[0m
+Data SBUS: 1811D (12230) main: state: 1[0m
+D (12231) main: Suspended[0m
+[0;32mI (12238) LOG_STATE: 1[0m
+Data SBUS: 1811D (12239) main: state: 1[0m
+D (12240) main: Suspended[0m
+[0;32mI (12243) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (12247) LOG_RAW_ADC: 2865,2818,2870[0m
+[0;32mI (12249) LOG_LIDAR: 300, 307, 320[0m
+[0;32mI (12249) LOG_STATE: 1[0m
+[0;32mI (12257) LOG_ADC: 2865, 2818, 2870[0m
+[0;32mI (12265) LOG_IMU: -0.19, -0.01, 0.02[0m
+[0;32mI (12269) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (12273) LOG_PID: 0.00,0.00[0m
+Data SBUS: 1811D (12277) main: state: 1[0m
+[0;32mI (12280) LOG_RAW_ADC: 2873,2855,2896[0m
+D (12281) main: Suspended[0m
+[0;32mI (12293) LOG_STATE: 1[0m
+Data SBUS: 1811D (12296) main: state: 1[0m
+D (12296) main: Suspended[0m
+[0;32mI (12302) LOG_STATE: 1[0m
+[0;32mI (12302) LOG_STATE: 1[0m
+Data SBUS: 1811D (12304) main: state: 1[0m
+D (12307) main: Suspended[0m
+[0;32mI (12313) LOG_RAW_ADC: 2875,2864,2862[0m
+[0;32mI (12315) LOG_STATE: 1[0m
+Data SBUS: 1811D (12318) main: state: 1[0m
+D (12321) main: Suspended[0m
+[0;32mI (12329) LOG_STATE: 1[0m
+Data SBUS: 1811D (12331) main: state: 1[0m
+D (12331) main: Suspended[0m
+[0;32mI (12339) LOG_STATE: 1[0m
+Data SBUS: 1811D (12340) main: state: 1[0m
+D (12341) main: Suspended[0m
+[0;32mI (12346) LOG_RAW_ADC: 2862,2818,2915[0m
+[0;32mI (12348) LOG_STATE: 1[0m
+Data SBUS: 1811D (12351) main: state: 1[0m
+D (12354) main: Suspended[0m
+[0;32mI (12362) LOG_STATE: 1[0m
+Data SBUS: 1811D (12363) main: state: 1[0m
+D (12364) main: Suspended[0m
+[0;32mI (12372) LOG_STATE: 1[0m
+Data SBUS: 1811D (12373) main: state: 1[0m
+D (12374) main: Suspended[0m
+[0;32mI (12377) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (12379) LOG_RAW_ADC: 2901,2864,2907[0m
+[0;32mI (12382) LOG_LIDAR: 301, 304, 319[0m
+[0;32mI (12391) LOG_ADC: 2901, 2864, 2907[0m
+[0;32mI (12395) LOG_IMU: -0.19, -0.01, 0.03[0m
+[0;32mI (12399) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (12403) LOG_PID: 0.00,0.00[0m
+[0;32mI (12382) LOG_STATE: 1[0m
+[0;32mI (12412) LOG_RAW_ADC: 2903,2862,2823[0m
+Data SBUS: 1811D (12414) main: state: 1[0m
+D (12418) main: Suspended[0m
+[0;32mI (12426) LOG_STATE: 1[0m
+Data SBUS: 1811D (12427) main: state: 1[0m
+D (12428) main: Suspended[0m
+[0;32mI (12436) LOG_STATE: 1[0m
+Data SBUS: 1811D (12437) main: state: 1[0m
+D (12438) main: Suspended[0m
+[0;32mI (12445) LOG_STATE: 1[0m
+[0;32mI (12445) LOG_RAW_ADC: 2930,2766,2838[0m
+Data SBUS: 1811D (12448) main: state: 1[0m
+D (12452) main: Suspended[0m
+[0;32mI (12459) LOG_STATE: 1[0m
+Data SBUS: 1811D (12461) main: state: 1[0m
+D (12461) main: Suspended[0m
+[0;32mI (12469) LOG_STATE: 1[0m
+Data SBUS: 1811D (12470) main: state: 1[0m
+D (12471) main: Suspended[0m
+[0;32mI (12478) LOG_STATE: 1[0m
+[0;32mI (12478) LOG_RAW_ADC: 2896,2832,2867[0m
+Data SBUS: 1811D (12481) main: state: 1[0m
+D (12485) main: Suspended[0m
+[0;32mI (12492) LOG_STATE: 1[0m
+Data SBUS: 1811D (12494) main: state: 1[0m
+D (12494) main: Suspended[0m
+[0;32mI (12502) LOG_STATE: 1[0m
+Data SBUS: 1811D (12503) main: state: 1[0m
+D (12504) main: Suspended[0m
+[0;32mI (12507) LOG_FK: 0, 0, 0,	0, 0, 0,	0, 0, 0,	0.00, 0.00[0m
+[0;32mI (12511) LOG_RAW_ADC: 2880,2877,2800[0m
+[0;32mI (12513) LOG_LIDAR: 300, 304, 319[0m
+[0;32mI (12521) LOG_ADC: 2880, 2877, 2800[0m
+[0;32mI (12525) LOG_IMU: -0.19, -0.01, 0.03[0m
+[0;32mI (12530) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (12534) LOG_PID: 0.00,0.00[0m
+[0;32mI (12513) LOG_STATE: 1[0m
+Data SBUS: 1811D (12544) main: state: 1[0m
+[0;32mI (12544) LOG_RAW_ADC: 2887,2865,2891[0m
+D (12544) main: Suspended[0m
+[0;32mI (12556) LOG_STATE: 1[0m
+Data SBUS: 1811D (12557) main: state: 1[0m
+D (12558) main: Suspended[0m
+[0;32mI (12566) LOG_STATE: 1[0m
+Data SBUS: 172D (12567) main: state: 3[0m
+D (12568) main: Descending[0m
+[0;32mI (12573) FK:  time: 0[0m
+[0;32mI (12574) TAG_NORM_TERRAIN: 11806, -0.09, 0.03, -1.00[0m
+[0;32mI (12577) LOG_RAW_ADC: 2911,2803,2923[0m
+x/z: 0.090449, y/z: -0.034598
+[0;32mI (12579) LOG_STATE: 3[0m
+[0;32mI (12592) TAG_NORM_SEARCH: 11824, 0.00, 0.00, -1.00[0m
+pitch: -0.000000, roll: -0.000000
+Data SBUS: 172D (12598) main: state: 3[0m
+D (12602) main: Descending[0m
+D (12603) TAG_SEARCH: time 16,  45.40, 45.00, 44.80[0m
+[0;32mI (12610) TAG_NORM_SEARCH: 11842, -0.00, -0.00, -1.00[0m
+[0;32mI (12610) LOG_RAW_ADC: 2905,2800,2896[0m
+pitch: 0.202102, roll: 0.000618
+[0;32mI (12620) LOG_STATE: 3[0m
+D (12627) TAG_SEARCH: time 40,  45.80, 45.00, 44.60[0m
+[0;32mI (12631) TAG_NORM_SEARCH: 11863, -0.01, 0.00, -1.00[0m
+pitch: 0.302537, roll: -0.173759
+[0;32mI (12639) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (12643) LOG_RAW_ADC: 2945,2864,2905[0m
+D (12647) TAG_SEARCH: time 60,  46.20, 45.00, 44.40[0m
+[0;32mI (12656) TAG_NORM_SEARCH: 11888, -0.01, 0.00, -1.00[0m
+pitch: 0.303607, roll: -0.173756
+Data SBUS: 172D (12664) main: state: 3[0m
+D (12668) main: Descending[0m
+D (12669) TAG_SEARCH: time 82,  46.60, 45.00, 44.20[0m
+[0;32mI (12676) TAG_NORM_SEARCH: 11908, -0.01, 0.01, -1.00[0m
+[0;32mI (12676) LOG_RAW_ADC: 2902,2896,2853[0m
+pitch: 0.605527, roll: -0.344617
+[0;32mI (12646) LOG_LIDAR: 299, 304, 319[0m
+[0;32mI (12693) LOG_ADC: 2902, 2896, 2853[0m
+D (12694) TAG_SEARCH: time 107,  47.00, 45.00, 44.00[0m
+[0;32mI (12702) TAG_NORM_SEARCH: 11934, -0.01, 0.01, -1.00[0m
+pitch: 0.705823, roll: -0.518149
+[0;32mI (12709) LOG_RAW_ADC: 2884,2944,2832[0m
+[0;32mI (12711) LOG_IMU: -0.20, -0.01, 0.03[0m
+D (12716) TAG_SEARCH: time 129,  47.40, 45.00, 43.80[0m
+[0;32mI (12724) TAG_NORM_SEARCH: 11956, -0.01, 0.01, -1.00[0m
+pitch: 0.704919, roll: -0.516584
+[0;32mI (12691) LOG_STATE: 3[0m
+[0;32mI (12734) LOG_SERVO: 2025,1975,2000[0m
+D (12738) TAG_SEARCH: time 151,  47.80, 45.00, 43.60[0m
+[0;32mI (12742) LOG_RAW_ADC: 2896,2777,2845[0m
+[0;32mI (12745) TAG_NORM_SEARCH: 11977, -0.01, 0.01, -1.00[0m
+pitch: 0.807762, roll: -0.689565
+[0;32mI (12745) LOG_PID: 0.00,0.00[0m
+D (12763) TAG_SEARCH: time 176,  48.20, 45.00, 43.40[0m
+[0;32mI (12767) TAG_NORM_SEARCH: 11999, -0.02, 0.01, -1.00[0m
+pitch: 1.107785, roll: -0.855390
+[0;32mI (12775) LOG_RAW_ADC: 2930,2860,2880[0m
+D (12780) TAG_SEARCH: time 193,  48.60, 45.00, 43.20[0m
+[0;32mI (12785) TAG_NORM_SEARCH: 12017, -0.02, 0.01, -1.00[0m
+pitch: 1.107785, roll: -0.855390
+D (12798) TAG_SEARCH: time 211,  49.00, 45.00, 43.00[0m
+[0;32mI (12798) TAG_NORM_SEARCH: 12030, -0.02, 0.02, -1.00[0m
+pitch: 1.211918, roll: -1.027498
+[0;32mI (12808) LOG_RAW_ADC: 2867,2800,2879[0m
+D (12812) TAG_SEARCH: time 225,  49.40, 45.00, 42.80[0m
+[0;32mI (12816) TAG_NORM_SEARCH: 12048, -0.02, 0.02, -1.00[0m
+pitch: 1.411116, roll: -1.018354
+D (12830) TAG_SEARCH: time 243,  49.80, 45.00, 42.60[0m
+[0;32mI (12830) TAG_NORM_SEARCH: 12062, -0.03, 0.02, -1.00[0m
+pitch: 1.510816, roll: -1.189666
+[0;32mI (12841) LOG_RAW_ADC: 2874,2858,2860[0m
+D (12844) TAG_SEARCH: time 257,  50.20, 45.00, 42.40[0m
+[0;32mI (12848) TAG_NORM_SEARCH: 12080, -0.03, 0.02, -1.00[0m
+pitch: 1.613866, roll: -1.356831
+D (12862) TAG_SEARCH: time 275,  50.60, 45.00, 42.20[0m
+[0;32mI (12862) TAG_NORM_SEARCH: 12094, -0.03, 0.02, -1.00[0m
+pitch: 1.613866, roll: -1.356831
+[0;32mI (12870) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (12874) LOG_RAW_ADC: 2800,2826,2890[0m
+D (12878) TAG_SEARCH: time 291,  51.00, 45.00, 42.00[0m
+[0;32mI (12887) TAG_NORM_SEARCH: 12119, -0.03, 0.03, -1.00[0m
+pitch: 1.911365, roll: -1.514921
+[0;32mI (12878) LOG_LIDAR: 301, 301, 318[0m
+D (12900) TAG_SEARCH: time 313,  51.40, 45.00, 41.80[0m
+[0;32mI (12905) TAG_NORM_SEARCH: 12137, -0.04, 0.03, -1.00[0m
+[0;32mI (12907) LOG_RAW_ADC: 2884,2771,2818[0m
+pitch: 2.017764, roll: -1.684738
+[0;32mI (12910) LOG_ADC: 2884, 2771, 2818[0m
+[0;32mI (12922) LOG_IMU: -0.20, -0.02, 0.01[0m
+D (12923) TAG_SEARCH: time 336,  51.80, 45.00, 41.60[0m
+[0;32mI (12931) TAG_NORM_SEARCH: 12163, -0.04, 0.03, -1.00[0m
+pitch: 2.014843, roll: -1.679756
+[0;32mI (12940) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (12940) LOG_RAW_ADC: 2893,2843,2877[0m
+D (12945) TAG_SEARCH: time 358,  52.20, 45.00, 41.40[0m
+[0;32mI (12953) TAG_NORM_SEARCH: 12185, -0.04, 0.03, -1.00[0m
+pitch: 2.318132, roll: -1.846097
+[0;32mI (12944) LOG_PID: 0.00,0.00[0m
+D (12967) TAG: Solution found[0m
+D (12968) TAG: Solution : 52.20, 45.00, 41.40
+[0m
+[0;32mI (12973) LOG_RAW_ADC: 2877,2815,2909[0m
+[0;32mI (13006) LOG_RAW_ADC: 2881,2896,2789[0m
+[0;32mI (13039) LOG_RAW_ADC: 2854,2805,2858[0m
+[0;32mI (13065) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (13065) LOG_LIDAR: 302, 300, 317[0m
+[0;32mI (13065) LOG_ADC: 2854, 2805, 2858[0m
+[0;32mI (13069) LOG_IMU: -0.21, -0.02, 0.02[0m
+[0;32mI (13072) LOG_RAW_ADC: 2862,2881,2830[0m
+[0;32mI (13074) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (13082) LOG_PID: 0.00,0.00[0m
+[0;32mI (13105) LOG_RAW_ADC: 2875,2759,2842[0m
+[0;32mI (13138) LOG_RAW_ADC: 2861,2861,2839[0m
+[0;32mI (13171) LOG_RAW_ADC: 2813,2801,2951[0m
+Data SBUS: 172D (13175) main: state: 3[0m
+D (13175) main: Descending[0m
+[0;32mI (13180) LOG_STATE: 3[0m
+Data SBUS: 172D (13181) main: state: 3[0m
+D (13181) main: Descending[0m
+[0;32mI (13186) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (13188) LOG_LIDAR: 303, 303, 318[0m
+[0;32mI (13192) LOG_ADC: 2813, 2801, 2951[0m
+[0;32mI (13196) LOG_IMU: -0.21, -0.01, 0.04[0m
+[0;32mI (13201) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (13204) LOG_RAW_ADC: 2770,2743,2936[0m
+[0;32mI (13188) LOG_STATE: 3[0m
+[0;32mI (13205) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (13218) main: state: 3[0m
+D (13220) main: Descending[0m
+[0;32mI (13227) LOG_STATE: 3[0m
+Data SBUS: 172D (13228) main: state: 3[0m
+D (13229) main: Descending[0m
+[0;32mI (13237) LOG_STATE: 3[0m
+[0;32mI (13237) LOG_RAW_ADC: 2819,3019,2942[0m
+Data SBUS: 172D (13239) main: state: 3[0m
+D (13243) main: Descending[0m
+[0;32mI (13251) LOG_STATE: 3[0m
+Data SBUS: 172D (13252) main: state: 3[0m
+D (13253) main: Descending[0m
+[0;32mI (13261) LOG_STATE: 3[0m
+Data SBUS: 172D (13262) main: state: 3[0m
+D (13262) main: Descending[0m
+[0;32mI (13270) LOG_STATE: 3[0m
+[0;32mI (13270) LOG_RAW_ADC: 2721,2838,2897[0m
+Data SBUS: 172D (13273) main: state: 3[0m
+D (13276) main: Descending[0m
+[0;32mI (13284) LOG_STATE: 3[0m
+Data SBUS: 172D (13286) main: state: 3[0m
+D (13286) main: Descending[0m
+[0;32mI (13294) LOG_STATE: 3[0m
+Data SBUS: 172D (13295) main: state: 3[0m
+D (13296) main: Descending[0m
+[0;32mI (13303) LOG_RAW_ADC: 2713,2767,2958[0m
+[0;32mI (13304) LOG_STATE: 3[0m
+Data SBUS: 172D (13307) main: state: 3[0m
+D (13310) main: Descending[0m
+[0;32mI (13317) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (13320) LOG_LIDAR: 305, 304, 317[0m
+[0;32mI (13324) LOG_ADC: 2713, 2767, 2958[0m
+[0;32mI (13328) LOG_IMU: -0.21, -0.01, 0.05[0m
+[0;32mI (13319) LOG_STATE: 3[0m
+[0;32mI (13332) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (13336) LOG_RAW_ADC: 2774,2794,2960[0m
+[0;32mI (13340) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (13348) main: state: 3[0m
+D (13351) main: Descending[0m
+[0;32mI (13359) LOG_STATE: 3[0m
+Data SBUS: 172D (13360) main: state: 3[0m
+D (13361) main: Descending[0m
+[0;32mI (13369) LOG_STATE: 3[0m
+[0;32mI (13369) LOG_RAW_ADC: 2785,2786,2917[0m
+Data SBUS: 172D (13371) main: state: 3[0m
+D (13375) main: Descending[0m
+[0;32mI (13383) LOG_STATE: 3[0m
+Data SBUS: 172D (13384) main: state: 3[0m
+D (13385) main: Descending[0m
+[0;32mI (13392) LOG_STATE: 3[0m
+Data SBUS: 172D (13393) main: state: 3[0m
+D (13394) main: Descending[0m
+[0;32mI (13402) LOG_STATE: 3[0m
+[0;32mI (13402) LOG_RAW_ADC: 2786,2880,2877[0m
+Data SBUS: 172D (13404) main: state: 3[0m
+D (13408) main: Descending[0m
+[0;32mI (13416) LOG_STATE: 3[0m
+Data SBUS: 172D (13417) main: state: 3[0m
+D (13418) main: Descending[0m
+[0;32mI (13426) LOG_STATE: 3[0m
+Data SBUS: 172D (13427) main: state: 3[0m
+D (13428) main: Descending[0m
+[0;32mI (13435) LOG_STATE: 3[0m
+[0;32mI (13435) LOG_RAW_ADC: 2712,2883,2934[0m
+Data SBUS: 172D (13438) main: state: 3[0m
+D (13441) main: Descending[0m
+[0;32mI (13448) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (13452) LOG_LIDAR: 308, 306, 316[0m
+[0;32mI (13456) LOG_ADC: 2712, 2883, 2934[0m
+[0;32mI (13460) LOG_IMU: -0.22, -0.01, 0.04[0m
+[0;32mI (13464) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (13468) LOG_RAW_ADC: 2753,2816,2897[0m
+[0;32mI (13450) LOG_STATE: 3[0m
+[0;32mI (13468) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (13484) main: state: 3[0m
+D (13484) main: Descending[0m
+[0;32mI (13491) LOG_STATE: 3[0m
+Data SBUS: 172D (13492) main: state: 3[0m
+D (13493) main: Descending[0m
+[0;32mI (13501) LOG_STATE: 3[0m
+[0;32mI (13501) LOG_RAW_ADC: 2740,3020,2920[0m
+Data SBUS: 172D (13503) main: state: 3[0m
+D (13507) main: Descending[0m
+[0;32mI (13515) LOG_STATE: 3[0m
+Data SBUS: 172D (13516) main: state: 3[0m
+D (13516) main: Descending[0m
+[0;32mI (13524) LOG_STATE: 3[0m
+Data SBUS: 172D (13525) main: state: 3[0m
+D (13526) main: Descending[0m
+[0;32mI (13534) LOG_STATE: 3[0m
+[0;32mI (13534) LOG_RAW_ADC: 2768,2800,2943[0m
+Data SBUS: 172D (13536) main: state: 3[0m
+D (13540) main: Descending[0m
+[0;32mI (13548) LOG_STATE: 3[0m
+Data SBUS: 172D (13549) main: state: 3[0m
+D (13550) main: Descending[0m
+[0;32mI (13557) LOG_STATE: 3[0m
+Data SBUS: 172D (13558) main: state: 3[0m
+D (13559) main: Descending[0m
+[0;32mI (13567) LOG_STATE: 3[0m
+[0;32mI (13567) LOG_RAW_ADC: 2723,2875,2832[0m
+Data SBUS: 172D (13569) main: state: 3[0m
+D (13573) main: Descending[0m
+[0;32mI (13579) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (13583) LOG_LIDAR: 308, 306, 317[0m
+[0;32mI (13582) LOG_STATE: 3[0m
+[0;32mI (13587) LOG_ADC: 2723, 2875, 2832[0m
+[0;32mI (13595) LOG_IMU: -0.22, -0.01, 0.03[0m
+[0;32mI (13599) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (13600) LOG_RAW_ADC: 2710,2835,2879[0m
+Data SBUS: 172D (13608) main: state: 3[0m
+D (13611) main: Descending[0m
+[0;32mI (13603) LOG_PID: 0.00,0.00[0m
+[0;32mI (13619) LOG_STATE: 3[0m
+Data SBUS: 172D (13623) main: state: 3[0m
+D (13625) main: Descending[0m
+[0;32mI (13632) LOG_STATE: 3[0m
+Data SBUS: 172D (13633) main: state: 3[0m
+[0;32mI (13633) LOG_RAW_ADC: 2709,2827,2879[0m
+D (13634) main: Descending[0m
+[0;32mI (13646) LOG_STATE: 3[0m
+Data SBUS: 172D (13648) main: state: 3[0m
+D (13648) main: Descending[0m
+[0;32mI (13656) LOG_STATE: 3[0m
+Data SBUS: 172D (13657) main: state: 3[0m
+D (13658) main: Descending[0m
+[0;32mI (13666) LOG_STATE: 3[0m
+[0;32mI (13666) LOG_RAW_ADC: 2736,2770,2953[0m
+Data SBUS: 172D (13668) main: state: 3[0m
+D (13672) main: Descending[0m
+[0;32mI (13680) LOG_STATE: 3[0m
+Data SBUS: 172D (13682) main: state: 3[0m
+D (13682) main: Descending[0m
+[0;32mI (13689) LOG_STATE: 3[0m
+Data SBUS: 172D (13690) main: state: 3[0m
+D (13691) main: Descending[0m
+[0;32mI (13699) LOG_STATE: 3[0m
+[0;32mI (13699) LOG_RAW_ADC: 2990,2901,2957[0m
+Data SBUS: 172D (13701) main: state: 3[0m
+D (13705) main: Descending[0m
+[0;32mI (13713) LOG_STATE: 3[0m
+Data SBUS: 172D (13714) main: state: 3[0m
+D (13715) main: Descending[0m
+[0;32mI (13718) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (13725) LOG_LIDAR: 309, 303, 317[0m
+[0;32mI (13729) LOG_ADC: 2990, 2901, 2957[0m
+[0;32mI (13732) LOG_RAW_ADC: 2784,2864,2874[0m
+[0;32mI (13723) LOG_STATE: 3[0m
+[0;32mI (13733) LOG_IMU: -0.22, -0.01, 0.03[0m
+[0;32mI (13745) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (13749) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (13753) main: state: 3[0m
+D (13756) main: Descending[0m
+[0;32mI (13764) LOG_STATE: 3[0m
+[0;32mI (13765) LOG_RAW_ADC: 2681,2833,2923[0m
+Data SBUS: 172D (13767) main: state: 3[0m
+D (13770) main: Descending[0m
+[0;32mI (13778) LOG_STATE: 3[0m
+Data SBUS: 172D (13779) main: state: 3[0m
+D (13780) main: Descending[0m
+[0;32mI (13788) LOG_STATE: 3[0m
+Data SBUS: 172D (13789) main: state: 3[0m
+D (13790) main: Descending[0m
+[0;32mI (13797) LOG_STATE: 3[0m
+Data SBUS: 172D (13798) main: state: 3[0m
+[0;32mI (13798) LOG_RAW_ADC: 2704,2806,2979[0m
+D (13799) main: Descending[0m
+[0;32mI (13811) LOG_STATE: 3[0m
+Data SBUS: 172D (13812) main: state: 3[0m
+D (13813) main: Descending[0m
+[0;32mI (13821) LOG_STATE: 3[0m
+Data SBUS: 172D (13822) main: state: 3[0m
+D (13823) main: Descending[0m
+[0;32mI (13831) LOG_STATE: 3[0m
+[0;32mI (13831) LOG_RAW_ADC: 2777,2791,2901[0m
+Data SBUS: 172D (13833) main: state: 3[0m
+D (13837) main: Descending[0m
+[0;32mI (13845) LOG_STATE: 3[0m
+Data SBUS: 172D (13846) main: state: 3[0m
+D (13847) main: Descending[0m
+[0;32mI (13854) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (13857) LOG_LIDAR: 309, 302, 316[0m
+[0;32mI (13861) LOG_ADC: 2777, 2791, 2901[0m
+[0;32mI (13864) LOG_RAW_ADC: 2738,3024,2815[0m
+[0;32mI (13856) LOG_STATE: 3[0m
+[0;32mI (13865) LOG_IMU: -0.22, -0.00, 0.04[0m
+[0;32mI (13877) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (13881) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (13884) main: state: 3[0m
+D (13888) main: Descending[0m
+[0;32mI (13896) LOG_STATE: 3[0m
+[0;32mI (13897) LOG_RAW_ADC: 2736,2798,2949[0m
+Data SBUS: 172D (13898) main: state: 3[0m
+D (13902) main: Descending[0m
+[0;32mI (13910) LOG_STATE: 3[0m
+Data SBUS: 172D (13911) main: state: 3[0m
+D (13912) main: Descending[0m
+[0;32mI (13919) LOG_STATE: 3[0m
+Data SBUS: 172D (13920) main: state: 3[0m
+D (13921) main: Descending[0m
+[0;32mI (13929) LOG_STATE: 3[0m
+Data SBUS: 172D (13930) main: state: 3[0m
+[0;32mI (13930) LOG_RAW_ADC: 2762,2897,2944[0m
+D (13931) main: Descending[0m
+[0;32mI (13943) LOG_STATE: 3[0m
+Data SBUS: 172D (13944) main: state: 3[0m
+D (13945) main: Descending[0m
+[0;32mI (13953) LOG_STATE: 3[0m
+Data SBUS: 172D (13954) main: state: 3[0m
+D (13955) main: Descending[0m
+[0;32mI (13962) LOG_STATE: 3[0m
+Data SBUS: 172D (13963) main: state: 3[0m
+[0;32mI (13963) LOG_RAW_ADC: 2797,2775,2923[0m
+D (13964) main: Descending[0m
+[0;32mI (13976) LOG_STATE: 3[0m
+Data SBUS: 172D (13977) main: state: 3[0m
+D (13978) main: Descending[0m
+[0;32mI (13984) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (13988) LOG_LIDAR: 308, 301, 317[0m
+[0;32mI (13992) LOG_ADC: 2797, 2775, 2923[0m
+[0;32mI (13996) LOG_RAW_ADC: 2775,2877,2886[0m
+[0;32mI (13987) LOG_STATE: 3[0m
+[0;32mI (13997) LOG_IMU: -0.23, 0.00, 0.05[0m
+[0;32mI (14009) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (14012) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (14016) main: state: 3[0m
+D (14020) main: Descending[0m
+[0;32mI (14028) LOG_STATE: 3[0m
+[0;32mI (14029) LOG_RAW_ADC: 2779,2821,2890[0m
+Data SBUS: 172D (14030) main: state: 3[0m
+D (14034) main: Descending[0m
+[0;32mI (14042) LOG_STATE: 3[0m
+Data SBUS: 172D (14043) main: state: 3[0m
+D (14044) main: Descending[0m
+[0;32mI (14051) LOG_STATE: 3[0m
+Data SBUS: 172D (14052) main: state: 3[0m
+D (14053) main: Descending[0m
+[0;32mI (14061) LOG_STATE: 3[0m
+Data SBUS: 172D (14062) main: state: 3[0m
+[0;32mI (14062) LOG_RAW_ADC: 2752,2818,2922[0m
+D (14063) main: Descending[0m
+[0;32mI (14075) LOG_STATE: 3[0m
+Data SBUS: 172D (14076) main: state: 3[0m
+D (14077) main: Descending[0m
+[0;32mI (14084) LOG_STATE: 3[0m
+[0;32mI (14084) LOG_STATE: 3[0m
+Data SBUS: 172D (14087) main: state: 3[0m
+D (14089) main: Descending[0m
+[0;32mI (14095) LOG_RAW_ADC: 2703,2870,2965[0m
+[0;32mI (14097) LOG_STATE: 3[0m
+Data SBUS: 172D (14100) main: state: 3[0m
+D (14103) main: Descending[0m
+[0;32mI (14111) LOG_STATE: 3[0m
+Data SBUS: 172D (14112) main: state: 3[0m
+D (14113) main: Descending[0m
+[0;32mI (14116) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (14123) LOG_LIDAR: 304, 298, 315[0m
+[0;32mI (14127) LOG_ADC: 2703, 2870, 2965[0m
+[0;32mI (14128) LOG_RAW_ADC: 2743,2779,2862[0m
+[0;32mI (14122) LOG_STATE: 3[0m
+[0;32mI (14131) LOG_IMU: -0.23, -0.00, 0.04[0m
+[0;32mI (14143) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (14147) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (14151) main: state: 3[0m
+D (14155) main: Descending[0m
+[0;32mI (14161) LOG_RAW_ADC: 2770,2856,2936[0m
+[0;32mI (14162) LOG_STATE: 3[0m
+Data SBUS: 172D (14167) main: state: 3[0m
+D (14169) main: Descending[0m
+[0;32mI (14176) LOG_STATE: 3[0m
+Data SBUS: 172D (14177) main: state: 3[0m
+D (14178) main: Descending[0m
+[0;32mI (14186) LOG_STATE: 3[0m
+Data SBUS: 172D (14187) main: state: 3[0m
+D (14188) main: Descending[0m
+[0;32mI (14194) LOG_RAW_ADC: 2709,2751,2949[0m
+[0;32mI (14196) LOG_STATE: 3[0m
+Data SBUS: 172D (14199) main: state: 3[0m
+D (14202) main: Descending[0m
+[0;32mI (14210) LOG_STATE: 3[0m
+Data SBUS: 172D (14211) main: state: 3[0m
+D (14212) main: Descending[0m
+[0;32mI (14219) LOG_STATE: 3[0m
+[0;32mI (14219) LOG_STATE: 3[0m
+Data SBUS: 172D (14221) main: state: 3[0m
+D (14224) main: Descending[0m
+[0;32mI (14227) LOG_RAW_ADC: 2762,2832,2940[0m
+[0;32mI (14232) LOG_STATE: 3[0m
+Data SBUS: 172D (14235) main: state: 3[0m
+D (14238) main: Descending[0m
+[0;32mI (14246) LOG_STATE: 3[0m
+Data SBUS: 172D (14247) main: state: 3[0m
+D (14248) main: Descending[0m
+[0;32mI (14251) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (14258) LOG_LIDAR: 296, 287, 302[0m
+[0;32mI (14260) LOG_RAW_ADC: 2730,2849,2388[0m
+[0;32mI (14258) LOG_STATE: 3[0m
+[0;32mI (14262) LOG_ADC: 2730, 2849, 2388[0m
+[0;32mI (14274) LOG_IMU: -0.23, -0.01, 0.03[0m
+[0;32mI (14278) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (14282) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (14286) main: state: 3[0m
+D (14289) main: Descending[0m
+[0;32mI (14293) LOG_RAW_ADC: 2721,2899,2919[0m
+[0;32mI (14297) LOG_STATE: 3[0m
+Data SBUS: 172D (14303) main: state: 3[0m
+D (14303) main: Descending[0m
+[0;32mI (14311) LOG_STATE: 3[0m
+Data SBUS: 172D (14312) main: state: 3[0m
+D (14313) main: Descending[0m
+[0;32mI (14321) LOG_STATE: 3[0m
+Data SBUS: 172D (14322) main: state: 3[0m
+D (14323) main: Descending[0m
+[0;32mI (14326) LOG_RAW_ADC: 2781,2767,2989[0m
+[0;32mI (14330) LOG_STATE: 3[0m
+Data SBUS: 172D (14334) main: state: 3[0m
+D (14337) main: Descending[0m
+[0;32mI (14344) LOG_STATE: 3[0m
+Data SBUS: 172D (14345) main: state: 3[0m
+D (14346) main: Descending[0m
+[0;32mI (14354) LOG_STATE: 3[0m
+Data SBUS: 172D (14355) main: state: 3[0m
+D (14356) main: Descending[0m
+[0;32mI (14359) LOG_RAW_ADC: 2704,2849,2971[0m
+[0;32mI (14364) LOG_STATE: 3[0m
+Data SBUS: 172D (14367) main: state: 3[0m
+D (14370) main: Descending[0m
+[0;32mI (14378) LOG_STATE: 3[0m
+Data SBUS: 172D (14379) main: state: 3[0m
+D (14379) main: Descending[0m
+[0;32mI (14386) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (14390) LOG_LIDAR: 285, 271, 287[0m
+[0;32mI (14392) LOG_RAW_ADC: 2701,2822,2807[0m
+[0;32mI (14388) LOG_STATE: 3[0m
+[0;32mI (14394) LOG_ADC: 2701, 2822, 2807[0m
+[0;32mI (14406) LOG_IMU: -0.23, -0.01, 0.02[0m
+[0;32mI (14410) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (14414) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (14417) main: state: 3[0m
+D (14421) main: Descending[0m
+[0;32mI (14425) LOG_RAW_ADC: 2747,2768,2896[0m
+[0;32mI (14429) LOG_STATE: 3[0m
+Data SBUS: 172D (14434) main: state: 3[0m
+D (14435) main: Descending[0m
+[0;32mI (14443) LOG_STATE: 3[0m
+Data SBUS: 172D (14444) main: state: 3[0m
+D (14445) main: Descending[0m
+[0;32mI (14453) LOG_STATE: 3[0m
+Data SBUS: 172D (14454) main: state: 3[0m
+D (14455) main: Descending[0m
+[0;32mI (14458) LOG_RAW_ADC: 2778,2812,2864[0m
+[0;32mI (14462) LOG_STATE: 3[0m
+Data SBUS: 172D (14465) main: state: 3[0m
+D (14468) main: Descending[0m
+[0;32mI (14476) LOG_STATE: 3[0m
+Data SBUS: 172D (14477) main: state: 3[0m
+D (14478) main: Descending[0m
+[0;32mI (14486) LOG_STATE: 3[0m
+Data SBUS: 172D (14487) main: state: 3[0m
+D (14488) main: Descending[0m
+[0;32mI (14491) LOG_RAW_ADC: 2798,2775,2864[0m
+[0;32mI (14495) LOG_STATE: 3[0m
+Data SBUS: 172D (14500) main: state: 3[0m
+D (14502) main: Descending[0m
+[0;32mI (14509) LOG_STATE: 3[0m
+Data SBUS: 172D (14510) main: state: 3[0m
+D (14511) main: Descending[0m
+[0;32mI (14517) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (14521) LOG_LIDAR: 262, 242, 262[0m
+[0;32mI (14524) LOG_RAW_ADC: 2730,2907,2929[0m
+[0;32mI (14520) LOG_STATE: 3[0m
+[0;32mI (14526) LOG_ADC: 2730, 2907, 2929[0m
+[0;32mI (14538) LOG_IMU: -0.23, -0.01, 0.02[0m
+[0;32mI (14541) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (14546) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (14549) main: state: 3[0m
+D (14553) main: Descending[0m
+[0;32mI (14557) LOG_RAW_ADC: 2733,2842,2919[0m
+[0;32mI (14561) LOG_STATE: 3[0m
+Data SBUS: 172D (14566) main: state: 3[0m
+D (14567) main: Descending[0m
+[0;32mI (14575) LOG_STATE: 3[0m
+Data SBUS: 172D (14576) main: state: 3[0m
+D (14577) main: Descending[0m
+[0;32mI (14584) LOG_STATE: 3[0m
+Data SBUS: 172D (14585) main: state: 3[0m
+D (14586) main: Descending[0m
+[0;32mI (14590) LOG_RAW_ADC: 2768,2864,2863[0m
+[0;32mI (14594) LOG_STATE: 3[0m
+Data SBUS: 172D (14597) main: state: 3[0m
+D (14600) main: Descending[0m
+[0;32mI (14608) LOG_STATE: 3[0m
+Data SBUS: 172D (14609) main: state: 3[0m
+D (14610) main: Descending[0m
+[0;32mI (14618) LOG_STATE: 3[0m
+Data SBUS: 172D (14619) main: state: 3[0m
+D (14619) main: Descending[0m
+[0;32mI (14623) LOG_RAW_ADC: 2753,2832,2807[0m
+[0;32mI (14627) LOG_STATE: 3[0m
+Data SBUS: 172D (14630) main: state: 3[0m
+D (14633) main: Descending[0m
+[0;32mI (14641) LOG_STATE: 3[0m
+Data SBUS: 172D (14642) main: state: 3[0m
+D (14643) main: Descending[0m
+[0;32mI (14649) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (14653) LOG_LIDAR: 241, 221, 239[0m
+[0;32mI (14656) LOG_RAW_ADC: 2764,2799,2917[0m
+[0;32mI (14652) LOG_STATE: 3[0m
+[0;32mI (14657) LOG_ADC: 2764, 2799, 2917[0m
+[0;32mI (14670) LOG_IMU: -0.23, -0.01, 0.03[0m
+[0;32mI (14673) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (14677) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (14681) main: state: 3[0m
+D (14685) main: Descending[0m
+[0;32mI (14689) LOG_RAW_ADC: 2751,2774,2874[0m
+[0;32mI (14692) LOG_STATE: 3[0m
+Data SBUS: 172D (14697) main: state: 3[0m
+D (14699) main: Descending[0m
+[0;32mI (14706) LOG_STATE: 3[0m
+Data SBUS: 172D (14707) main: state: 3[0m
+D (14708) main: Descending[0m
+[0;32mI (14716) LOG_STATE: 3[0m
+Data SBUS: 172D (14717) main: state: 3[0m
+D (14718) main: Descending[0m
+[0;32mI (14722) LOG_RAW_ADC: 2783,2707,2980[0m
+[0;32mI (14726) LOG_STATE: 3[0m
+Data SBUS: 172D (14729) main: state: 3[0m
+D (14732) main: Descending[0m
+[0;32mI (14740) LOG_STATE: 3[0m
+Data SBUS: 172D (14741) main: state: 3[0m
+D (14742) main: Descending[0m
+[0;32mI (14749) LOG_STATE: 3[0m
+Data SBUS: 172D (14750) main: state: 3[0m
+D (14751) main: Descending[0m
+[0;32mI (14755) LOG_RAW_ADC: 2758,2916,2946[0m
+[0;32mI (14759) LOG_STATE: 3[0m
+Data SBUS: 172D (14763) main: state: 3[0m
+D (14765) main: Descending[0m
+[0;32mI (14773) LOG_STATE: 3[0m
+Data SBUS: 172D (14774) main: state: 3[0m
+D (14775) main: Descending[0m
+[0;32mI (14781) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (14785) LOG_LIDAR: 220, 204, 221[0m
+[0;32mI (14788) LOG_RAW_ADC: 2733,2917,2890[0m
+[0;32mI (14784) LOG_STATE: 3[0m
+[0;32mI (14789) LOG_ADC: 2733, 2917, 2890[0m
+[0;32mI (14801) LOG_IMU: -0.24, -0.02, 0.04[0m
+[0;32mI (14805) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (14809) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (14813) main: state: 3[0m
+D (14816) main: Descending[0m
+[0;32mI (14821) LOG_RAW_ADC: 2709,2852,2864[0m
+[0;32mI (14824) LOG_STATE: 3[0m
+Data SBUS: 172D (14829) main: state: 3[0m
+D (14830) main: Descending[0m
+[0;32mI (14838) LOG_STATE: 3[0m
+Data SBUS: 172D (14839) main: state: 3[0m
+D (14840) main: Descending[0m
+[0;32mI (14848) LOG_STATE: 3[0m
+Data SBUS: 172D (14849) main: state: 3[0m
+D (14850) main: Descending[0m
+[0;32mI (14854) LOG_RAW_ADC: 2716,2874,2869[0m
+[0;32mI (14857) LOG_STATE: 3[0m
+Data SBUS: 172D (14862) main: state: 3[0m
+D (14864) main: Descending[0m
+[0;32mI (14871) LOG_STATE: 3[0m
+Data SBUS: 172D (14872) main: state: 3[0m
+D (14873) main: Descending[0m
+[0;32mI (14881) LOG_STATE: 3[0m
+Data SBUS: 172D (14882) main: state: 3[0m
+D (14883) main: Descending[0m
+[0;32mI (14887) LOG_RAW_ADC: 2734,2890,2947[0m
+[0;32mI (14891) LOG_STATE: 3[0m
+Data SBUS: 172D (14894) main: state: 3[0m
+D (14897) main: Descending[0m
+[0;32mI (14905) LOG_STATE: 3[0m
+Data SBUS: 172D (14907) main: state: 3[0m
+D (14907) main: Descending[0m
+[0;32mI (14913) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (14917) LOG_LIDAR: 199, 185, 205[0m
+[0;32mI (14920) LOG_RAW_ADC: 2733,2911,2893[0m
+[0;32mI (14915) LOG_STATE: 3[0m
+[0;32mI (14921) LOG_ADC: 2733, 2911, 2893[0m
+[0;32mI (14933) LOG_IMU: -0.24, -0.02, 0.04[0m
+[0;32mI (14937) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (14941) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (14944) main: state: 3[0m
+D (14948) main: Descending[0m
+[0;32mI (14953) LOG_RAW_ADC: 2726,2994,2919[0m
+[0;32mI (14956) LOG_STATE: 3[0m
+Data SBUS: 172D (14961) main: state: 3[0m
+D (14962) main: Descending[0m
+[0;32mI (14970) LOG_STATE: 3[0m
+Data SBUS: 172D (14971) main: state: 3[0m
+D (14972) main: Descending[0m
+[0;32mI (14980) LOG_STATE: 3[0m
+Data SBUS: 172D (14981) main: state: 3[0m
+D (14981) main: Descending[0m
+[0;32mI (14986) LOG_RAW_ADC: 2722,2837,2937[0m
+[0;32mI (14989) LOG_STATE: 3[0m
+Data SBUS: 172D (14993) main: state: 3[0m
+D (14995) main: Descending[0m
+[0;32mI (15003) LOG_STATE: 3[0m
+Data SBUS: 172D (15004) main: state: 3[0m
+D (15005) main: Descending[0m
+[0;32mI (15013) LOG_STATE: 3[0m
+Data SBUS: 172D (15014) main: state: 3[0m
+D (15015) main: Descending[0m
+[0;32mI (15019) LOG_RAW_ADC: 2559,2864,2935[0m
+[0;32mI (15023) LOG_STATE: 3[0m
+Data SBUS: 172D (15026) main: state: 3[0m
+D (15029) main: Descending[0m
+[0;32mI (15036) LOG_STATE: 3[0m
+Data SBUS: 172D (15037) main: state: 3[0m
+D (15038) main: Descending[0m
+[0;32mI (15044) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (15047) LOG_STATE: 3[0m
+[0;32mI (15052) LOG_RAW_ADC: 2746,2797,2896[0m
+[0;32mI (15050) LOG_LIDAR: 189, 173, 189[0m
+[0;32mI (15060) LOG_ADC: 2746, 2797, 2896[0m
+[0;32mI (15064) LOG_IMU: -0.24, -0.02, 0.03[0m
+Data SBUS: 172D (15069) main: state: 3[0m
+D (15072) main: Descending[0m
+[0;32mI (15068) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (15079) LOG_PID: 0.00,0.00[0m
+[0;32mI (15081) LOG_STATE: 3[0m
+[0;32mI (15085) LOG_RAW_ADC: 2739,3018,2839[0m
+Data SBUS: 172D (15090) main: state: 3[0m
+D (15094) main: Descending[0m
+[0;32mI (15102) LOG_STATE: 3[0m
+Data SBUS: 172D (15103) main: state: 3[0m
+D (15104) main: Descending[0m
+[0;32mI (15111) LOG_STATE: 3[0m
+Data SBUS: 172D (15112) main: state: 3[0m
+D (15113) main: Descending[0m
+[0;32mI (15118) LOG_RAW_ADC: 2787,2801,2928[0m
+[0;32mI (15121) LOG_STATE: 3[0m
+Data SBUS: 172D (15124) main: state: 3[0m
+D (15127) main: Descending[0m
+[0;32mI (15135) LOG_STATE: 3[0m
+Data SBUS: 172D (15136) main: state: 3[0m
+D (15137) main: Descending[0m
+[0;32mI (15145) LOG_STATE: 3[0m
+Data SBUS: 172D (15146) main: state: 3[0m
+D (15147) main: Descending[0m
+[0;32mI (15151) LOG_RAW_ADC: 2721,2825,2880[0m
+[0;32mI (15154) LOG_STATE: 3[0m
+Data SBUS: 172D (15158) main: state: 3[0m
+D (15161) main: Descending[0m
+[0;32mI (15168) LOG_STATE: 3[0m
+Data SBUS: 172D (15169) main: state: 3[0m
+D (15170) main: Descending[0m
+[0;32mI (15178) LOG_STATE: 3[0m
+Data SBUS: 172D (15179) main: state: 3[0m
+D (15180) main: Descending[0m
+[0;32mI (15183) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (15184) LOG_RAW_ADC: 2749,2896,2896[0m
+[0;32mI (15190) LOG_LIDAR: 180, 164, 181[0m
+[0;32mI (15198) LOG_ADC: 2749, 2896, 2896[0m
+[0;32mI (15190) LOG_STATE: 3[0m
+[0;32mI (15202) LOG_IMU: -0.24, -0.01, 0.03[0m
+[0;32mI (15211) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (15214) LOG_PID: 0.00,0.00[0m
+[0;32mI (15217) LOG_RAW_ADC: 2739,2731,2928[0m
+Data SBUS: 172D (15222) main: state: 3[0m
+D (15226) main: Descending[0m
+[0;32mI (15234) LOG_STATE: 3[0m
+Data SBUS: 172D (15236) main: state: 3[0m
+D (15236) main: Descending[0m
+[0;32mI (15243) LOG_STATE: 3[0m
+Data SBUS: 172D (15244) main: state: 3[0m
+D (15245) main: Descending[0m
+[0;32mI (15250) LOG_RAW_ADC: 2745,2813,2943[0m
+[0;32mI (15253) LOG_STATE: 3[0m
+Data SBUS: 172D (15257) main: state: 3[0m
+D (15259) main: Descending[0m
+[0;32mI (15267) LOG_STATE: 3[0m
+Data SBUS: 172D (15268) main: state: 3[0m
+D (15269) main: Descending[0m
+[0;32mI (15276) LOG_STATE: 3[0m
+Data SBUS: 172D (15277) main: state: 3[0m
+D (15278) main: Descending[0m
+[0;32mI (15283) LOG_RAW_ADC: 2710,2874,2858[0m
+[0;32mI (15286) LOG_STATE: 3[0m
+Data SBUS: 172D (15290) main: state: 3[0m
+D (15292) main: Descending[0m
+[0;32mI (15300) LOG_STATE: 3[0m
+Data SBUS: 172D (15301) main: state: 3[0m
+D (15302) main: Descending[0m
+[0;32mI (15310) LOG_STATE: 3[0m
+Data SBUS: 172D (15311) main: state: 3[0m
+D (15312) main: Descending[0m
+[0;32mI (15316) LOG_RAW_ADC: 2726,2827,2921[0m
+[0;32mI (15318) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (15326) LOG_LIDAR: 172, 154, 174[0m
+[0;32mI (15330) LOG_ADC: 2726, 2827, 2921[0m
+[0;32mI (15334) LOG_IMU: -0.24, -0.00, 0.03[0m
+[0;32mI (15339) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (15343) LOG_PID: 0.00,0.00[0m
+[0;32mI (15319) LOG_STATE: 3[0m
+[0;32mI (15349) LOG_RAW_ADC: 2747,2807,2879[0m
+Data SBUS: 172D (15354) main: state: 3[0m
+D (15358) main: Descending[0m
+[0;32mI (15365) LOG_STATE: 3[0m
+Data SBUS: 172D (15367) main: state: 3[0m
+D (15367) main: Descending[0m
+[0;32mI (15375) LOG_STATE: 3[0m
+Data SBUS: 172D (15376) main: state: 3[0m
+D (15377) main: Descending[0m
+[0;32mI (15382) LOG_RAW_ADC: 2761,2846,2915[0m
+[0;32mI (15385) LOG_STATE: 3[0m
+Data SBUS: 172D (15388) main: state: 3[0m
+D (15391) main: Descending[0m
+[0;32mI (15399) LOG_STATE: 3[0m
+Data SBUS: 172D (15400) main: state: 3[0m
+D (15401) main: Descending[0m
+[0;32mI (15408) LOG_STATE: 3[0m
+Data SBUS: 172D (15409) main: state: 3[0m
+D (15410) main: Descending[0m
+[0;32mI (15415) LOG_RAW_ADC: 2754,2874,2897[0m
+[0;32mI (15418) LOG_STATE: 3[0m
+Data SBUS: 172D (15421) main: state: 3[0m
+D (15424) main: Descending[0m
+[0;32mI (15432) LOG_STATE: 3[0m
+Data SBUS: 172D (15433) main: state: 3[0m
+D (15434) main: Descending[0m
+[0;32mI (15441) LOG_STATE: 3[0m
+Data SBUS: 172D (15442) main: state: 3[0m
+D (15443) main: Descending[0m
+[0;32mI (15446) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (15448) LOG_RAW_ADC: 2791,2896,2874[0m
+[0;32mI (15453) LOG_LIDAR: 162, 148, 165[0m
+[0;32mI (15462) LOG_ADC: 2791, 2896, 2874[0m
+[0;32mI (15466) LOG_IMU: -0.23, 0.00, 0.04[0m
+[0;32mI (15470) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (15454) LOG_STATE: 3[0m
+[0;32mI (15474) LOG_PID: 0.00,0.00[0m
+[0;32mI (15481) LOG_RAW_ADC: 2800,2822,2704[0m
+Data SBUS: 172D (15485) main: state: 3[0m
+D (15489) main: Descending[0m
+[0;32mI (15497) LOG_STATE: 3[0m
+Data SBUS: 172D (15498) main: state: 3[0m
+D (15499) main: Descending[0m
+[0;32mI (15507) LOG_STATE: 3[0m
+Data SBUS: 172D (15508) main: state: 3[0m
+D (15508) main: Descending[0m
+[0;32mI (15514) LOG_RAW_ADC: 2779,2785,2946[0m
+[0;32mI (15516) LOG_STATE: 3[0m
+Data SBUS: 172D (15520) main: state: 3[0m
+D (15522) main: Descending[0m
+[0;32mI (15530) LOG_STATE: 3[0m
+Data SBUS: 172D (15531) main: state: 3[0m
+D (15532) main: Descending[0m
+[0;32mI (15540) LOG_STATE: 3[0m
+Data SBUS: 172D (15541) main: state: 3[0m
+D (15542) main: Descending[0m
+[0;32mI (15547) LOG_RAW_ADC: 2762,2659,2898[0m
+[0;32mI (15550) LOG_STATE: 3[0m
+Data SBUS: 172D (15554) main: state: 3[0m
+D (15556) main: Descending[0m
+[0;32mI (15563) LOG_STATE: 3[0m
+Data SBUS: 172D (15564) main: state: 3[0m
+D (15565) main: Descending[0m
+[0;32mI (15573) LOG_STATE: 3[0m
+Data SBUS: 172D (15574) main: state: 3[0m
+D (15575) main: Descending[0m
+[0;32mI (15580) LOG_RAW_ADC: 2731,2836,2895[0m
+[0;32mI (15583) LOG_STATE: 3[0m
+[0;32mI (15585) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+Data SBUS: 172D (15593) main: state: 3[0m
+D (15596) main: Descending[0m
+[0;32mI (15594) LOG_LIDAR: 151, 143, 157[0m
+[0;32mI (15603) LOG_ADC: 2731, 2836, 2895[0m
+[0;32mI (15607) LOG_IMU: -0.23, 0.00, 0.05[0m
+[0;32mI (15612) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (15613) LOG_RAW_ADC: 2786,2791,2896[0m
+[0;32mI (15605) LOG_STATE: 3[0m
+[0;32mI (15616) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (15630) main: state: 3[0m
+D (15631) main: Descending[0m
+[0;32mI (15638) LOG_STATE: 3[0m
+Data SBUS: 172D (15639) main: state: 3[0m
+D (15640) main: Descending[0m
+[0;32mI (15646) LOG_RAW_ADC: 2783,2733,2768[0m
+[0;32mI (15648) LOG_STATE: 3[0m
+Data SBUS: 172D (15652) main: state: 3[0m
+D (15654) main: Descending[0m
+[0;32mI (15662) LOG_STATE: 3[0m
+Data SBUS: 172D (15663) main: state: 3[0m
+D (15664) main: Descending[0m
+[0;32mI (15672) LOG_STATE: 3[0m
+Data SBUS: 172D (15673) main: state: 3[0m
+D (15673) main: Descending[0m
+[0;32mI (15679) LOG_RAW_ADC: 2773,2845,2923[0m
+[0;32mI (15681) LOG_STATE: 3[0m
+Data SBUS: 172D (15685) main: state: 3[0m
+D (15687) main: Descending[0m
+[0;32mI (15695) LOG_STATE: 3[0m
+Data SBUS: 172D (15696) main: state: 3[0m
+D (15697) main: Descending[0m
+[0;32mI (15705) LOG_STATE: 3[0m
+Data SBUS: 172D (15706) main: state: 3[0m
+D (15707) main: Descending[0m
+[0;32mI (15712) LOG_RAW_ADC: 2757,2767,2906[0m
+[0;32mI (15714) LOG_STATE: 3[0m
+Data SBUS: 172D (15718) main: state: 3[0m
+D (15721) main: Descending[0m
+[0;32mI (15728) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (15731) LOG_LIDAR: 139, 132, 143[0m
+[0;32mI (15735) LOG_ADC: 2757, 2767, 2906[0m
+[0;32mI (15739) LOG_IMU: -0.23, 0.00, 0.03[0m
+[0;32mI (15743) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (15745) LOG_RAW_ADC: 2757,2789,2872[0m
+[0;32mI (15730) LOG_STATE: 3[0m
+[0;32mI (15747) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (15761) main: state: 3[0m
+D (15762) main: Descending[0m
+[0;32mI (15770) LOG_STATE: 3[0m
+Data SBUS: 172D (15771) main: state: 3[0m
+D (15772) main: Descending[0m
+[0;32mI (15778) LOG_RAW_ADC: 2697,2858,2901[0m
+[0;32mI (15780) LOG_STATE: 3[0m
+Data SBUS: 172D (15783) main: state: 3[0m
+D (15786) main: Descending[0m
+[0;32mI (15794) LOG_STATE: 3[0m
+Data SBUS: 172D (15795) main: state: 3[0m
+D (15796) main: Descending[0m
+[0;32mI (15803) LOG_STATE: 3[0m
+[0;32mI (15803) LOG_STATE: 3[0m
+Data SBUS: 172D (15805) main: state: 3[0m
+D (15808) main: Descending[0m
+[0;32mI (15811) LOG_RAW_ADC: 2746,2854,2949[0m
+[0;32mI (15816) LOG_STATE: 3[0m
+Data SBUS: 172D (15819) main: state: 3[0m
+D (15822) main: Descending[0m
+[0;32mI (15830) LOG_STATE: 3[0m
+Data SBUS: 172D (15832) main: state: 3[0m
+D (15832) main: Descending[0m
+[0;32mI (15840) LOG_STATE: 3[0m
+Data SBUS: 172D (15841) main: state: 3[0m
+D (15841) main: Descending[0m
+[0;32mI (15844) LOG_RAW_ADC: 2736,2765,2881[0m
+[0;32mI (15849) LOG_STATE: 3[0m
+Data SBUS: 172D (15852) main: state: 3[0m
+D (15855) main: Descending[0m
+[0;32mI (15858) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (15864) LOG_STATE: 3[0m
+[0;32mI (15867) LOG_LIDAR: 127, 119, 134[0m
+[0;32mI (15873) LOG_ADC: 2736, 2765, 2881[0m
+[0;32mI (15877) LOG_IMU: -0.23, 0.01, 0.03[0m
+[0;32mI (15877) LOG_RAW_ADC: 2791,2875,2964[0m
+[0;32mI (15881) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (15890) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (15893) main: state: 3[0m
+D (15897) main: Descending[0m
+[0;32mI (15905) LOG_STATE: 3[0m
+Data SBUS: 172D (15908) main: state: 3[0m
+D (15908) main: Descending[0m
+[0;32mI (15910) LOG_RAW_ADC: 2749,2799,2885[0m
+[0;32mI (15914) LOG_STATE: 3[0m
+Data SBUS: 172D (15918) main: state: 3[0m
+D (15921) main: Descending[0m
+[0;32mI (15928) LOG_STATE: 3[0m
+Data SBUS: 172D (15929) main: state: 3[0m
+D (15930) main: Descending[0m
+[0;32mI (15938) LOG_STATE: 3[0m
+Data SBUS: 172D (15939) main: state: 3[0m
+D (15940) main: Descending[0m
+[0;32mI (15943) LOG_RAW_ADC: 2714,2864,2896[0m
+[0;32mI (15948) LOG_STATE: 3[0m
+Data SBUS: 172D (15951) main: state: 3[0m
+D (15954) main: Descending[0m
+[0;32mI (15962) LOG_STATE: 3[0m
+Data SBUS: 172D (15963) main: state: 3[0m
+D (15963) main: Descending[0m
+[0;32mI (15971) LOG_STATE: 3[0m
+Data SBUS: 172D (15972) main: state: 3[0m
+D (15973) main: Descending[0m
+[0;32mI (15976) LOG_RAW_ADC: 2752,2769,2962[0m
+[0;32mI (15981) LOG_STATE: 3[0m
+Data SBUS: 172D (15985) main: state: 3[0m
+D (15987) main: Descending[0m
+[0;32mI (15993) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (15997) LOG_LIDAR: 114, 107, 124[0m
+[0;32mI (16001) LOG_ADC: 2752, 2769, 2962[0m
+[0;32mI (15996) LOG_STATE: 3[0m
+[0;32mI (16005) LOG_IMU: -0.22, 0.02, 0.02[0m
+[0;32mI (16009) LOG_RAW_ADC: 2737,2720,2930[0m
+[0;32mI (16013) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (16021) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (16025) main: state: 3[0m
+D (16029) main: Descending[0m
+[0;32mI (16036) LOG_STATE: 3[0m
+Data SBUS: 172D (16039) main: state: 3[0m
+D (16039) main: Descending[0m
+[0;32mI (16042) LOG_RAW_ADC: 2750,2896,2935[0m
+[0;32mI (16046) LOG_STATE: 3[0m
+Data SBUS: 172D (16049) main: state: 3[0m
+D (16052) main: Descending[0m
+[0;32mI (16060) LOG_STATE: 3[0m
+Data SBUS: 172D (16061) main: state: 3[0m
+D (16062) main: Descending[0m
+[0;32mI (16070) LOG_STATE: 3[0m
+Data SBUS: 172D (16071) main: state: 3[0m
+D (16071) main: Descending[0m
+[0;32mI (16075) LOG_RAW_ADC: 2750,2597,2988[0m
+[0;32mI (16079) LOG_STATE: 3[0m
+Data SBUS: 172D (16084) main: state: 3[0m
+D (16085) main: Descending[0m
+[0;32mI (16093) LOG_STATE: 3[0m
+Data SBUS: 172D (16094) main: state: 3[0m
+D (16095) main: Descending[0m
+[0;32mI (16103) LOG_STATE: 3[0m
+Data SBUS: 172D (16104) main: state: 3[0m
+D (16105) main: Descending[0m
+[0;32mI (16108) LOG_RAW_ADC: 2755,2869,2896[0m
+[0;32mI (16113) LOG_STATE: 3[0m
+Data SBUS: 172D (16116) main: state: 3[0m
+D (16119) main: Descending[0m
+[0;32mI (16125) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (16129) LOG_LIDAR: 105, 95, 116[0m
+[0;32mI (16133) LOG_ADC: 2755, 2869, 2896[0m
+[0;32mI (16137) LOG_IMU: -0.21, 0.02, 0.03[0m
+[0;32mI (16141) LOG_RAW_ADC: 2723,2847,2907[0m
+[0;32mI (16127) LOG_STATE: 3[0m
+[0;32mI (16141) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (16154) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (16157) main: state: 3[0m
+D (16160) main: Descending[0m
+[0;32mI (16168) LOG_STATE: 3[0m
+Data SBUS: 172D (16169) main: state: 3[0m
+D (16170) main: Descending[0m
+[0;32mI (16174) LOG_RAW_ADC: 2771,2869,2898[0m
+[0;32mI (16178) LOG_STATE: 3[0m
+Data SBUS: 172D (16181) main: state: 3[0m
+D (16184) main: Descending[0m
+[0;32mI (16192) LOG_STATE: 3[0m
+Data SBUS: 172D (16193) main: state: 3[0m
+D (16194) main: Descending[0m
+[0;32mI (16201) LOG_STATE: 3[0m
+Data SBUS: 172D (16202) main: state: 3[0m
+D (16203) main: Descending[0m
+[0;32mI (16207) LOG_RAW_ADC: 2734,2910,2847[0m
+[0;32mI (16211) LOG_STATE: 3[0m
+Data SBUS: 172D (16214) main: state: 3[0m
+D (16217) main: Descending[0m
+[0;32mI (16225) LOG_STATE: 3[0m
+Data SBUS: 172D (16226) main: state: 3[0m
+D (16227) main: Descending[0m
+[0;32mI (16234) LOG_STATE: 3[0m
+Data SBUS: 172D (16235) main: state: 3[0m
+D (16236) main: Descending[0m
+[0;32mI (16240) LOG_RAW_ADC: 2737,2992,2895[0m
+[0;32mI (16244) LOG_STATE: 3[0m
+Data SBUS: 172D (16248) main: state: 3[0m
+D (16250) main: Descending[0m
+[0;32mI (16256) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (16260) LOG_LIDAR: 98, 88, 108[0m
+[0;32mI (16264) LOG_ADC: 2737, 2992, 2895[0m
+[0;32mI (16269) LOG_IMU: -0.21, 0.02, 0.04[0m
+[0;32mI (16273) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (16273) LOG_RAW_ADC: 2735,2893,2896[0m
+[0;32mI (16277) LOG_PID: 0.00,0.00[0m
+[0;32mI (16259) LOG_STATE: 3[0m
+Data SBUS: 172D (16292) main: state: 3[0m
+D (16292) main: Descending[0m
+[0;32mI (16299) LOG_STATE: 3[0m
+Data SBUS: 172D (16300) main: state: 3[0m
+D (16301) main: Descending[0m
+[0;32mI (16306) LOG_RAW_ADC: 2745,3068,2859[0m
+[0;32mI (16309) LOG_STATE: 3[0m
+Data SBUS: 172D (16312) main: state: 3[0m
+D (16315) main: Descending[0m
+[0;32mI (16323) LOG_STATE: 3[0m
+Data SBUS: 172D (16324) main: state: 3[0m
+D (16325) main: Descending[0m
+[0;32mI (16333) LOG_STATE: 3[0m
+Data SBUS: 172D (16334) main: state: 3[0m
+D (16335) main: Descending[0m
+[0;32mI (16339) LOG_RAW_ADC: 2779,2815,2903[0m
+[0;32mI (16342) LOG_STATE: 3[0m
+Data SBUS: 172D (16346) main: state: 3[0m
+D (16349) main: Descending[0m
+[0;32mI (16356) LOG_STATE: 3[0m
+Data SBUS: 172D (16357) main: state: 3[0m
+D (16358) main: Descending[0m
+[0;32mI (16366) LOG_STATE: 3[0m
+Data SBUS: 172D (16367) main: state: 3[0m
+D (16368) main: Descending[0m
+[0;32mI (16372) LOG_RAW_ADC: 2768,2725,2878[0m
+[0;32mI (16376) LOG_STATE: 3[0m
+Data SBUS: 172D (16379) main: state: 3[0m
+D (16382) main: Descending[0m
+[0;32mI (16385) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (16392) LOG_LIDAR: 94, 86, 105[0m
+[0;32mI (16396) LOG_ADC: 2768, 2725, 2878[0m
+[0;32mI (16400) LOG_IMU: -0.20, 0.01, 0.04[0m
+[0;32mI (16404) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (16405) LOG_RAW_ADC: 2733,2881,2975[0m
+[0;32mI (16391) LOG_STATE: 3[0m
+[0;32mI (16408) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (16422) main: state: 3[0m
+D (16423) main: Descending[0m
+[0;32mI (16431) LOG_STATE: 3[0m
+Data SBUS: 172D (16432) main: state: 3[0m
+D (16433) main: Descending[0m
+[0;32mI (16438) LOG_RAW_ADC: 2754,2720,2928[0m
+[0;32mI (16441) LOG_STATE: 3[0m
+Data SBUS: 172D (16445) main: state: 3[0m
+D (16447) main: Descending[0m
+[0;32mI (16455) LOG_STATE: 3[0m
+Data SBUS: 172D (16456) main: state: 3[0m
+D (16456) main: Descending[0m
+[0;32mI (16464) LOG_STATE: 3[0m
+Data SBUS: 172D (16465) main: state: 3[0m
+D (16466) main: Descending[0m
+[0;32mI (16471) LOG_RAW_ADC: 2736,2713,2903[0m
+[0;32mI (16474) LOG_STATE: 3[0m
+Data SBUS: 172D (16477) main: state: 3[0m
+D (16480) main: Descending[0m
+[0;32mI (16488) LOG_STATE: 3[0m
+Data SBUS: 172D (16490) main: state: 3[0m
+D (16490) main: Descending[0m
+[0;32mI (16497) LOG_STATE: 3[0m
+Data SBUS: 172D (16498) main: state: 3[0m
+D (16499) main: Descending[0m
+[0;32mI (16504) LOG_RAW_ADC: 2753,2771,2970[0m
+[0;32mI (16507) LOG_STATE: 3[0m
+Data SBUS: 172D (16510) main: state: 3[0m
+D (16513) main: Descending[0m
+[0;32mI (16519) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (16522) LOG_STATE: 3[0m
+[0;32mI (16523) LOG_LIDAR: 91, 81, 102[0m
+[0;32mI (16530) LOG_ADC: 2753, 2771, 2970[0m
+[0;32mI (16535) LOG_IMU: -0.19, 0.01, 0.03[0m
+[0;32mI (16537) LOG_RAW_ADC: 2890,2796,2948[0m
+Data SBUS: 172D (16543) main: state: 3[0m
+D (16547) main: Descending[0m
+[0;32mI (16539) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (16554) LOG_PID: 0.00,0.00[0m
+[0;32mI (16556) LOG_STATE: 3[0m
+Data SBUS: 172D (16564) main: state: 3[0m
+D (16564) main: Descending[0m
+[0;32mI (16570) LOG_RAW_ADC: 2763,2767,2923[0m
+[0;32mI (16572) LOG_STATE: 3[0m
+Data SBUS: 172D (16575) main: state: 3[0m
+D (16578) main: Descending[0m
+[0;32mI (16586) LOG_STATE: 3[0m
+Data SBUS: 172D (16588) main: state: 3[0m
+D (16588) main: Descending[0m
+[0;32mI (16596) LOG_STATE: 3[0m
+Data SBUS: 172D (16597) main: state: 3[0m
+D (16598) main: Descending[0m
+[0;32mI (16603) LOG_RAW_ADC: 2769,2779,2788[0m
+[0;32mI (16605) LOG_STATE: 3[0m
+Data SBUS: 172D (16609) main: state: 3[0m
+D (16612) main: Descending[0m
+[0;32mI (16619) LOG_STATE: 3[0m
+Data SBUS: 172D (16620) main: state: 3[0m
+D (16621) main: Descending[0m
+[0;32mI (16629) LOG_STATE: 3[0m
+Data SBUS: 172D (16630) main: state: 3[0m
+D (16631) main: Descending[0m
+[0;32mI (16636) LOG_RAW_ADC: 2757,2945,2933[0m
+[0;32mI (16639) LOG_STATE: 3[0m
+Data SBUS: 172D (16643) main: state: 3[0m
+D (16645) main: Descending[0m
+[0;32mI (16653) LOG_STATE: 3[0m
+Data SBUS: 172D (16654) main: state: 3[0m
+D (16654) main: Descending[0m
+[0;32mI (16658) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (16665) LOG_LIDAR: 86, 74, 97[0m
+[0;32mI (16668) LOG_ADC: 2757, 2945, 2933[0m
+[0;32mI (16669) LOG_RAW_ADC: 2818,2702,2906[0m
+[0;32mI (16663) LOG_STATE: 3[0m
+[0;32mI (16673) LOG_IMU: -0.17, 0.02, 0.02[0m
+[0;32mI (16685) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (16688) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (16692) main: state: 3[0m
+D (16696) main: Descending[0m
+[0;32mI (16702) LOG_RAW_ADC: 2731,2912,2879[0m
+[0;32mI (16704) LOG_STATE: 3[0m
+Data SBUS: 172D (16708) main: state: 3[0m
+D (16710) main: Descending[0m
+[0;32mI (16718) LOG_STATE: 3[0m
+Data SBUS: 172D (16719) main: state: 3[0m
+D (16719) main: Descending[0m
+[0;32mI (16727) LOG_STATE: 3[0m
+Data SBUS: 172D (16728) main: state: 3[0m
+D (16729) main: Descending[0m
+[0;32mI (16735) LOG_RAW_ADC: 2733,2865,2916[0m
+[0;32mI (16737) LOG_STATE: 3[0m
+Data SBUS: 172D (16741) main: state: 3[0m
+D (16743) main: Descending[0m
+[0;32mI (16751) LOG_STATE: 3[0m
+Data SBUS: 172D (16752) main: state: 3[0m
+D (16753) main: Descending[0m
+[0;32mI (16760) LOG_STATE: 3[0m
+Data SBUS: 172D (16761) main: state: 3[0m
+D (16762) main: Descending[0m
+[0;32mI (16768) LOG_RAW_ADC: 2758,2747,2875[0m
+[0;32mI (16770) LOG_STATE: 3[0m
+Data SBUS: 172D (16773) main: state: 3[0m
+D (16776) main: Descending[0m
+[0;32mI (16784) LOG_STATE: 3[0m
+Data SBUS: 172D (16786) main: state: 3[0m
+D (16786) main: Descending[0m
+[0;32mI (16792) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (16796) LOG_LIDAR: 79, 68, 93[0m
+[0;32mI (16800) LOG_ADC: 2758, 2747, 2875[0m
+[0;32mI (16801) LOG_RAW_ADC: 2724,2879,2833[0m
+[0;32mI (16795) LOG_STATE: 3[0m
+[0;32mI (16804) LOG_IMU: -0.16, 0.04, 0.02[0m
+[0;32mI (16816) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (16820) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (16823) main: state: 3[0m
+D (16827) main: Descending[0m
+[0;32mI (16834) LOG_RAW_ADC: 2768,2794,2908[0m
+[0;32mI (16835) LOG_STATE: 3[0m
+Data SBUS: 172D (16840) main: state: 3[0m
+D (16841) main: Descending[0m
+[0;32mI (16849) LOG_STATE: 3[0m
+Data SBUS: 172D (16850) main: state: 3[0m
+D (16851) main: Descending[0m
+[0;32mI (16859) LOG_STATE: 3[0m
+Data SBUS: 172D (16860) main: state: 3[0m
+D (16860) main: Descending[0m
+[0;32mI (16867) LOG_RAW_ADC: 2779,2826,2914[0m
+[0;32mI (16868) LOG_STATE: 3[0m
+Data SBUS: 172D (16871) main: state: 3[0m
+D (16874) main: Descending[0m
+[0;32mI (16882) LOG_STATE: 3[0m
+Data SBUS: 172D (16883) main: state: 3[0m
+D (16884) main: Descending[0m
+[0;32mI (16892) LOG_STATE: 3[0m
+Data SBUS: 172D (16893) main: state: 3[0m
+D (16894) main: Descending[0m
+[0;32mI (16900) LOG_RAW_ADC: 2714,2861,2898[0m
+[0;32mI (16901) LOG_STATE: 3[0m
+Data SBUS: 172D (16905) main: state: 3[0m
+D (16908) main: Descending[0m
+[0;32mI (16915) LOG_STATE: 3[0m
+Data SBUS: 172D (16916) main: state: 3[0m
+D (16917) main: Descending[0m
+[0;32mI (16923) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (16926) LOG_STATE: 3[0m
+[0;32mI (16929) LOG_LIDAR: 69, 62, 87[0m
+[0;32mI (16933) LOG_RAW_ADC: 2716,3168,2912[0m
+Data SBUS: 172D (16939) main: state: 3[0m
+[0;32mI (16934) LOG_ADC: 2716, 3168, 2912[0m
+[0;32mI (16947) LOG_IMU: -0.14, 0.02, 0.03[0m
+[0;32mI (16951) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (16955) LOG_PID: 0.00,0.00[0m
+D (16942) main: Descending[0m
+[0;32mI (16966) LOG_STATE: 3[0m
+[0;32mI (16966) LOG_RAW_ADC: 2773,2786,2923[0m
+Data SBUS: 172D (16969) main: state: 3[0m
+D (16973) main: Descending[0m
+[0;32mI (16980) LOG_STATE: 3[0m
+Data SBUS: 172D (16981) main: state: 3[0m
+D (16982) main: Descending[0m
+[0;32mI (16990) LOG_STATE: 3[0m
+Data SBUS: 172D (16991) main: state: 3[0m
+D (16992) main: Descending[0m
+[0;32mI (16999) LOG_RAW_ADC: 2723,2754,2985[0m
+[0;32mI (17000) LOG_STATE: 3[0m
+Data SBUS: 172D (17004) main: state: 3[0m
+D (17006) main: Descending[0m
+[0;32mI (17014) LOG_STATE: 3[0m
+Data SBUS: 172D (17015) main: state: 3[0m
+D (17015) main: Descending[0m
+[0;32mI (17023) LOG_STATE: 3[0m
+Data SBUS: 172D (17024) main: state: 3[0m
+D (17025) main: Descending[0m
+[0;32mI (17032) LOG_RAW_ADC: 2791,2794,2886[0m
+[0;32mI (17033) LOG_STATE: 3[0m
+Data SBUS: 172D (17037) main: state: 3[0m
+D (17039) main: Descending[0m
+[0;32mI (17047) LOG_STATE: 3[0m
+Data SBUS: 172D (17048) main: state: 3[0m
+D (17049) main: Descending[0m
+[0;32mI (17057) LOG_STATE: 3[0m
+Data SBUS: 172D (17058) main: state: 3[0m
+D (17058) main: Descending[0m
+[0;32mI (17059) LOG_FK: 99, -172, 413,	96, 16, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (17065) LOG_RAW_ADC: 2743,2748,2913[0m
+[0;32mI (17068) LOG_LIDAR: 63, 54, 72[0m
+[0;32mI (17077) LOG_ADC: 2743, 2748, 2913[0m
+[0;32mI (17081) LOG_IMU: -0.12, -0.02, 0.04[0m
+[0;32mI (17085) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (17089) LOG_PID: 0.00,0.00[0m
+[0;32mI (17069) LOG_STATE: 3[0m
+[0;32mI (17098) LOG_RAW_ADC: 2752,2773,3035[0m
+Data SBUS: 172D (17100) main: state: 3[0m
+D (17104) main: Descending[0m
+[0;32mI (17112) LOG_STATE: 3[0m
+Data SBUS: 172D (17113) main: state: 3[0m
+D (17114) main: Descending[0m
+[0;32mI (17121) LOG_STATE: 3[0m
+Data SBUS: 172D (17122) main: state: 3[0m
+D (17123) main: Descending[0m
+[0;32mI (17131) LOG_STATE: 3[0m
+[0;32mI (17131) LOG_RAW_ADC: 2735,2795,2960[0m
+Data SBUS: 172D (17134) main: state: 3[0m
+D (17137) main: Descending[0m
+[0;32mI (17145) LOG_STATE: 3[0m
+Data SBUS: 172D (17147) main: state: 3[0m
+D (17147) main: Descending[0m
+[0;32mI (17155) LOG_STATE: 3[0m
+Data SBUS: 172D (17156) main: state: 3[0m
+D (17157) main: Descending[0m
+[0;32mI (17164) LOG_STATE: 3[0m
+[0;32mI (17164) LOG_RAW_ADC: 2734,2886,2890[0m
+Data SBUS: 172D (17167) main: state: 3[0m
+D (17171) main: Descending[0m
+[0;32mI (17178) LOG_STATE: 3[0m
+Data SBUS: 172D (17179) main: state: 3[0m
+D (17180) main: Descending[0m
+[0;32mI (17188) LOG_STATE: 3[0m
+Data SBUS: 172D (17189) main: state: 3[0m
+D (17190) main: Descending[0m
+[0;32mI (17193) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (17197) LOG_RAW_ADC: 2736,2896,2890[0m
+[0;32mI (17200) LOG_LIDAR: 60, 53, 61[0m
+[0;32mI (17208) LOG_ADC: 2736, 2896, 2890[0m
+[0;32mI (17212) LOG_IMU: -0.10, -0.07, 0.04[0m
+[0;32mI (17217) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (17221) LOG_PID: 0.00,0.00[0m
+[0;32mI (17200) LOG_STATE: 3[0m
+[0;32mI (17230) LOG_RAW_ADC: 2733,2896,2832[0m
+Data SBUS: 172D (17232) main: state: 3[0m
+D (17236) main: Descending[0m
+[0;32mI (17243) LOG_STATE: 3[0m
+Data SBUS: 172D (17244) main: state: 3[0m
+D (17245) main: Descending[0m
+[0;32mI (17253) LOG_STATE: 3[0m
+Data SBUS: 172D (17254) main: state: 3[0m
+D (17255) main: Descending[0m
+[0;32mI (17263) LOG_STATE: 3[0m
+[0;32mI (17263) LOG_RAW_ADC: 2705,2781,2944[0m
+Data SBUS: 172D (17265) main: state: 3[0m
+D (17269) main: Descending[0m
+[0;32mI (17277) LOG_STATE: 3[0m
+Data SBUS: 172D (17278) main: state: 3[0m
+D (17278) main: Descending[0m
+[0;32mI (17286) LOG_STATE: 3[0m
+Data SBUS: 172D (17287) main: state: 3[0m
+D (17288) main: Descending[0m
+[0;32mI (17296) LOG_STATE: 3[0m
+[0;32mI (17296) LOG_RAW_ADC: 2715,2848,2865[0m
+Data SBUS: 172D (17298) main: state: 3[0m
+D (17302) main: Descending[0m
+[0;32mI (17310) LOG_STATE: 3[0m
+Data SBUS: 172D (17311) main: state: 3[0m
+D (17312) main: Descending[0m
+[0;32mI (17319) LOG_STATE: 3[0m
+Data SBUS: 172D (17320) main: state: 3[0m
+D (17321) main: Descending[0m
+[0;32mI (17324) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (17329) LOG_RAW_ADC: 2741,2855,2938[0m
+[0;32mI (17332) LOG_LIDAR: 53, 48, 53[0m
+[0;32mI (17340) LOG_ADC: 2741, 2855, 2938[0m
+[0;32mI (17344) LOG_IMU: -0.08, -0.05, 0.03[0m
+[0;32mI (17348) LOG_SERVO: 1948,1975,2040[0m
+[0;32mI (17352) LOG_PID: 0.00,0.00[0m
+[0;32mI (17332) LOG_STATE: 3[0m
+[0;32mI (17362) LOG_RAW_ADC: 2713,2895,2951[0m
+Data SBUS: 172D (17363) main: state: 3[0m
+D (17367) main: Descending[0m
+[0;32mI (17375) LOG_STATE: 3[0m
+Data SBUS: 172D (17376) main: state: 3[0m
+D (17377) main: Descending[0m
+[0;32mI (17384) LOG_STATE: 3[0m
+Data SBUS: 172D (17385) main: state: 3[0m
+D (17386) main: Descending[0m
+[0;32mI (17394) LOG_STATE: 3[0m
+Data SBUS: 172D (17395) main: state: 3[0m
+[0;32mI (17395) LOG_RAW_ADC: 2789,2813,2835[0m
+D (17396) main: Descending[0m
+[0;32mI (17408) LOG_STATE: 3[0m
+Data SBUS: 172D (17409) main: state: 3[0m
+D (17410) main: Descending[0m
+[0;32mI (17418) LOG_STATE: 3[0m
+Data SBUS: 172D (17419) main: state: 4[0m
+D (17420) main: Touchdown[0m
+[0;32mI (17423) lg: IMU Control Loop Task Started![0m
+[0;32mI (17428) LOG_STATE: 4[0m
+[0;32mI (17428) LOG_RAW_ADC: 2672,2818,2937[0m
+Data SBUS: 172D (17435) main: state: 4[0m
+D (17438) main: Touchdown[0m
+[0;32mI (17446) LOG_STATE: 4[0m
+Data SBUS: 172D (17447) main: state: 4[0m
+D (17448) main: Touchdown[0m
+[0;32mI (17456) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (17458) LOG_LIDAR: 43, 0, 48[0m
+[0;32mI (17461) LOG_RAW_ADC: 2703,2894,2919[0m
+[0;32mI (17458) LOG_STATE: 4[0m
+[0;32mI (17462) LOG_ADC: 2703, 2894, 2919[0m
+[0;32mI (17474) LOG_IMU: -0.06, -0.01, 0.03[0m
+[0;32mI (17478) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (17482) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172[0;32mI (17477) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (17485) main: state: 4[0m
+[0;32mI (17494) LOG_RAW_ADC: 2755,2893,3120[0m
+D (17494) main: Touchdown[0m
+[0;32mI (17506) LOG_STATE: 4[0m
+Data SBUS: 172D (17509) main: state: 4[0m
+D (17509) main: Touchdown[0m
+[0;32mI (17516) LOG_STATE: 4[0m
+Data SBUS: 172D (17517) main: state: 4[0m
+D (17518) main: Touchdown[0m
+[0;32mI (17525) LOG_STATE: 4[0m
+Data SBUS: 172D (17526) main: state: 4[0m
+[0;32mI (17527) LOG_RAW_ADC: 2736,2843,2754[0m
+[0;32mI (17527) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (17527) main: Touchdown[0m
+[0;32mI (17544) LOG_STATE: 4[0m
+Data SBUS: 172D (17545) main: state: 4[0m
+D (17546) main: Touchdown[0m
+[0;32mI (17554) LOG_STATE: 4[0m
+Data SBUS: 172D (17555) main: state: 4[0m
+D (17556) main: Touchdown[0m
+[0;32mI (17560) LOG_RAW_ADC: 2929,2781,2992[0m
+[0;32mI (17564) LOG_STATE: 4[0m
+Data SBUS: 172D (17567) main: state: 4[0m
+D (17570) main: Touchdown[0m
+[0;32mI (17577) LOG_STATE: 4[0m
+[0;32mI (17577) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (17581) main: state: 4[0m
+D (17584) main: Touchdown[0m
+[0;32mI (17585) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (17593) LOG_RAW_ADC: 2729,2867,2903[0m
+[0;32mI (17593) LOG_STATE: 4[0m
+[0;32mI (17594) LOG_LIDAR: 0, 0, 42[0m
+Data SBUS: 172D (17606) main: state: 4[0m
+D (17609) main: Touchdown[0m
+[0;32mI (17607) LOG_ADC: 2729, 2867, 2903[0m
+[0;32mI (17616) LOG_IMU: -0.04, 0.02, 0.02[0m
+[0;32mI (17620) LOG_SERVO: 2025,1975,2000[0m
+[0;32mI (17625) LOG_PID: 0.00,0.00[0m
+[0;32mI (17626) LOG_RAW_ADC: 2791,2822,2912[0m
+[0;32mI (17618) LOG_STATE: 4[0m
+[0;32mI (17627) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (17641) main: state: 4[0m
+D (17644) main: Touchdown[0m
+[0;32mI (17652) LOG_STATE: 4[0m
+Data SBUS: 172D (17653) main: state: 4[0m
+D (17654) main: Touchdown[0m
+[0;32mI (17659) LOG_RAW_ADC: 2835,2848,2837[0m
+[0;32mI (17662) LOG_STATE: 4[0m
+Data SBUS: 172D (17665) main: state: 4[0m
+D (17668) main: Touchdown[0m
+[0;32mI (17676) LOG_STATE: 4[0m
+[0;32mI (17677) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (17679) main: state: 4[0m
+D (17683) main: Touchdown[0m
+[0;32mI (17690) LOG_STATE: 4[0m
+Data SBUS: 172D (17691) main: state: 4[0m
+[0;32mI (17692) LOG_RAW_ADC: 2955,2815,2822[0m
+D (17692) main: Touchdown[0m
+[0;32mI (17704) LOG_STATE: 4[0m
+Data SBUS: 172D (17705) main: state: 4[0m
+D (17706) main: Touchdown[0m
+[0;32mI (17714) LOG_STATE: 4[0m
+Data SBUS: 172D (17715) main: state: 4[0m
+D (17716) main: Touchdown[0m
+[0;32mI (17723) LOG_STATE: 4[0m
+Data SBUS: 172D (17724) main: state: 4[0m
+D (17725) main: Touchdown[0m
+[0;32mI (17725) LOG_RAW_ADC: 2907,2352,2896[0m
+[0;32mI (17727) IMUC: pci: 4.152322, rci: 1.935992
+[0m
+[0;32mI (17728) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (17745) LOG_LIDAR: 0, 0, 40[0m
+[0;32mI (17748) LOG_ADC: 2907, 2352, 2896[0m
+[0;32mI (17733) LOG_STATE: 4[0m
+[0;32mI (17754) LOG_IMU: -0.04, -0.11, -0.05[0m
+[0;32mI (17758) LOG_RAW_ADC: 2919,2716,2864[0m
+[0;32mI (17760) LOG_SERVO: 2008,1966,2008[0m
+[0;32mI (17768) LOG_PID: 4.15,1.94[0m
+Data SBUS: 172D (17772) main: state: 4[0m
+D (17776) main: Touchdown[0m
+[0;32mI (17777) IMUC: pci: 6.823029, rci: 2.875051
+[0m
+[0;32mI (17784) LOG_STATE: 4[0m
+Data SBUS: 172D (17790) main: state: 4[0m
+D (17790) main: Touchdown[0m
+[0;32mI (17791) LOG_RAW_ADC: 2892,2878,2832[0m
+[0;32mI (17798) LOG_STATE: 4[0m
+Data SBUS: 172D (17802) main: state: 4[0m
+D (17804) main: Touchdown[0m
+[0;32mI (17812) LOG_STATE: 4[0m
+Data SBUS: 172D (17813) main: state: 4[0m
+D (17814) main: Touchdown[0m
+[0;32mI (17822) LOG_STATE: 4[0m
+Data SBUS: 172D (17823) main: state: 4[0m
+D (17823) main: Touchdown[0m
+[0;32mI (17824) LOG_RAW_ADC: 2831,2870,2813[0m
+[0;32mI (17831) LOG_STATE: 4[0m
+[0;32mI (17832) IMUC: pci: 5.719606, rci: 1.992595
+[0m
+Data SBUS: 172D (17839) main: state: 4[0m
+D (17842) main: Touchdown[0m
+[0;32mI (17850) LOG_STATE: 4[0m
+Data SBUS: 172D (17851) main: state: 4[0m
+D (17852) main: Touchdown[0m
+[0;32mI (17857) LOG_RAW_ADC: 2823,2850,2896[0m
+[0;32mI (17860) LOG_STATE: 4[0m
+Data SBUS: 172D (17863) main: state: 4[0m
+D (17866) main: Touchdown[0m
+[0;32mI (17872) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (17876) LOG_LIDAR: 0, 1201, 35[0m
+[0;32mI (17880) LOG_ADC: 2823, 2850, 2896[0m
+[0;32mI (17877) IMUC: pci: 5.284899, rci: 1.495371
+[0m
+[0;32mI (17875) LOG_STATE: 4[0m
+[0;32mI (17890) LOG_RAW_ADC: 2805,2698,2883[0m
+[0;32mI (17884) LOG_IMU: -0.04, -0.08, -0.02[0m
+[0;32mI (17901) LOG_SERVO: 1937,1924,2046[0m
+[0;32mI (17905) LOG_PID: 5.28,1.50[0m
+Data SBUS: 172D (17909) main: state: 4[0m
+D (17913) main: Touchdown[0m
+[0;32mI (17920) LOG_STATE: 4[0m
+Data SBUS: 172D (17922) main: state: 4[0m
+D (17922) main: Touchdown[0m
+[0;32mI (17923) LOG_RAW_ADC: 2810,2816,2885[0m
+[0;32mI (17929) IMUC: pci: 5.247653, rci: 0.750719
+[0m
+[0;32mI (17930) LOG_STATE: 4[0m
+Data SBUS: 172D (17939) main: state: 4[0m
+D (17941) main: Touchdown[0m
+[0;32mI (17949) LOG_STATE: 4[0m
+Data SBUS: 172D (17950) main: state: 4[0m
+D (17951) main: Touchdown[0m
+[0;32mI (17956) LOG_RAW_ADC: 2749,2784,2848[0m
+[0;32mI (17958) LOG_STATE: 4[0m
+Data SBUS: 172D (17962) main: state: 4[0m
+D (17965) main: Touchdown[0m
+[0;32mI (17972) LOG_STATE: 4[0m
+Data SBUS: 172D (17973) main: state: 4[0m
+D (17974) main: Touchdown[0m
+[0;32mI (17977) IMUC: pci: 3.929539, rci: 0.728856
+[0m
+[0;32mI (17982) LOG_STATE: 4[0m
+Data SBUS: 172D (17986) main: state: 4[0m
+D (17989) main: Touchdown[0m
+[0;32mI (17989) LOG_RAW_ADC: 2718,2719,2838[0m
+[0;32mI (17996) LOG_STATE: 4[0m
+Data SBUS: 172D (18001) main: state: 4[0m
+D (18003) main: Touchdown[0m
+[0;32mI (18009) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (18013) LOG_LIDAR: 0, 0, 33[0m
+[0;32mI (18016) LOG_ADC: 2718, 2719, 2838[0m
+[0;32mI (18021) LG_IMU: -0.02, -0.04, -0.01[0m
+[0;32mI (18022) LOG_RAW_ADC: 2707,2635,2928[0m
+[0;32mI (18011) LOG_STATE: 4[0m
+[0;32mI (18025) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (18029) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18037) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (18045) main: state: 4[0m
+D (18049) main: Touchdown[0m
+[0;32mI (18055) LOG_RAW_ADC: 2672,2693,2918[0m
+[0;32mI (18057) LOG_STATE: 4[0m
+Data SBUS: 172D (18061) main: state: 4[0m
+D (18063) main: Touchdown[0m
+[0;32mI (18070) LOG_STATE: 4[0m
+Data SBUS: 172D (18071) main: state: 4[0m
+D (18072) main: Touchdown[0m
+[0;32mI (18077) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18080) LOG_STATE: 4[0m
+Data SBUS: 172D (18085) main: state: 4[0m
+D (18087) main: Touchdown[0m
+[0;32mI (18088) LOG_RAW_ADC: 2687,2559,2863[0m
+[0;32mI (18095) LOG_STATE: 4[0m
+Data SBUS: 172D (18098) main: state: 4[0m
+D (18101) main: Touchdown[0m
+[0;32mI (18109) LOG_STATE: 4[0m
+Data SBUS: 172D (18110) main: state: 4[0m
+D (18111) main: Touchdown[0m
+[0;32mI (18118) LOG_STATE: 4[0m
+Data SBUS: 172D (18119) main: state: 4[0m
+D (18120) main: Touchdown[0m
+[0;32mI (18121) LOG_RAW_ADC: 2674,2558,2935[0m
+[0;32mI (18127) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18128) LOG_STATE: 4[0m
+Data SBUS: 172D (18137) main: state: 4[0m
+D (18139) main: Touchdown[0m
+[0;32mI (18145) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (18149) LOG_LIDAR: 0, 9, 34[0m
+[0;32mI (18153) LOG_ADC: 2674, 2558, 2935[0m
+[0;32mI (18154) LOG_RAW_ADC: 2626,2666,2827[0m
+[0;32mI (18148) LOG_STATE: 4[0m
+[0;32mI (18157) LOG_IMU: -0.01, 0.00, -0.00[0m
+[0;32mI (18169) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (18173) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (18176) main: state: 4[0m
+[0;32mI (18177) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (18180) main: Touchdown[0m
+[0;32mI (18187) LOG_RAW_ADC: 2587,2625,2842[0m
+[0;32mI (18193) LOG_STATE: 4[0m
+Data SBUS: 172D (18199) main: state: 4[0m
+D (18199) main: Touchdown[0m
+[0;32mI (18207) LOG_STATE: 4[0m
+Data SBUS: 172D (18208) main: state: 4[0m
+D (18209) main: Touchdown[0m
+[0;32mI (18216) LOG_STATE: 4[0m
+Data SBUS: 172D (18217) main: state: 4[0m
+D (18218) main: Touchdown[0m
+[0;32mI (18220) LOG_RAW_ADC: 2610,2613,2986[0m
+[0;32mI (18226) LOG_STATE: 4[0m
+[0;32mI (18227) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (18234) main: state: 4[0m
+D (18237) main: Touchdown[0m
+[0;32mI (18245) LOG_STATE: 4[0m
+Data SBUS: 172D (18246) main: state: 4[0m
+D (18247) main: Touchdown[0m
+[0;32mI (18253) LOG_RAW_ADC: 2656,2533,2953[0m
+[0;32mI (18255) LOG_STATE: 4[0m
+Data SBUS: 172D (18258) main: state: 4[0m
+D (18261) main: Touchdown[0m
+[0;32mI (18268) LOG_STATE: 4[0m
+Data SBUS: 172D (18269) main: state: 4[0m
+D (18270) main: Touchdown[0m
+[0;32mI (18276) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (18277) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18279) LOG_STATE: 4[0m
+[0;32mI (18286) LOG_RAW_ADC: 2656,2646,2842[0m
+[0;32mI (18280) LOG_LIDAR: 0, 20, 34[0m
+[0;32mI (18297) LOG_ADC: 2656, 2646, 2842[0m
+[0;32mI (18301) LOG_IMU: -0.01, 0.02, 0.00[0m
+[0;32mI (18305) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (18309) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (18313) main: state: 4[0m
+D (18317) main: Touchdown[0m
+[0;32mI (18319) LOG_RAW_ADC: 2603,2669,2965[0m
+[0;32mI (18324) LOG_STATE: 4[0m
+[0;32mI (18327) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (18332) main: state: 4[0m
+D (18336) main: Touchdown[0m
+[0;32mI (18343) LOG_STATE: 4[0m
+Data SBUS: 172D (18345) main: state: 4[0m
+D (18345) main: Touchdown[0m
+[0;32mI (18352) LOG_RAW_ADC: 2621,2592,2909[0m
+[0;32mI (18353) LOG_STATE: 4[0m
+Data SBUS: 172D (18356) main: state: 4[0m
+D (18359) main: Touchdown[0m
+[0;32mI (18367) LOG_STATE: 4[0m
+Data SBUS: 172D (18368) main: state: 4[0m
+D (18369) main: Touchdown[0m
+[0;32mI (18376) LOG_STATE: 4[0m
+Data SBUS: 172D (18377) main: state: 4[0m
+[0;32mI (18377) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (18378) main: Touchdown[0m
+[0;32mI (18385) LOG_RAW_ADC: 2639,2640,2847[0m
+[0;32mI (18391) LOG_STATE: 4[0m
+Data SBUS: 172D (18395) main: state: 4[0m
+D (18397) main: Touchdown[0m
+[0;32mI (18405) LOG_STATE: 4[0m
+Data SBUS: 172D (18406) main: state: 4[0m
+D (18407) main: Touchdown[0m
+[0;32mI (18413) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (18417) LOG_LIDAR: 0, 23, 33[0m
+[0;32mI (18418) LOG_RAW_ADC: 2629,2559,2911[0m
+[0;32mI (18415) LOG_STATE: 4[0m
+[0;32mI (18420) LOG_ADC: 2629, 2559, 2911[0m
+[0;32mI (18427) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18433) LOG_IMU: -0.01, 0.02, 0.00[0m
+[0;32mI (18441) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (18446) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (18449) main: state: 4[0m
+[0;32mI (18451) LOG_RAW_ADC: 2690,2624,2977[0m
+D (18453) main: Touchdown[0m
+[0;32mI (18465) LOG_STATE: 4[0m
+Data SBUS: 172D (18468) main: state: 4[0m
+D (18469) main: Touchdown[0m
+[0;32mI (18474) LOG_STATE: 4[0m
+[0;32mI (18474) LOG_STATE: 4[0m
+[0;32mI (18476) LOG_STATE: 4[0m
+[0;32mI (18477) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18484) LOG_RAW_ADC: 2649,2583,2902[0m
+Data SBUS: 172D (18488) main: state: 4[0m
+D (18492) main: Touchdown[0m
+[0;32mI (18500) LOG_STATE: 4[0m
+Data SBUS: 172D (18501) main: state: 4[0m
+D (18502) main: Touchdown[0m
+[0;32mI (18509) LOG_STATE: 4[0m
+Data SBUS: 172D (18510) main: state: 4[0m
+D (18511) main: Touchdown[0m
+[0;32mI (18517) LOG_RAW_ADC: 2622,2559,2902[0m
+[0;32mI (18519) LOG_STATE: 4[0m
+Data SBUS: 172D (18523) main: state: 4[0m
+D (18525) main: Touchdown[0m
+[0;32mI (18527) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18533) LOG_STATE: 4[0m
+Data SBUS: 172D (18537) main: state: 4[0m
+D (18540) main: Touchdown[0m
+[0;32mI (18547) LOG_STATE: 4[0m
+Data SBUS: 172D (18548) main: state: 4[0m
+D (18549) main: Touchdown[0m
+[0;32mI (18550) LOG_RAW_ADC: 2640,2599,2937[0m
+[0;32mI (18549) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (18558) LOG_STATE: 4[0m
+[0;32mI (18563) LOG_LIDAR: 0, 24, 32[0m
+[0;32mI (18570) LOG_ADC: 2640, 2599, 2937[0m
+[0;32mI (18574) LOG_IMU: -0.01, 0.02, 0.00[0m
+[0;32mI (18579) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (18583) LOG_PID: 0.00,0.00[0m
+[0;32mI (18583) LOG_RAW_ADC: 2613,2559,2928[0m
+Data SBUS: 172D (18591) main: state: 4[0m
+[0;32mI (18577) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (18595) main: Touchdown[0m
+[0;32mI (18607) LOG_STATE: 4[0m
+Data SBUS: 172D (18610) main: state: 4[0m
+D (18610) main: Touchdown[0m
+[0;32mI (18616) LOG_RAW_ADC: 2592,2585,2965[0m
+[0;32mI (18617) LOG_STATE: 4[0m
+Data SBUS: 172D (18621) main: state: 4[0m
+D (18623) main: Touchdown[0m
+[0;32mI (18627) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18631) LOG_STATE: 4[0m
+Data SBUS: 172D (18635) main: state: 4[0m
+D (18638) main: Touchdown[0m
+[0;32mI (18645) LOG_STATE: 4[0m
+Data SBUS: 172D (18646) main: state: 4[0m
+D (18647) main: Touchdown[0m
+[0;32mI (18649) LOG_RAW_ADC: 2623,2599,2928[0m
+[0;32mI (18655) LOG_STATE: 4[0m
+Data SBUS: 172D (18659) main: state: 4[0m
+D (18661) main: Touchdown[0m
+[0;32mI (18669) LOG_STATE: 4[0m
+Data SBUS: 172D (18670) main: state: 4[0m
+D (18671) main: Touchdown[0m
+[0;32mI (18677) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18678) LOG_STATE: 4[0m
+[0;32mI (18682) LOG_RAW_ADC: 2635,2481,2939[0m
+Data SBUS: 172D (18686) main: state: 4[0m
+D (18690) main: Touchdown[0m
+[0;32mI (18686) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (18700) LOG_LIDAR: 0, 26, 31[0m
+[0;32mI (18704) LOG_ADC: 2635, 2481, 2939[0m
+[0;32mI (18708) LOG_IMU: -0.00, 0.03, 0.00[0m
+[0;32mI (18712) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (18715) LOG_RAW_ADC: 2593,2645,2928[0m
+[0;32mI (18698) LOG_STATE: 4[0m
+[0;32mI (18716) LOG_PID: 0.00,0.00[0m
+[0;32mI (18727) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (18732) main: state: 4[0m
+D (18736) main: Touchdown[0m
+[0;32mI (18744) LOG_STATE: 4[0m
+Data SBUS: 172D (18745) main: state: 4[0m
+D (18746) main: Touchdown[0m
+[0;32mI (18748) LOG_RAW_ADC: 2646,2608,2887[0m
+[0;32mI (18753) LOG_STATE: 4[0m
+Data SBUS: 172D (18757) main: state: 4[0m
+D (18760) main: Touchdown[0m
+[0;32mI (18767) LOG_STATE: 4[0m
+Data SBUS: 172D (18768) main: state: 4[0m
+D (18769) main: Touchdown[0m
+[0;32mI (18777) LOG_STATE: 4[0m
+[0;32mI (18777) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172 (18780) main: state: 4[0m
+[0;32mI (18781) LOG_RAW_ADC: 2559,2649,3023[0m
+D (18784) main: Touchdown[0m
+[0;32mI (18796) LOG_STATE: 4[0m
+Data SBUS: 172D (18798) main: state: 4[0m
+D (18798) main: Touchdown[0m
+[0;32mI (18805) LOG_STATE: 4[0m
+Data SBUS: 172D (18806) main: state: 4[0m
+D (18807) main: Touchdown[0m
+[0;32mI (18814) LOG_RAW_ADC: 2657,2507,2746[0m
+[0;32mI (18815) LOG_STATE: 4[0m
+Data SBUS: 172D (18818) main: state: 4[0m
+D (18821) main: Touchdown[0m
+[0;32mI (18827) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (18827) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18830) LOG_STATE: 4[0m
+[0;32mI (18831) LOG_LIDAR: 0, 25, 30[0m
+[0;32mI (18844) LOG_ADC: 2657, 2507, 2746[0m
+[0;32mI (18847) LOG_IMU: 0.00, 0.03, 0.00[0m
+[0;32mI (18847) LOG_RAW_ADC: 2657,2549,2873[0m
+[0;32mI (18851) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (18860) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (18863) main: state: 4[0m
+D (18867) main: Touchdown[0m
+[0;32mI (18875) LOG_STATE: 4[0m
+[0;32mI (18877) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (18878) main: state: 4[0m
+[0;32mI (18880) LOG_RAW_ADC: 2640,2559,2800[0m
+D (18882) main: Touchdown[0m
+[0;32mI (18894) LOG_STATE: 4[0m
+Data SBUS: 172D (18895) main: state: 4[0m
+D (18896) main: Touchdown[0m
+[0;32mI (18903) LOG_STATE: 4[0m
+Data SBUS: 172D (18904) main: state: 4[0m
+D (18905) main: Touchdown[0m
+[0;32mI (18913) LOG_STATE: 4[0m
+[0;32mI (18913) LOG_RAW_ADC: 2711,2606,2862[0m
+Data SBUS: 172D (18915) main: state: 4[0m
+D (18919) main: Touchdown[0m
+[0;32mI (18927) LOG_STATE: 4[0m
+[0;32mI (18927) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (18930) main: state: 4[0m
+D (18934) main: Touchdown[0m
+[0;32mI (18941) LOG_STATE: 4[0m
+Data SBUS: 172D (18942) main: state: 4[0m
+D (18943) main: Touchdown[0m
+[0;32mI (18946) LOG_RAW_ADC: 2555,2593,2935[0m
+[0;32mI (18951) LOG_STATE: 4[0m
+Data SBUS: 172D (18955) main: state: 4[0m
+D (18957) main: Touchdown[0m
+[0;32mI (18963) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (18967) LOG_LIDAR: 0, 26, 29[0m
+[0;32mI (18971) LOG_ADC: 2555, 2593, 2935[0m
+[0;32mI (18975) LOG_IMU: 0.01, 0.03, 0.00[0m
+[0;32mI (18979) LOG_RAW_ADC: 2608,2629,2879[0m
+[0;32mI (18966) LOG_STATE: 4[0m
+[0;32mI (18977) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (18979) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (18996) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (19000) main: state: 4[0m
+D (19003) main: Touchdown[0m
+[0;32mI (19011) LOG_STATE: 4[0m
+[0;32mI (19012) LOG_RAW_ADC: 2606,2672,2957[0m
+Data SBUS: 172D (19014) main: state: 4[0m
+D (19017) main: Touchdown[0m
+[0;32mI (19025) LOG_STATE: 4[0m
+Data SBUS: 172D (19026) main: state: 4[0m
+D (19027) main: Touchdown[0m
+[0;32mI (19027) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19035) LOG_STATE: 4[0m
+Data SBUS: 172D (19039) main: state: 4[0m
+D (19042) main: Touchdown[0m
+[0;32mI (19045) LOG_RAW_ADC: 2621,2623,2953[0m
+[0;32mI (19049) LOG_STATE: 4[0m
+Data SBUS: 172D (19053) main: state: 4[0m
+D (19055) main: Touchdown[0m
+[0;32mI (19063) LOG_STATE: 4[0m
+Data SBUS: 172D (19064) main: state: 4[0m
+D (19065) main: Touchdown[0m
+[0;32mI (19073) LOG_STATE: 4[0m
+Data SBUS: 172D (19074) main: state: 4[0m
+D (19074) main: Touchdown[0m
+[0;32mI (19077) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19078) LOG_RAW_ADC: 2595,2627,2832[0m
+[0;32mI (19082) LOG_STATE: 4[0m
+Data SBUS: 172D (19092) main: state: 4[0m
+D (19094) main: Touchdown[0m
+[0;32mI (19100) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (19104) LOG_LIDAR: 0, 25, 31[0m
+[0;32mI (19107) LOG_ADC: 2595, 2627, 2832[0m
+[0;32mI (19111) LOG_RAW_ADC: 2626,2521,2940[0m
+[0;32mI (19102) LOG_STATE: 4[0m
+[0;32mI (19111) LOG_IMU: 0.01, 0.03, 0.00[0m
+[0;32mI (19124) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (19127) LOG_PID: 0.00,0.00[0m
+[0;32mI (19127) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (19136) main: state: 4[0m
+D (19140) main: Touchdown[0m
+[0;32mI (19144) LOG_RAW_ADC: 2635,2610,2989[0m
+[0;32mI (19147) LOG_STATE: 4[0m
+Data SBUS: 172D (19152) main: state: 4[0m
+D (19154) main: Touchdown[0m
+[0;32mI (19161) LOG_STATE: 4[0m
+Data SBUS: 172D (19162) main: state: 4[0m
+D (19163) main: Touchdown[0m
+[0;32mI (19171) LOG_STATE: 4[0m
+Data SBUS: 172D (19172) main: state: 4[0m
+D (19173) main: Touchdown[0m
+[0;32mI (19177) LOG_RAW_ADC: 2559,2546,3026[0m
+[0;32mI (19180) LOG_STATE: 4[0m
+[0;32mI (19180) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (19188) main: state: 4[0m
+D (19192) main: Touchdown[0m
+[0;32mI (19199) LOG_STATE: 4[0m
+Data SBUS: 172D (19201) main: state: 4[0m
+D (19201) main: Touchdown[0m
+[0;32mI (19209) LOG_STATE: 4[0m
+Data SBUS: 172D (19210) main: state: 4[0m
+[0;32mI (19210) LOG_RAW_ADC: 2620,2543,2933[0m
+D (19211) main: Touchdown[0m
+[0;32mI (19223) LOG_STATE: 4[0m
+Data SBUS: 172D (19224) main: state: 4[0m
+D (19225) main: Touchdown[0m
+[0;32mI (19227) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19231) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (19240) LOG_LIDAR: 0, 25, 31[0m
+[0;32mI (19243) LOG_RAW_ADC: 2598,2527,2932[0m
+[0;32mI (19232) LOG_STATE: 4[0m
+[0;32mI (19244) LOG_ADC: 2598, 2527, 2932[0m
+[0;32mI (19256) LOG_IMU: 0.02, 0.03, 0.00[0m
+[0;32mI (19259) LOG_SERVO: 1906,1899,2064[0m
+Data SBUS: 172D (19264) main: state: 4[0m
+D (19267) main: Touchdown[0m
+[0;32mI (19263) LOG_PID: 0.00,0.00[0m
+[0;32mI (19275) LOG_STATE: 4[0m
+[0;32mI (19276) LOG_RAW_ADC: 2670,2602,2895[0m
+Data SBUS: 172D (19281) main: state: 4[0m
+[0;32mI (19282) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (19285) main: Touchdown[0m
+[0;32mI (19298) LOG_STATE: 4[0m
+Data SBUS: 172D (19300) main: state: 4[0m
+D (19300) main: Touchdown[0m
+[0;32mI (19307) LOG_STATE: 4[0m
+Data SBUS: 172D (19308) main: state: 4[0m
+D (19309) main: Touchdown[0m
+[0;32mI (19309) LOG_RAW_ADC: 2641,2608,2917[0m
+[0;32mI (19317) LOG_STATE: 4[0m
+Data SBUS: 172D (19320) main: state: 4[0m
+D (19323) main: Touchdown[0m
+[0;32mI (19327) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19331) LOG_STATE: 4[0m
+Data SBUS: 172D (19336) main: state: 4[0m
+D (19338) main: Touchdown[0m
+[0;32mI (19342) LOG_RAW_ADC: 2640,2645,2924[0m
+[0;32mI (19345) LOG_STATE: 4[0m
+Data SBUS: 172D (19348) main: state: 4[0m
+D (19351) main: Touchdown[0m
+[0;32mI (19359) LOG_STATE: 4[0m
+Data SBUS: 172D (19360) main: state: 4[0m
+D (19361) main: Touchdown[0m
+[0;32mI (19369) LOG_STATE: 4[0m
+Data SBUS: 172D (19370) main: state: 4[0m
+D (19371) main: Touchdown[0m
+[0;32mI (19374) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (19375) LOG_RAW_ADC: 2640,2707,3034[0m
+[0;32mI (19377) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19381) LOG_LIDAR: 0, 25, 30[0m
+[0;32mI (19394) LOG_ADC: 2640, 2707, 3034[0m
+[0;32mI (19398) LOG_IMU: 0.02, 0.03, 0.00[0m
+[0;32mI (19402) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (19406) LOG_PID: 0.00,0.00[0m
+[0;32mI (19408) LOG_RAW_ADC: 2758,2544,2895[0m
+[0;32mI (19381) LOG_STATE: 4[0m
+Data SBUS: 172D (19423) main: state: 4[0m
+D (19423) main: Touchdown[0m
+[0;32mI (19427) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19429) LOG_STATE: 4[0m
+Data SBUS: 172D (19433) main: state: 4[0m
+D (19436) main: Touchdown[0m
+[0;32mI (19441) LOG_RAW_ADC: 2559,2615,2911[0m
+[0;32mI (19443) LOG_STATE: 4[0m
+Data SBUS: 172D (19447) main: state: 4[0m
+D (19450) main: Touchdown[0m
+[0;32mI (19457) LOG_STATE: 4[0m
+Data SBUS: 172D (19459) main: state: 4[0m
+D (19459) main: Touchdown[0m
+[0;32mI (19467) LOG_STATE: 4[0m
+Data SBUS: 172D (19468) main: state: 4[0m
+D (19469) main: Touchdown[0m
+[0;32mI (19474) LOG_RAW_ADC: 2609,2597,2925[0m
+[0;32mI (19476) LOG_STATE: 4[0m
+[0;32mI (19477) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (19484) main: state: 4[0m
+D (19488) main: Touchdown[0m
+[0;32mI (19495) LOG_STATE: 4[0m
+Data SBUS: 172D (19496) main: state: 4[0m
+D (19497) main: Touchdown[0m
+[0;32mI (19505) LOG_STATE: 4[0m
+Data SBUS: 172D (19506) main: state: 4[0m
+D (19507) main: Touchdown[0m
+[0;32mI (19507) LOG_RAW_ADC: 2641,2662,2955[0m
+[0;32mI (19510) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (19521) LOG_LIDAR: 0, 0, 29[0m
+[0;32mI (19525) LOG_ADC: 2641, 2662, 2955[0m
+[0;32mI (19529) LOG_IMU: 0.03, 0.03, 0.00[0m
+[0;32mI (19527) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19514) LOG_STATE: 4[0m
+[0;32mI (19540) LOG_RAW_ADC: 2691,2518,3132[0m
+[0;32mI (19533) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (19550) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (19553) main: state: 4[0m
+D (19557) main: Touchdown[0m
+[0;32mI (19565) LOG_STATE: 4[0m
+Data SBUS: 172D (19568) main: state: 4[0m
+D (19568) main: Touchdown[0m
+[0;32mI (19573) LOG_RAW_ADC: 2603,2618,2917[0m
+[0;32mI (19574) LOG_STATE: 4[0m
+[0;32mI (19577) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (19582) main: state: 4[0m
+D (19586) main: Touchdown[0m
+[0;32mI (19593) LOG_STATE: 4[0m
+Data SBUS: 172D (19594) main: state: 4[0m
+D (19595) main: Touchdown[0m
+[0;32mI (19603) LOG_STATE: 4[0m
+Data SBUS: 172D (19604) main: state: 4[0m
+D (19605) main: Touchdown[0m
+[0;32mI (19606) LOG_RAW_ADC: 2618,2622,2924[0m
+[0;32mI (19613) LOG_STATE: 4[0m
+Data SBUS: 172D (19616) main: state: 4[0m
+D (19619) main: Touchdown[0m
+[0;32mI (19626) LOG_STATE: 4[0m
+Data SBUS: 172D (19627) main: state: 4[0m
+[0;32mI (19627) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (19628) main: Touchdown[0m
+[0;32mI (19639) LOG_RAW_ADC: 2639,2558,3120[0m
+[0;32mI (19641) LOG_STATE: 4[0m
+Data SBUS: 172D (19646) main: state: 4[0m
+D (19647) main: Touchdown[0m
+[0;32mI (19653) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (19657) LOG_LIDAR: 0, 9, 29[0m
+[0;32mI (19661) LOG_ADC: 2639, 2558, 3120[0m
+[0;32mI (19665) LOG_IMU: 0.03, 0.03, 0.00[0m
+[0;32mI (19669) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (19672) LOG_RAW_ADC: 2624,2626,2914[0m
+[0;32mI (19656) LOG_STATE: 4[0m
+[0;32mI (19674) LOG_PID: 0.00,0.00[0m
+[0;32mI (19678) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (19690) main: state: 4[0m
+D (19693) main: Touchdown[0m
+[0;32mI (19701) LOG_STATE: 4[0m
+Data SBUS: 172D (19702) main: state: 4[0m
+D (19703) main: Touchdown[0m
+[0;32mI (19705) LOG_RAW_ADC: 2623,2551,2922[0m
+[0;32mI (19711) LOG_STATE: 4[0m
+Data SBUS: 172D (19714) main: state: 4[0m
+D (19717) main: Touchdown[0m
+[0;32mI (19725) LOG_STATE: 4[0m
+Data SBUS: 172D (19726) main: state: 4[0m
+D (19726) main: Touchdown[0m
+[0;32mI (19727) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19734) LOG_STATE: 4[0m
+[0;32mI (19738) LOG_RAW_ADC: 2603,2545,2915[0m
+Data SBUS: 172D (19742) main: state: 4[0m
+D (19745) main: Touchdown[0m
+[0;32mI (19753) LOG_STATE: 4[0m
+Data SBUS: 172D (19754) main: state: 4[0m
+D (19755) main: Touchdown[0m
+[0;32mI (19763) LOG_STATE: 4[0m
+Data SBUS: 172D (19764) main: state: 4[0m
+D (19765) main: Touchdown[0m
+[0;32mI (19771) LOG_RAW_ADC: 2607,2526,2939[0m
+[0;32mI (19772) LOG_STATE: 4[0m
+Data SBUS: 172D (19776) main: state: 4[0m
+[0;32mI (19777) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19784) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (19791) LOG_LIDAR: 0, 0, 30[0m
+[0;32mI (19795) LOG_ADC: 2607, 2526, 2939[0m
+[0;32mI (19799) LOG_IMU: 0.04, 0.03, 0.00[0m
+[0;32mI (19803) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (19804) LOG_RAW_ADC: 2608,2619,2928[0m
+D (19778) main: Touchdown[0m
+[0;32mI (19807) LOG_PID: 0.00,0.00[0m
+[0;32mI (19819) LOG_STATE: 4[0m
+Data SBUS: 172D (19825) main: state: 4[0m
+D (19825) main: Touchdown[0m
+[0;32mI (19827) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19832) LOG_STATE: 4[0m
+Data SBUS: 172[0;32mI (19837) LOG_RAW_ADC: 2652,2536,2874[0m
+D (19837) main: state: 4[0m
+D (19843) main: Touchdown[0m
+[0;32mI (19851) LOG_STATE: 4[0m
+Data SBUS: 172D (19852) main: state: 4[0m
+D (19853) main: Touchdown[0m
+[0;32mI (19861) LOG_STATE: 4[0m
+Data SBUS: 172D (19862) main: state: 4[0m
+D (19863) main: Touchdown[0m
+[0;32mI (19870) LOG_STATE: 4[0m
+[0;32mI (19870) LOG_RAW_ADC: 2606,2537,2959[0m
+Data SBUS: 172D (19873) main: state: 4[0m
+D (19876) main: Touchdown[0m
+[0;32mI (19877) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19884) LOG_STATE: 4[0m
+Data SBUS: 172D (19890) main: state: 4[0m
+D (19891) main: Touchdown[0m
+[0;32mI (19899) LOG_STATE: 4[0m
+Data SBUS: 172D (19900) main: state: 4[0m
+D (19901) main: Touchdown[0m
+[0;32mI (19903) LOG_RAW_ADC: 2636,2615,2707[0m
+[0;32mI (19908) LOG_STATE: 4[0m
+Data SBUS: 172D (19912) main: state: 4[0m
+D (19915) main: Touchdown[0m
+[0;32mI (19918) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (19925) LOG_LIDAR: 0, 0, 31[0m
+[0;32mI (19928) LOG_ADC: 2636, 2615, 2707[0m
+[0;32mI (19927) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19936) LOG_RAW_ADC: 2662,2527,2967[0m
+[0;32mI (19923) LOG_STATE: 4[0m
+[0;32mI (19932) LOG_IMU: 0.04, 0.03, 0.00[0m
+[0;32mI (19950) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (19953) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (19957) main: state: 4[0m
+D (19961) main: Touchdown[0m
+[0;32mI (19968) LOG_STATE: 4[0m
+[0;32mI (19969) LOG_RAW_ADC: 2667,2559,2902[0m
+Data SBUS: 172D (19971) main: state: 4[0m
+D (19975) main: Touchdown[0m
+[0;32mI (19977) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (19982) LOG_STATE: 4[0m
+Data SBUS: 172D (19987) main: state: 4[0m
+D (19989) main: Touchdown[0m
+[0;32mI (19997) LOG_STATE: 4[0m
+Data SBUS: 172D (19998) main: state: 4[0m
+D (19999) main: Touchdown[0m
+[0;32mI (20002) LOG_RAW_ADC: 2620,2591,2867[0m
+[0;32mI (20006) LOG_STATE: 4[0m
+Data SBUS: 172D (20010) main: state: 4[0m
+D (20013) main: Touchdown[0m
+[0;32mI (20020) LOG_STATE: 4[0m
+Data SBUS: 172D (20021) main: state: 4[0m
+D (20022) main: Touchdown[0m
+[0;32mI (20027) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20030) LOG_STATE: 4[0m
+Data SBUS: 172D (20035) main: state: 4[0m
+[0;32mI (20035) LOG_RAW_ADC: 2635,2589,2938[0m
+D (20037) main: Touchdown[0m
+[0;32mI (20049) LOG_STATE: 4[0m
+Data SBUS: 172D (20050) main: state: 4[0m
+D (20051) main: Touchdown[0m
+[0;32mI (20057) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (20061) LOG_LIDAR: 0, 5, 31[0m
+[0;32mI (20059) LOG_STATE: 4[0m
+[0;32mI (20068) LOG_RAW_ADC: 2615,2557,2939[0m
+[0;32mI (20066) LOG_ADC: 2635, 2589, 2938[0m
+[0;32mI (20076) LOG_IMU: 0.05, 0.03, 0.00[0m
+[0;32mI (20080) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (20077) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (20090) main: state: 4[0m
+D (20093) main: Touchdown[0m
+[0;32mI (20084) LOG_PID: 0.00,0.00[0m
+[0;32mI (20101) LOG_STATE: 4[0m
+[0;32mI (20101) LOG_RAW_ADC: 2635,2547,2909[0m
+Data SBUS: 172D (20107) main: state: 4[0m
+D (20111) main: Touchdown[0m
+[0;32mI (20118) LOG_STATE: 4[0m
+Data SBUS: 172D (20119) main: state: 4[0m
+D (20120) main: Touchdown[0m
+[0;32mI (20127) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20128) LOG_STATE: 4[0m
+Data SBUS: 172D (20133) main: state: 4[0m
+[0;32mI (20134) LOG_RAW_ADC: 2587,2522,2624[0m
+D (20135) main: Touchdown[0m
+[0;32mI (20147) LOG_STATE: 4[0m
+Data SBUS: 172D (20148) main: state: 4[0m
+D (20149) main: Touchdown[0m
+[0;32mI (20157) LOG_STATE: 4[0m
+Data SBUS: 172D (20158) main: state: 4[0m
+D (20158) main: Touchdown[0m
+[0;32mI (20166) LOG_STATE: 4[0m
+Data SBUS: 172D (20167) main: state: 4[0m
+[0;32mI (20167) LOG_RAW_ADC: 2593,2650,2846[0m
+D (20168) main: Touchdown[0m
+[0;32mI (20177) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20180) LOG_STATE: 4[0m
+Data SBUS: 172D (20185) main: state: 4[0m
+D (20187) main: Touchdown[0m
+[0;32mI (20195) LOG_STATE: 4[0m
+Data SBUS: 172D (20196) main: state: 4[0m
+D (20197) main: Touchdown[0m
+[0;32mI (20200) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (20200) LOG_RAW_ADC: 2686,2521,2983[0m
+[0;32mI (20207) LOG_LIDAR: 0, 0, 32[0m
+[0;32mI (20215) LOG_ADC: 2686, 2521, 2983[0m
+[0;32mI (20219) LOG_IMU: 0.05, 0.03, 0.00[0m
+[0;32mI (20223) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (20227) LOG_PID: 0.00,0.00[0m
+[0;32mI (20227) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20233) LOG_RAW_ADC: 2628,2527,2878[0m
+[0;32mI (20207) LOG_STATE: 4[0m
+Data SBUS: 172D (20247) main: state: 4[0m
+D (20247) main: Touchdown[0m
+[0;32mI (20255) LOG_STATE: 4[0m
+Data SBUS: 172D (20256) main: state: 4[0m
+D (20257) main: Touchdown[0m
+[0;32mI (20264) LOG_STATE: 4[0m
+Data SBUS: 172D (20265) main: state: 4[0m
+D (20266) main: Touchdown[0m
+[0;32mI (20266) LOG_RAW_ADC: 2624,2544,3024[0m
+[0;32mI (20274) LOG_STATE: 4[0m
+[0;32mI (20277) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (20282) main: state: 4[0m
+D (20285) main: Touchdown[0m
+[0;32mI (20293) LOG_STATE: 4[0m
+Data SBUS: 172D (20294) main: state: 4[0m
+D (20295) main: Touchdown[0m
+[0;32mI (20299) LOG_RAW_ADC: 2609,2680,2898[0m
+[0;32mI (20302) LOG_STATE: 4[0m
+Data SBUS: 172D (20306) main: state: 4[0m
+D (20309) main: Touchdown[0m
+[0;32mI (20316) LOG_STATE: 4[0m
+Data SBUS: 172D (20317) main: state: 4[0m
+D (20318) main: Touchdown[0m
+[0;32mI (20326) LOG_STATE: 4[0m
+Data SBUS: 172D (20327) main: state: 4[0m
+D (20328) main: Touchdown[0m
+[0;32mI (20327) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20332) LOG_RAW_ADC: 2587,2597,2847[0m
+[0;32mI (20331) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (20347) LOG_LIDAR: 0, 0, 33[0m
+[0;32mI (20351) LOG_ADC: 2587, 2597, 2847[0m
+[0;32mI (20355) LOG_IMU: 0.06, 0.03, 0.00[0m
+[0;32mI (20359) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (20363) LOG_ID: 0.00,0.00[0m
+[0;32mI (20365) LOG_RAW_ADC: 2593,2559,2944[0m
+[0;32mI (20335) LOG_STATE: 4[0m
+[0;32mI (20377) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (20380) main: state: 4[0m
+D (20383) main: Touchdown[0m
+[0;32mI (20391) LOG_STATE: 4[0m
+Data SBUS: 172D (20392) main: state: 4[0m
+D (20393) main: Touchdown[0m
+[0;32mI (20398) LOG_RAW_ADC: 2631,2548,2920[0m
+[0;32mI (20400) LOG_STATE: 4[0m
+Data SBUS: 172D (20404) main: state: 4[0m
+D (20407) main: Touchdown[0m
+[0;32mI (20414) LOG_STATE: 4[0m
+Data SBUS: 172D (20415) main: state: 4[0m
+D (20416) main: Touchdown[0m
+[0;32mI (20424) LOG_STATE: 4[0m
+Data SBUS: 172D (20425) main: state: 4[0m
+D (20426) main: Touchdown[0m
+[0;32mI (20427) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20431) LOG_RAW_ADC: 2635,2587,2961[0m
+[0;32mI (20433) LOG_STATE: 4[0m
+Data SBUS: 172D (20443) main: state: 4[0m
+D (20445) main: Touchdown[0m
+[0;32mI (20452) LOG_STATE: 4[0m
+Data SBUS: 172D (20453) main: state: 4[0m
+D (20454) main: Touchdown[0m
+[0;32mI (20462) LOG_STATE: 4[0m
+Data SBUS: 172D (20463) main: state: 4[0m
+D (20464) main: Touchdown[0m
+[0;32mI (20464) LOG_RAW_ADC: 2625,2648,2919[0m
+[0;32mI (20467) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (20478) LOG_LIDAR: 0, 13, 33[0m
+[0;32mI (20482) LOG_ADC: 2625, 2648, 2919[0m
+[0;32mI (20486) LOG_IMU: 0.06, 0.03, 0.00[0m
+[0;32mI (20477) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20471) LOG_STATE: 4[0m
+[0;32mI (20497) LOG_RAW_ADC: 2621,2619,2980[0m
+[0;32mI (20490) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (20507) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (20510) main: state: 4[0m
+D (20514) main: Touchdown[0m
+[0;32mI (20522) LOG_STATE: 4[0m
+Data SBUS: 172D (20523) main: state: 4[0m
+D (20524) main: Touchdown[0m
+[0;32mI (20527) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20530) LOG_RAW_ADC: 2634,2622,2914[0m
+[0;32mI (20531) LOG_STATE: 4[0m
+Data SBUS: 172D (20541) main: state: 4[0m
+D (20543) main: Touchdown[0m
+[0;32mI (20550) LOG_STATE: 4[0m
+Data SBUS: 172D (20551) main: state: 4[0m
+D (20552) main: Touchdown[0m
+[0;32mI (20560) LOG_STATE: 4[0m
+Data SBUS: 172D (20561) main: state: 4[0m
+D (20562) main: Touchdown[0m
+[0;32mI (20563) LOG_RAW_ADC: 2559,2587,2864[0m
+[0;32mI (20570) LOG_STATE: 4[0m
+Data SBUS: 172D (20573) main: state: 4[0m
+D (20576) main: Touchdown[0m
+[0;32mI (20577) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20583) LOG_STATE: 4[0m
+Data SBUS: 172D (20588) main: state: 4[0m
+D (20590) main: Touchdown[0m
+[0;32mI (20596) LOG_RAW_ADC: 2626,2593,2831[0m
+[0;32mI (20598) LOG_STATE: 4[0m
+Data SBUS: 172D (20602) main: state: 4[0m
+D (20604) main: Touchdown[0m
+[0;32mI (20610) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (20614) LOG_LIDAR: 0, 18, 32[0m
+[0;32mI (20618) LOG_ADC: 2626, 2593, 2831[0m
+[0;32mI (20622) LOG_IMU: 0.07, 0.03, 0.00[0m
+[0;32mI (20613) LOG_STATE: 4[0m
+[0;32mI (20629) LOG_RAW_ADC: 2752,2598,2880[0m
+[0;32mI (20627) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20626) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (20643) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (20647) main: state: 4[0m
+D (20651) main: Touchdown[0m
+[0;32mI (20658) LOG_STATE: 4[0m
+Data SBUS: 172D (20660) main: state: 4[0m
+D (20660) main: Touchdown[0m
+[0;32mI (20662) LOG_RAW_ADC: 2558,2617,2943[0m
+[0;32mI (20668) LOG_STATE: 4[0m
+Data SBUS: 172D (20671) main: state: 4[0m
+D (20674) main: Touchdown[0m
+[0;32mI (20677) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20682) LOG_STATE: 4[0m
+Data SBUS: 172D (20687) main: state: 4[0m
+D (20689) main: Touchdown[0m
+[0;32mI (20695) LOG_RAW_ADC: 2594,2645,2938[0m
+[0;32mI (20696) LOG_STATE: 4[0m
+Data SBUS: 172D (20700) main: state: 4[0m
+D (20703) main: Touchdown[0m
+[0;32mI (20710) LOG_STATE: 4[0m
+Data SBUS: 172D (20711) main: state: 4[0m
+D (20712) main: Touchdown[0m
+[0;32mI (20720) LOG_STATE: 4[0m
+Data SBUS: 172D (20721) main: state: 4[0m
+D (20722) main: Touchdown[0m
+[0;32mI (20727) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20728) LOG_RAW_ADC: 2559,2595,2914[0m
+[0;32mI (20729) LOG_STATE: 4[0m
+Data SBUS: 172D (20739) main: state: 4[0m
+D (20741) main: Touchdown[0m
+[0;32mI (20747) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (20751) LOG_LIDAR: 0, 23, 32[0m
+[0;32mI (20754) LOG_ADC: 2559, 2595, 2914[0m
+[0;32mI (20759) LOG_IMU: 0.07, 0.03, 0.00[0m
+[0;32mI (20761) LOG_RAW_ADC: 2607,2259,2775[0m
+[0;32mI (20749) LOG_STATE: 4[0m
+[0;32mI (20763) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (20775) LOG_PID: 0.00,0.00[0m
+[0;32mI (20777) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (20783) main: state: 4[0m
+D (20787) main: Touchdown[0m
+[0;32mI (20794) LOG_STATE: 4[0m
+[0;32mI (20794) LOG_RAW_ADC: 2670,2523,3200[0m
+Data SBUS: 172D (20797) main: state: 4[0m
+D (20801) main: Touchdown[0m
+[0;32mI (20808) LOG_STATE: 4[0m
+Data SBUS: 172D (20809) main: state: 4[0m
+D (20810) main: Touchdown[0m
+[0;32mI (20818) LOG_STATE: 4[0m
+Data SBUS: 172D (20819) main: state: 4[0m
+D (20820) main: Touchdown[0m
+[0;32mI (20827) LOG_STATE: 4[0m
+[0;32mI (20827) LOG_RAW_ADC: 2559,2704,2950[0m
+Data SBUS: 172D (20830) main: state: 4[0m
+[0;32mI (20830) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (20834) main: Touchdown[0m
+[0;32mI (20846) LOG_STATE: 4[0m
+Data SBUS: 172D (20847) main: state: 4[0m
+D (20848) main: Touchdown[0m
+[0;32mI (20856) LOG_STATE: 4[0m
+Data SBUS: 172D (20857) main: state: 4[0m
+D (20858) main: Touchdown[0m
+[0;32mI (20860) LOG_RAW_ADC: 2624,2559,2933[0m
+[0;32mI (20866) LOG_STATE: 4[0m
+Data SBUS: 172D (20869) main: state: 4[0m
+D (20872) main: Touchdown[0m
+[0;32mI (20877) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20878) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (20887) LOG_LIDAR: 0, 24, 31[0m
+[0;32mI (20891) LOG_ADC: 2624, 2559, 2933[0m
+[0;32mI (20893) LOG_RAW_ADC: 2619,2595,2883[0m
+[0;32mI (20879) LOG_STATE: 4[0m
+[0;32mI (20895) LOG_IMU: 0.08, 0.03, 0.00[0m
+[0;32mI (20907) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (20911) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (20914) main: state: 4[0m
+D (20918) main: Touchdown[0m
+[0;32mI (20926) LOG_STATE: 4[0m
+[0;32mI (20926) LOG_RAW_ADC: 2635,2543,2908[0m
+Data SBUS: 172[0;32mI (20928) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (20928) main: state: 4[0m
+D (20937) main: Touchdown[0m
+[0;32mI (20945) LOG_STATE: 4[0m
+Data SBUS: 172D (20946) main: state: 4[0m
+D (20947) main: Touchdown[0m
+[0;32mI (20954) LOG_STATE: 4[0m
+Data SBUS: 172D (20955) main: state: 4[0m
+D (20956) main: Touchdown[0m
+[0;32mI (20959) LOG_RAW_ADC: 2592,2586,2954[0m
+[0;32mI (20964) LOG_STATE: 4[0m
+Data SBUS: 172D (20967) main: state: 4[0m
+D (20970) main: Touchdown[0m
+[0;32mI (20977) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (20978) LOG_STATE: 4[0m
+Data SBUS: 172D (20983) main: state: 4[0m
+D (20985) main: Touchdown[0m
+[0;32mI (20992) LOG_STATE: 4[0m
+[0;32mI (20992) LOG_RAW_ADC: 2601,2662,2890[0m
+Data SBUS: 172D (20995) main: state: 4[0m
+D (20999) main: Touchdown[0m
+[0;32mI (21006) LOG_STATE: 4[0m
+Data SBUS: 172D (21007) main: state: 4[0m
+D (21008) main: Touchdown[0m
+[0;32mI (21014) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (21018) LOG_LIDAR: 0, 0, 32[0m
+[0;32mI (21022) LOG_ADC: 2601, 2662, 2890[0m
+[0;32mI (21025) LOG_RAW_ADC: 2625,2555,2933[0m
+[0;32mI (21017) LOG_STATE: 4[0m
+[0;32mI (21026) LOG_IMU: 0.08, 0.03, 0.00[0m
+[0;32mI (21030) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21038) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (21047) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (21050) main: state: 4[0m
+D (21054) main: Touchdown[0m
+[0;32mI (21058) LOG_RAW_ADC: 2672,2630,2925[0m
+[0;32mI (21062) LOG_STATE: 4[0m
+Data SBUS: 172D (21067) main: state: 4[0m
+D (21068) main: Touchdown[0m
+[0;32mI (21076) LOG_STATE: 4[0m
+Data SBUS: 172D (21077) main: state: 4[0m
+[0;32mI (21077) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (21078) main: Touchdown[0m
+[0;32mI (21090) LOG_STATE: 4[0m
+[0;32mI (21091) LOG_RAW_ADC: 2618,2559,2864[0m
+Data SBUS: 172D (21093) main: state: 4[0m
+D (21097) main: Touchdown[0m
+[0;32mI (21104) LOG_STATE: 4[0m
+Data SBUS: 172D (21105) main: state: 4[0m
+D (21106) main: Touchdown[0m
+[0;32mI (21114) LOG_STATE: 4[0m
+Data SBUS: 172D (21115) main: state: 4[0m
+D (21116) main: Touchdown[0m
+[0;32mI (21123) LOG_STATE: 4[0m
+Data SBUS: 172D (21124) main: state: 4[0m
+[0;32mI (21124) LOG_RAW_ADC: 2621,2535,2868[0m
+D (21125) main: Touchdown[0m
+[0;32mI (21130) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21137) LOG_STATE: 4[0m
+Data SBUS: 172D (21142) main: state: 4[0m
+D (21144) main: Touchdown[0m
+[0;32mI (21150) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (21154) LOG_LIDAR: 0, 0, 32[0m
+[0;32mI (21157) LOG_RAW_ADC: 2607,2599,2878[0m
+[0;32mI (21153) LOG_STATE: 4[0m
+[0;32mI (21158) LOG_ADC: 2607, 2599, 2878[0m
+[0;32mI (21170) LOG_IMU: 0.08, 0.03, 0.00[0m
+[0;32mI (21174) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (21178) LOG_PID: 0.00,0.00[0m
+[0;32mI (21177) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (21187) main: state: 4[0m
+[0;32mI (21190) LOG_RAW_ADC: 2559,2667,2868[0m
+D (21190) main: Touchdown[0m
+[0;32mI (21202) LOG_STATE: 4[0m
+Data SBUS: 172D (21205) main: state: 4[0m
+D (21205) main: Touchdown[0m
+[0;32mI (21212) LOG_STATE: 4[0m
+[0;32mI (21212) LOG_STATE: 4[0m
+Data SBUS: 172D (21214) main: state: 4[0m
+D (21217) main: Touchdown[0m
+[0;32mI (21223) LOG_RAW_ADC: 2676,2559,3005[0m
+[0;32mI (21225) LOG_STATE: 4[0m
+[0;32mI (21227) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (21232) main: state: 4[0m
+D (21236) main: Touchdown[0m
+[0;32mI (21244) LOG_STATE: 4[0m
+Data SBUS: 172D (21245) main: state: 4[0m
+D (21246) main: Touchdown[0m
+[0;32mI (21253) LOG_STATE: 4[0m
+Data SBUS: 172D (21254) main: state: 4[0m
+D (21255) main: Touchdown[0m
+[0;32mI (21256) LOG_RAW_ADC: 2595,2701,2863[0m
+[0;32mI (21263) LOG_STATE: 4[0m
+Data SBUS: 172D (21266) main: state: 4[0m
+D (21269) main: Touchdown[0m
+[0;32mI (21277) LOG_STATE: 4[0m
+[0;32mI (21277) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (21280) main: state: 4[0m
+[0;32mI (21281) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 44,	5.17, -1.98[0m
+[0;32mI (21289) LOG_RAW_ADC: 2613,2546,2887[0m
+D (21285) main: Touchdown[0m
+[0;32mI (21291) LOG_LIDAR: 0, 14, 31[0m
+[0;32mI (21302) LOG_ADC: 2613, 2546, 2887[0m
+[0;32mI (21306) LOG_IMU: 0.09, 0.03, 0.00[0m
+[0;32mI (21310) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (21314) LOG_PID: 0.00,0.00[0m
+[0;32mI (21304) LOG_STATE: 4[0m
+[0;32mI (21322) LOG_RAW_ADC: 2684,2639,2865[0m
+Data SBUS: 172D (21325) main: state: 4[0m
+[0;32mI (21327) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (21329) main: Touchdown[0m
+[0;32mI (21342) LOG_STATE: 4[0m
+Data SBUS: 172D (21343) main: state: 4[0m
+D (21344) main: Touchdown[0m
+[0;32mI (21351) LOG_STATE: 4[0m
+Data SBUS: 172D (21352) main: state: 4[0m
+D (21353) main: Touchdown[0m
+[0;32mI (21355) LOG_RAW_ADC: 2633,2611,2895[0m
+[0;32mI (21361) LOG_STATE: 4[0m
+Data SBUS: 172D (21364) main: state: 4[0m
+D (21367) main: Touchdown[0m
+[0;32mI (21375) LOG_STATE: 4[0m
+Data SBUS: 172D (21376) main: state: 4[0m
+D (21377) main: Touchdown[0m
+[0;32mI (21377) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21384) LOG_STATE: 4[0m
+[0;32mI (21388) LOG_RAW_ADC: 2613,2599,2874[0m
+Data SBUS: 172D (21392) main: state: 4[0m
+D (21395) main: Touchdown[0m
+[0;32mI (21403) LOG_STATE: 4[0m
+Data SBUS: 172D (21405) main: state: 4[0m
+D (21405) main: Touchdown[0m
+[0;32mI (21413) LOG_STATE: 4[0m
+Data SBUS: 172D (21414) main: state: 4[0m
+D (21415) main: Touchdown[0m
+[0;32mI (21418) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (21421) LOG_RAW_ADC: 2559,2518,3286[0m
+[0;32mI (21425) LOG_LIDAR: 0, 0, 34[0m
+[0;32mI (21433) LOG_ADC: 2559, 2518, 3286[0m
+[0;32mI (21437) LOG_IMU: 0.10, 0.03, 0.00[0m
+[0;32mI (21441) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (21429) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21425) LOG_STATE: 4[0m
+[0;32mI (21445) LOG_PID: 0.00,0.00[0m
+[0;32mI (21454) LOG_RAW_ADC: 2627,2634,2922[0m
+Data SBUS: 172D (21461) main: state: 4[0m
+D (21465) main: Touchdown[0m
+[0;32mI (21473) LOG_STATE: 4[0m
+Data SBUS: 172D (21475) main: state: 4[0m
+D (21475) main: Touchdown[0m
+[0;32mI (21477) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21482) LOG_STATE: 4[0m
+Data SBUS: 172D (21486) main: state: 4[0m
+[0;32mI (21487) LOG_RAW_ADC: 2665,2547,2878[0m
+D (21489) main: Touchdown[0m
+[0;32mI (21501) LOG_STATE: 4[0m
+Data SBUS: 172D (21502) main: state: 4[0m
+D (21503) main: Touchdown[0m
+[0;32mI (21511) LOG_STATE: 4[0m
+Data SBUS: 172D (21512) main: state: 4[0m
+D (21513) main: Touchdown[0m
+[0;32mI (21520) LOG_STATE: 4[0m
+[0;32mI (21520) LOG_RAW_ADC: 2612,2695,2924[0m
+Data SBUS: 172D (21523) main: state: 4[0m
+D (21527) main: Touchdown[0m
+[0;32mI (21527) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21534) LOG_STATE: 4[0m
+Data SBUS: 172D (21539) main: state: 4[0m
+D (21541) main: Touchdown[0m
+[0;32mI (21549) LOG_STATE: 4[0m
+Data SBUS: 172D (21550) main: state: 4[0m
+D (21551) main: Touchdown[0m
+[0;32mI (21553) LOG_RAW_ADC: 2559,2559,2928[0m
+[0;32mI (21557) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (21565) LOG_LIDAR: 0, 15, 34[0m
+[0;32mI (21569) LOG_ADC: 2559, 2559, 2928[0m
+[0;32mI (21573) LOG_IMU: 0.10, 0.03, 0.00[0m
+[0;32mI (21577) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (21581) LOG_PID: 0.00,0.00[0m
+[0;32mI (21558) LOG_STATE: 4[0m
+[0;32mI (21586) LOG_RAW_ADC: 2633,2672,2891[0m
+[0;32mI (21577) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (21598) main: state: 4[0m
+D (21601) main: Touchdown[0m
+[0;32mI (21609) LOG_STATE: 4[0m
+Data SBUS: 172D (21610) main: state: 4[0m
+D (21611) main: Touchdown[0m
+[0;32mI (21619) LOG_STATE: 4[0m
+[0;32mI (21619) LOG_RAW_ADC: 2644,2599,2855[0m
+Data SBUS: 172D (21621) main: state: 4[0m
+D (21625) main: Touchdown[0m
+[0;32mI (21627) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21632) LOG_STATE: 4[0m
+Data SBUS: 172D (21638) main: state: 4[0m
+D (21639) main: Touchdown[0m
+[0;32mI (21647) LOG_STATE: 4[0m
+Data SBUS: 172D (21648) main: state: 4[0m
+D (21649) main: Touchdown[0m
+[0;32mI (21652) LOG_RAW_ADC: 2607,2527,2944[0m
+[0;32mI (21657) LOG_STATE: 4[0m
+Data SBUS: 172D (21660) main: state: 4[0m
+D (21663) main: Touchdown[0m
+[0;32mI (21671) LOG_STATE: 4[0m
+Data SBUS: 172D (21672) main: state: 4[0m
+D (21673) main: Touchdown[0m
+[0;32mI (21677) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21680) LOG_STATE: 4[0m
+Data SBUS: 172D (21684) main: state: 4[0m
+[0;32mI (21685) LOG_RAW_ADC: 2607,2559,2929[0m
+[0;32mI (21685) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (21699) LOG_LIDAR: 0, 4, 33[0m
+[0;32mI (21702) LOG_ADC: 2607, 2559, 2929[0m
+[0;32mI (21707) LOG_IMU: 0.10, 0.03, 0.00[0m
+[0;32mI (21711) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (21715) LOG_PID: 0.00,0.00[0m
+[0;32mI (21718) LOG_RAW_ADC: 2599,2672,2921[0m
+D (21687) main: Touchdown[0m
+[0;32mI (21727) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21731) LOG_STATE: 4[0m
+Data SBUS: 172D (21740) main: state: 4[0m
+D (21740) main: Touchdown[0m
+[0;32mI (21745) LOG_STATE: 4[0m
+Data SBUS: 172D (21746) main: state: 4[0m
+D (21747) main: Touchdown[0m
+[0;32mI (21751) LOG_RAW_ADC: 2634,2555,2949[0m
+[0;32mI (21755) LOG_STATE: 4[0m
+Data SBUS: 172D (21758) main: state: 4[0m
+D (21761) main: Touchdown[0m
+[0;32mI (21769) LOG_STATE: 4[0m
+Data SBUS: 172D (21770) main: state: 4[0m
+D (21770) main: Touchdown[0m
+[0;32mI (21777) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21778) LOG_STATE: 4[0m
+Data SBUS: 172D (21783) main: state: 4[0m
+[0;32mI (21784) LOG_RAW_ADC: 2559,2593,2956[0m
+D (21785) main: Touchdown[0m
+[0;32mI (21797) LOG_STATE: 4[0m
+Data SBUS: 172D (21798) main: state: 4[0m
+D (21799) main: Touchdown[0m
+[0;32mI (21807) LOG_STATE: 4[0m
+Data SBUS: 172D (21808) main: state: 4[0m
+D (21809) main: Touchdown[0m
+[0;32mI (21816) LOG_STATE: 4[0m
+Data SBUS: 172D (21817) main: state: 4[0m
+[0;32mI (21817) LOG_RAW_ADC: 2649,2638,2921[0m
+D (21818) main: Touchdown[0m
+[0;32mI (21818) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (21827) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21831) LOG_STATE: 4[0m
+[0;32mI (21833) LOG_LIDAR: 0, 5, 31[0m
+[0;32mI (21844) LOG_ADC: 2649, 2638, 2921[0m
+[0;32mI (21849) LOG_IMU: 0.11, 0.03, 0.00[0m
+[0;32mI (21850) LOG_RAW_ADC: 2621,2507,2978[0m
+Data SBUS: 172D (21857) main: state: 4[0m
+D (21861) main: Touchdown[0m
+[0;32mI (21853) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (21868) LOG_PID: 0.00,0.00[0m
+[0;32mI (21870) LOG_STATE: 4[0m
+Data SBUS: 172D (21877) main: state: 4[0m
+[0;32mI (21877) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21883) LOG_RAW_ADC: 2559,2599,2947[0m
+D (21878) main: Touchdown[0m
+[0;32mI (21895) LOG_STATE: 4[0m
+Data SBUS: 172D (21898) main: state: 4[0m
+D (21898) main: Touchdown[0m
+[0;32mI (21905) LOG_STATE: 4[0m
+[0;32mI (21905) LOG_STATE: 4[0m
+Data SBUS: 172D (21907) main: state: 4[0m
+D (21910) main: Touchdown[0m
+[0;32mI (21916) LOG_RAW_ADC: 2593,2722,2935[0m
+[0;32mI (21917) LOG_STATE: 4[0m
+Data SBUS: 172D (21921) main: state: 4[0m
+D (21924) main: Touchdown[0m
+[0;32mI (21927) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21931) LOG_STATE: 4[0m
+Data SBUS: 172D (21937) main: state: 4[0m
+D (21938) main: Touchdown[0m
+[0;32mI (21946) LOG_STATE: 4[0m
+Data SBUS: 172D (21947) main: state: 4[0m
+D (21948) main: Touchdown[0m
+[0;32mI (21949) LOG_RAW_ADC: 2618,2611,3025[0m
+[0;32mI (21956) LOG_STATE: 4[0m
+Data SBUS: 172D (21959) main: state: 4[0m
+D (21962) main: Touchdown[0m
+[0;32mI (21969) LOG_STATE: 4[0m
+Data SBUS: 172D (21970) main: state: 4[0m
+D (21971) main: Touchdown[0m
+[0;32mI (21971) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (21981) LOG_LIDAR: 0, 0, 33[0m
+[0;32mI (21982) LOG_RAW_ADC: 2655,2559,2960[0m
+[0;32mI (21980) LOG_STATE: 4[0m
+[0;32mI (21977) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (21985) LOG_ADC: 2655, 2559, 2960[0m
+[0;32mI (22002) LOG_IMU: 0.11, 0.03, 0.00[0m
+[0;32mI (22006) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (22010) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (22014) main: state: 4[0m
+[0;32mI (22015) LOG_RAW_ADC: 2639,2559,2929[0m
+D (22017) main: Touchdown[0m
+[0;32mI (22027) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22029) LOG_STATE: 4[0m
+Data SBUS: 172D (22037) main: state: 4[0m
+D (22038) main: Touchdown[0m
+[0;32mI (22044) LOG_STATE: 4[0m
+Data SBUS: 172D (22045) main: state: 4[0m
+D (22046) main: Touchdown[0m
+[0;32mI (22048) LOG_RAW_ADC: 2650,2665,2926[0m
+[0;32mI (22054) LOG_STATE: 4[0m
+Data SBUS: 172D (22057) main: state: 4[0m
+D (22060) main: Touchdown[0m
+[0;32mI (22067) LOG_STATE: 4[0m
+Data SBUS: 172D (22068) main: state: 4[0m
+D (22069) main: Touchdown[0m
+[0;32mI (22077) LOG_STATE: 4[0m
+[0;32mI (22077) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (22080) main: state: 4[0m
+[0;32mI (22081) LOG_RAW_ADC: 2650,2512,2958[0m
+D (22084) main: Touchdown[0m
+[0;32mI (22096) LOG_STATE: 4[0m
+Data SBUS: 172D (22098) main: state: 4[0m
+D (22098) main: Touchdown[0m
+[0;32mI (22106) LOG_STATE: 4[0m
+Data SBUS: 172D (22107) main: state: 4[0m
+D (22107) main: Touchdown[0m
+[0;32mI (22114) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (22114) LOG_RAW_ADC: 2665,2639,2985[0m
+[0;32mI (22118) LOG_LIDAR: 0, 5, 34[0m
+[0;32mI (22126) LOG_ADC: 2665, 2639, 2985[0m
+[0;32mI (22130) LOG_IMU: 0.12, 0.03, 0.00[0m
+[0;32mI (22127) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22118) LOG_STATE: 4[0m
+[0;32mI (22134) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (22147) LOG_PID: 0.00,0.00[0m
+[0;32mI (22147) LOG_RAW_ADC: 2549,2684,2864[0m
+Data SBUS: 172D (22154) main: state: 4[0m
+D (22158) main: Touchdown[0m
+[0;32mI (22166) LOG_STATE: 4[0m
+Data SBUS: 172D (22168) main: state: 4[0m
+D (22168) main: Touchdown[0m
+[0;32mI (22175) LOG_STATE: 4[0m
+[0;32mI (22175) LOG_STATE: 4[0m
+[0;32mI (22177) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22180) LOG_RAW_ADC: 2637,2559,2999[0m
+Data SBUS: 172D (22186) main: state: 4[0m
+D (22189) main: Touchdown[0m
+[0;32mI (22197) LOG_STATE: 4[0m
+Data SBUS: 172D (22198) main: state: 4[0m
+D (22199) main: Touchdown[0m
+[0;32mI (22207) LOG_STATE: 4[0m
+Data SBUS: 172D (22208) main: state: 4[0m
+D (22209) main: Touchdown[0m
+[0;32mI (22213) LOG_RAW_ADC: 2597,2605,2893[0m
+[0;32mI (22216) LOG_STATE: 4[0m
+Data SBUS: 172D (22220) main: state: 4[0m
+D (22222) main: Touchdown[0m
+[0;32mI (22227) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22230) LOG_STATE: 4[0m
+Data SBUS: 172D (22235) main: state: 4[0m
+D (22237) main: Touchdown[0m
+[0;32mI (22245) LOG_STATE: 4[0m
+Data SBUS: 172D (22246) main: state: 4[0m
+[0;32mI (22246) LOG_RAW_ADC: 2681,2591,2960[0m
+D (22247) main: Touchdown[0m
+[0;32mI (22250) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (22261) LOG_LIDAR: 0, 0, 33[0m
+[0;32mI (22265) LOG_ADC: 2681, 2591, 2960[0m
+[0;32mI (22269) LOG_IMU: 0.12, 0.03, 0.00[0m
+[0;32mI (22273) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (22277) LOG_PID: 0.00,0.00[0m
+[0;32mI (22279) LOG_RAW_ADC: 2619,2681,2955[0m
+[0;32mI (22277) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22260) LOG_STATE: 4[0m
+Data SBUS: 172D (22299) main: state: 4[0m
+D (22299) main: Touchdown[0m
+[0;32mI (22305) LOG_STATE: 4[0m
+Data SBUS: 172D (22306) main: state: 4[0m
+D (22307) main: Touchdown[0m
+[0;32mI (22312) LOG_RAW_ADC: 2608,2600,2955[0m
+[0;32mI (22314) LOG_STATE: 4[0m
+Data SBUS: 172D (22318) main: state: 4[0m
+D (22321) main: Touchdown[0m
+[0;32mI (22327) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22328) LOG_STATE: 4[0m
+Data SBUS: 172D (22333) main: state: 4[0m
+D (22335) main: Touchdown[0m
+[0;32mI (22343) LOG_STATE: 4[0m
+Data SBUS: 172D (22344) main: state: 4[0m
+D (22345) main: Touchdown[0m
+[0;32mI (22345) LOG_RAW_ADC: 2608,2610,2916[0m
+[0;32mI (22352) LOG_STATE: 4[0m
+Data SBUS: 172D (22357) main: state: 4[0m
+D (22359) main: Touchdown[0m
+[0;32mI (22366) LOG_STATE: 4[0m
+Data SBUS: 172D (22367) main: state: 4[0m
+D (22368) main: Touchdown[0m
+[0;32mI (22376) LOG_STATE: 4[0m
+Data SBUS: 172D (22377) main: state: 4[0m
+D (22378) main: Touchdown[0m
+[0;32mI (22378) LOG_RAW_ADC: 2581,2526,2989[0m
+[0;32mI (22377) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22381) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (22397) LOG_LIDAR: 0, 0, 34[0m
+[0;32mI (22401) LOG_ADC: 2581, 2526, 2989[0m
+[0;32mI (22405) LOG_IMU: 0.13, 0.03, 0.00[0m
+[0;32mI (22409) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (22411) LOG_RAW_ADC: 2960,2523,2908[0m
+[0;32mI (22385) LOG_STATE: 4[0m
+[0;32mI (22413) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172[0;32mI (22427) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (22427) main: state: 4[0m
+D (22433) main: Touchdown[0m
+[0;32mI (22441) LOG_STATE: 4[0m
+Data SBUS: 172D (22442) main: state: 4[0m
+D (22443) main: Touchdown[0m
+[0;32mI (22444) LOG_RAW_ADC: 2631,2559,2923[0m
+[0;32mI (22451) LOG_STATE: 4[0m
+Data SBUS: 172D (22454) main: state: 4[0m
+D (22457) main: Touchdown[0m
+[0;32mI (22464) LOG_STATE: 4[0m
+Data SBUS: 172D (22465) main: state: 4[0m
+D (22466) main: Touchdown[0m
+[0;32mI (22474) LOG_STATE: 4[0m
+Data SBUS: 172D (22475) main: state: 4[0m
+D (22476) main: Touchdown[0m
+[0;32mI (22477) LOG_RAW_ADC: 2651,2624,2938[0m
+[0;32mI (22477) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22484) LOG_STATE: 4[0m
+Data SBUS: 172D (22493) main: state: 4[0m
+D (22495) main: Touchdown[0m
+[0;32mI (22503) LOG_STATE: 4[0m
+Data SBUS: 172D (22504) main: state: 4[0m
+D (22504) main: Touchdown[0m
+[0;32mI (22510) LOG_RAW_ADC: 2605,2640,2859[0m
+[0;32mI (22512) LOG_STATE: 4[0m
+Data SBUS: 172D (22515) main: state: 4[0m
+D (22518) main: Touchdown[0m
+[0;32mI (22524) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (22528) LOG_LIDAR: 0, 0, 34[0m
+[0;32mI (22532) LOG_ADC: 2605, 2640, 2859[0m
+[0;32mI (22536) LOG_IMU: 0.13, 0.03, 0.00[0m
+[0;32mI (22527) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22543) LOG_RAW_ADC: 2599,2832,2911[0m
+[0;32mI (22527) LOG_STATE: 4[0m
+[0;32mI (22540) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (22558) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (22561) main: state: 4[0m
+D (22564) main: Touchdown[0m
+[0;32mI (22572) LOG_STATE: 4[0m
+Data SBUS: 172D (22573) main: state: 4[0m
+D (22574) main: Touchdown[0m
+[0;32mI (22576) LOG_RAW_ADC: 2608,2533,2909[0m
+[0;32mI (22582) LOG_STATE: 4[0m
+[0;32mI (22581) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (22589) main: state: 4[0m
+D (22593) main: Touchdown[0m
+[0;32mI (22601) LOG_STATE: 4[0m
+Data SBUS: 172D (22603) main: state: 4[0m
+D (22603) main: Touchdown[0m
+[0;32mI (22609) LOG_RAW_ADC: 2886,2606,2928[0m
+[0;32mI (22610) LOG_STATE: 4[0m
+Data SBUS: 172D (22614) main: state: 4[0m
+D (22616) main: Touchdown[0m
+[0;32mI (22624) LOG_STATE: 4[0m
+Data SBUS: 172D (22625) main: state: 4[0m
+D (22626) main: Touchdown[0m
+[0;32mI (22627) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22634) LOG_STATE: 4[0m
+Data SBUS: 172D (22638) main: state: 4[0m
+D (22641) main: Touchdown[0m
+[0;32mI (22642) LOG_RAW_ADC: 2605,2628,2915[0m
+[0;32mI (22648) LOG_STATE: 4[0m
+Data SBUS: 172D (22652) main: state: 4[0m
+D (22655) main: Touchdown[0m
+[0;32mI (22661) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (22665) LOG_LIDAR: 0, 9, 34[0m
+[0;32mI (22668) LOG_ADC: 2605, 2628, 2915[0m
+[0;32mI (22672) LOG_IMU: 0.14, 0.03, 0.00[0m
+[0;32mI (22675) LOG_RAW_ADC: 2644,2559,2870[0m
+[0;32mI (22663) LOG_STATE: 4[0m
+[0;32mI (22677) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (22682) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22689) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172D (22697) main: state: 4[0m
+D (22701) main: Touchdown[0m
+[0;32mI (22708) LOG_STATE: 4[0m
+[0;32mI (22708) LOG_RAW_ADC: 2637,2624,2999[0m
+Data SBUS: 172D (22711) main: state: 4[0m
+D (22714) main: Touchdown[0m
+[0;32mI (22722) LOG_STATE: 4[0m
+Data SBUS: 172D (22723) main: state: 4[0m
+D (22724) main: Touchdown[0m
+[0;32mI (22727) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22732) LOG_STATE: 4[0m
+Data SBUS: 172D (22737) main: state: 4[0m
+D (22739) main: Touchdown[0m
+[0;32mI (22741) LOG_RAW_ADC: 2800,2426,2933[0m
+[0;32mI (22746) LOG_STATE: 4[0m
+Data SBUS: 172D (22750) main: state: 4[0m
+D (22753) main: Touchdown[0m
+[0;32mI (22760) LOG_STATE: 4[0m
+Data SBUS: 172D (22761) main: state: 4[0m
+D (22762) main: Touchdown[0m
+[0;32mI (22770) LOG_STATE: 4[0m
+Data SBUS: 172D (22771) main: state: 4[0m
+D (22772) main: Touchdown[0m
+[0;32mI (22774) LOG_RAW_ADC: 2646,2595,2975[0m
+[0;32mI (22779) LOG_STATE: 4[0m
+[0;32mI (22779) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (22787) main: state: 4[0m
+D (22791) main: Touchdown[0m
+[0;32mI (22797) LOG_FK: 99, -172, 413,	96, 167, 425,	-189, 0, 445,	5.17, -1.98[0m
+[0;32mI (22801) LOG_LIDAR: 0, 0, 35[0m
+[0;32mI (22804) LOG_ADC: 2646, 2595, 2975[0m
+[0;32mI (22807) LOG_RAW_ADC: 2625,2527,2982[0m
+[0;32mI (22799) LOG_STATE: 4[0m
+[0;32mI (22809) LOG_IMU: 0.14, 0.03, 0.00[0m
+[0;32mI (22821) LOG_SERVO: 1906,1899,2064[0m
+[0;32mI (22824) LOG_PID: 0.00,0.00[0m
+Data SBUS: 172[0;32mI (22827) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+D (22828) main: state: 4[0m
+D (22837) main: Touchdown[0m
+[0;32mI (22840) LOG_RAW_ADC: 2602,2611,2724[0m
+[0;32mI (22844) LOG_STATE: 4[0m
+Data SBUS: 172D (22849) main: state: 4[0m
+D (22851) main: Touchdown[0m
+[0;32mI (22858) LOG_STATE: 4[0m
+Data SBUS: 172D (22859) main: state: 4[0m
+D (22860) main: Touchdown[0m
+[0;32mI (22868) LOG_STATE: 4[0m
+Data SBUS: 172D (22869) main: state: 4[0m
+D (22870) main: Touchdown[0m
+[0;32mI (22873) LOG_RAW_ADC: 2697,2677,2946[0m
+[0;32mI (22877) LOG_STATE: 4[0m
+[0;32mI (22877) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+Data SBUS: 172D (22886) main: state: 4[0m
+D (22889) main: Touchdown[0m
+[0;32mI (22896) LOG_STATE: 4[0m
+Data SBUS: 172D (22897) main: state: 4[0m
+D (22898) main: Touchdown[0m
+[0;32mI (22906) LOG_STATE: 4[0m
+[0;32mI (22906) LOG_RAW_ADC: 2603,2669,2855[0m
+Data SBUS: 172D (22908) main: state: 4[0m
+D (22912) main: Touchdown[0m
+[0;32mI (22920) LOG_STATE: 4[0m
+Data SBUS: 172D (22921) main: state: 4[0m
+D (22922) main: Touchdown[0m
+[0;32mI (22927) IMUC: pci: 0.000000, rci: 0.000000
+[0m
+[0;32mI (22928) LOG_FK: 99, -1
