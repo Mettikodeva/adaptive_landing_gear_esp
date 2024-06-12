@@ -87,33 +87,6 @@ void startAdcTask(void *args){
     #ifdef CONFIG_LOG_ADC_RAW
         ESP_LOGI("LOG_RAW_ADC","T,a1,a2,a3");
     #endif
-    
-    // timer 
-    // gptimer_handle_t timer_handle;
-    // gptimer_config_t config{
-    //     .clk_src = GPTIMER_CLK_SRC_APB,
-    //     .direction = GPTIMER_COUNT_UP,
-    //     .resolution_hz = 10000, // 10 kHz
-    // };
-
-    // ESP_ERROR_CHECK(gptimer_new_timer(&config, &timer_handle));
-    // gptimer_event_callbacks_t callbacks {
-    //     .on_alarm = onTimer,
-    // };
-    // gptimer_register_event_callbacks(timer_handle, &callbacks, NULL);
-
-    // ESP_ERROR_CHECK(gptimer_enable(timer_handle));
-
-    // gptimer_alarm_config_t alarm_config{
-    //     .alarm_count = 329, // 100 us * 330 = 33 ms
-    //     .reload_count= 330,
-    //     .flags = {
-    //         .auto_reload_on_alarm = true,
-    //     },
-    // };
-
-    // gptimer_set_alarm_action(timer_handle, &alarm_config);
-    // ESP_ERROR_CHECK(gptimer_start(timer_handle));
 
     last_time = xTaskGetTickCount();
     for (;;){
@@ -122,11 +95,11 @@ void startAdcTask(void *args){
         for (int i = 0; i < 3; i++)
         {
             adc_value[i] = analogRead(pin[i]);
-            adc_value_filtered[i] = filters[i]->filter(adc_value[i]);
+            // adc_value_filtered[i] = filters[i]->filter(adc_value[i]);
         }
-        // adc_value_filtered[0] = filters[0]->filter(adc_value[0]);
-        // adc_value_filtered[1] = filters[1]->filter(adc_value[1]);
-        // adc_value_filtered[2] = filters[2]->filter(adc_value[2]);
+        adc_value_filtered[0] = filters[0]->filter(adc_value[0]);
+        adc_value_filtered[1] = filters[1]->filter(adc_value[1]);
+        adc_value_filtered[2] = filters[2]->filter(adc_value[2]);
         #ifdef CONFIG_LOG_ADC_RAW
         ESP_LOGI("LOG_RAW_ADC","%d,%d,%d",adc_value[0],adc_value[1],adc_value[2]);
         #endif
