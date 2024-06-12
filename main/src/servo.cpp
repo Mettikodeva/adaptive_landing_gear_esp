@@ -19,6 +19,12 @@ Servo::Servo(int8_t update_rate){
     _pwm_pin[0] = 25;
     _pwm_pin[1] = 26;
     _pwm_pin[2] = 27;
+    _pwm_val[0] = 2000;
+    _pwm_val[1] = 2000;
+    _pwm_val[2] = 2000;
+    _prev_pwm_val[0] = 2000;
+    _prev_pwm_val[1] = 2000;
+    _prev_pwm_val[2] = 2000;
 
     // _deg_max = 90.0;
     // _deg_min = 0.0;
@@ -29,7 +35,7 @@ Servo::Servo(int8_t update_rate){
 
 Servo::~Servo(){
     // Destructor
-    free(_name);
+    // free(_name);
     mcpwm_del_timer(_timer);
     mcpwm_del_operator(_oper[0]);
     mcpwm_del_operator(_oper[1]);
@@ -183,10 +189,19 @@ void Servo::writeMicroseconds(int num_servo, int usec){
         _pwm_max = CONFIG_SERVO3_MAX;
         break;
     }
-
+    _pwm_val[num_servo] = usec;
+    if(_pwm_val[num_servo] - _prev_pwm_val[num_servo] > step){
+        _pwm_val[num_servo] = _prev_pwm_val[num_servo] + step;
+        usec = _pwm_val[num_servo];
+    }
+    else if(_pwm_val[num_servo] - _prev_pwm_val[num_servo] < -step){
+        _pwm_val[num_servo] = _prev_pwm_val[num_servo] - step;
+        usec = _pwm_val[num_servo];
+    }
+    // printf("Servo %d: %d\n", num_servo, usec);
     if (usec < _pwm_min) {
-        ESP_LOGE(_name, "Invalid microseconds: %d. Microseconds must be greater than %d", usec, _pwm_min);
         usec = _pwm_min;
+        ESP_LOGE(_name, "Invalid microseconds: %d. Microseconds must be greater than %d", usec, _pwm_min);
         // return;
     }
     if (usec > _pwm_max) {
@@ -194,18 +209,13 @@ void Servo::writeMicroseconds(int num_servo, int usec){
         // return;
         usec = _pwm_max;
     }
-    
-    if(_pwm_val[num_servo] - _prev_pwm_val[num_servo] > step){
-        _pwm_val[num_servo] = _prev_pwm_val[num_servo] + step;
-    }
-    else if(_pwm_val[num_servo] - _prev_pwm_val[num_servo] < -step){
-        _pwm_val[num_servo] = _prev_pwm_val[num_servo] - step;
-    }
+    _prev_pwm_val[num_servo] = usec;
     // _pwm_val = usec;
     ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(_comparator[num_servo], usec));
     // set servo update rate
     // vTaskDelayUntil(&_last_time_write, 1000/_update_rate / portTICK_PERIOD_MS);
 }
+
 void Servo::writeMicroseconds(int usec){
     
     // write the microseconds to the servo
