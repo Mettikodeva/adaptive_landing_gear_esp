@@ -78,12 +78,13 @@ int16_t IRAM_ATTR Iir::getMedian(){
 }
 
 int16_t IRAM_ATTR Iir::filter(int16_t input){
-    buffer.push_back(input);
-    while(buffer.size() > WINDOW){
+    while(buffer.size() >= WINDOW){
         buffer.erase(buffer.begin());
     }
 
     size_t size = buffer.size();
+    int16_t output = alpha * input + (1 - alpha) * buffer.back();
+    buffer.push_back(output);
     for(size_t i = 1; i < size; ++i){
         buffer.push_back(alpha * buffer[i] + (1 - alpha) * buffer[i - 1]);
     }
