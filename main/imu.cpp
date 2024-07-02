@@ -74,10 +74,10 @@ void imuTask(void *args){
             // mpu.dmpGetAccel(&aa, fifoBuffer);
             mpu.dmpGetAccel(&aa, fifoBuffer);
             mpu.dmpGetGyro(&gg, fifoBuffer);
-			ESP_LOGD(TAG,"aX: %d, aY: %d, aZ: %d", aa.x, aa.y, aa.z);
-            ESP_LOGD(TAG,"gX: %d, gY: %d, gZ: %d", gg.x, gg.y, gg.z);
+			// ESP_LOGD(TAG,"aX: %d, aY: %d, aZ: %d", aa.x, aa.y, aa.z);
+            // ESP_LOGD(TAG,"gX: %d, gY: %d, gZ: %d", gg.x, gg.y, gg.z);
 		}
-		ESP_LOGI(TAG, "ypr: %f %f %f", ypr[0], ypr[1], ypr[2]);
+		// ESP_LOGI(TAG, "ypr: %f %f %f", ypr[0], ypr[1], ypr[2]);
 		
 	}
 }

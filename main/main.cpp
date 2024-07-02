@@ -10,13 +10,9 @@
 
 #ifdef CONFIG_USE_BT
 	#include "BluetoothSerial.h"
-
 	const char bt_name[12]  = "LandingGear";
-
 	// Check if Bluetooth is available
-
 	BluetoothSerial SerialBT;
-
 	int vprintf_bt(const char *fmt, va_list args){
 			char buf[256];
 			vsnprintf(buf, sizeof(buf), fmt, args);
@@ -75,9 +71,12 @@ void app_main(void)
 
 		bool ret = SerialBT.begin(bt_name);
 		if (ret) {
+			while(!SerialBT.hasClient()) vTaskDelay(100 / portTICK_PERIOD_MS);
 			printf("Bluetooth \"%s\" is started.\n\n", bt_name);
 			vprintf_like_t original_vprintf = esp_log_set_vprintf(vprintf_bt);
 		} else ESP_LOGW(TAG, "Failed to start Bluetooth, using UART");
+
+		vTaskDelay(10000 / portTICK_PERIOD_MS);
 	#endif
 	vTaskDelay(1000 / portTICK_PERIOD_MS);
 	printf("Starting SBUS\n");
@@ -145,6 +144,62 @@ void app_main(void)
 				state = eTaskGetState(TaskHandle_suspended);
 				if(state == eSuspended){
 					vTaskResume(TaskHandle_suspended);
+				}
+				state = eTaskGetState(TaskHandle_imuControl);
+				
+				// else if(state != eSuspended){
+				// 	landing_gear_state = DESCENDING;
+				// 	vTaskSuspend(TaskHandle_suspended);
+				// 	vTaskDelay(5);
+				// 	vTaskResume(TaskHandle_servoWrite);
+				// 	ESP_LOGD(TAG, "Suspended Task suspended");
+				// }
+			}				
+			else if(landing_gear_state == DESCENDING){
+				ESP_LOGD(TAG, "Descending");
+				// resume and suspend terrain task, create if not exist
+				state = eTaskGetState(TaskHandle_terrain);
+				if(state == eSuspended){
+					vTaskSuspend(TaskHandle_imuControl);
+					vTaskSuspend(TaskHandle_suspended);
+					vTaskDelay(1);
+					vTaskResume(TaskHandle_terrain);
+					vTaskResume(TaskHandle_servoWrite);
+				}
+			}
+			
+			else if(landing_gear_state == TOUCHDOWN){
+				ESP_LOGD(TAG, "Touchdown");
+				// resume and suspend terrain task, create if not exist
+				state = eTaskGetState(TaskHandle_imuControl);
+				if(state == eSuspended){
+					vTaskSuspend(TaskHandle_suspended);
+					vTaskSuspend(TaskHandle_terrain);
+					vTaskDelay(1);
+					vTaskResume(TaskHandle_imuControl);
+					vTaskResume(TaskHandle_servoWrite);
+				}
+			}
+			else if(landing_gear_state == STANDBY){
+				ESP_LOGD(TAG, "standby");
+			}
+			else{
+				ESP_LOGD(TAG, "State not found");
+			}
+			prev_state = landing_gear_state;
+			vTaskDelay(5 / portTICK_PERIOD_MS);
+		}
+		else{
+			if((landing_gear_state == DESCENDING) && ((distance[0] < 10) || (distance[1] < 10) || (distance[2] < 10))){
+					landing_gear_state = TOUCHDOWN;
+			}
+			eTaskState state;
+			ESP_LOGD(TAG,"state: %d", (int)landing_gear_state);
+			if(landing_gear_state == SUSPENDED){
+				ESP_LOGD(TAG, "Suspended");
+				state = eTaskGetState(TaskHandle_suspended);
+				if(state == eSuspended){
+					vTaskResume(TaskHandle_suspended);
 					vTaskDelay(1);
 					vTaskSuspend(TaskHandle_servoWrite);
 					vTaskSuspend(TaskHandle_terrain);
@@ -192,7 +247,6 @@ void app_main(void)
 			prev_state = landing_gear_state;
 			vTaskDelay(5 / portTICK_PERIOD_MS);
 		}
-		
 	}
 }
 

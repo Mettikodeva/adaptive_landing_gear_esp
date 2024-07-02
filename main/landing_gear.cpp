@@ -161,7 +161,12 @@ void servoWriteTask(void *pvParameter){
     for (;;)
     {
         vTaskDelayUntil(&lastTime, 50 / portTICK_PERIOD_MS);
-
+        if(landing_gear_state == SUSPENDED){
+            pwms[0] = PWM1(45);
+            pwms[1] = PWM2(45);
+            pwms[2] = PWM3(45);
+        }
+        else
         if(landing_gear_state == TOUCHDOWN){
             m1 += -3*pcval_imu - 2*rcval_imu;
             m2 += -3*pcval_imu + 2*rcval_imu;
@@ -482,38 +487,39 @@ static void button_event_single_cb(void *arg, void *data)
     int pin = (int)data;
     if(pin == 18){
         // resume and suspend terrain task, create if not exist
-        if(TaskHandle_terrain == NULL){
-            xTaskCreatePinnedToCore(getTerrainTask, "terrain task", 2048*2, NULL, 2, &TaskHandle_terrain, 0);
-        }
-        else{
-            eTaskState state = eTaskGetState(TaskHandle_terrain);
-            if(state == eSuspended){
-                vTaskResume(TaskHandle_terrain);
-                ESP_LOGD(TAG, "Terrain Task resumed");
-            }
-            else if(state != eSuspended){
-                vTaskSuspend(TaskHandle_terrain);
-                ESP_LOGD(TAG, "Terrain Task suspended");
-            }
-        } 
+        landing_gear_state = DESCENDING;
+        // if(TaskHandle_terrain == NULL){
+        //     xTaskCreatePinnedToCore(getTerrainTask, "terrain task", 2048*2, NULL, 2, &TaskHandle_terrain, 0);
+        // }
+        // else{
+        //     eTaskState state = eTaskGetState(TaskHandle_terrain);
+        //     if(state == eSuspended){
+        //         vTaskResume(TaskHandle_terrain);
+        //         ESP_LOGD(TAG, "Terrain Task resumed");
+        //     }
+        //     else if(state != eSuspended){
+        //         vTaskSuspend(TaskHandle_terrain);
+        //         ESP_LOGD(TAG, "Terrain Task suspended");
+        //     }
+        // } 
     }
     else if(pin == 5){
-        
-        eTaskState state = eTaskGetState(TaskHandle_suspended);
-        if(state == eSuspended){
-            vTaskResume(TaskHandle_suspended);
-            vTaskDelay(5);
-            vTaskSuspend(TaskHandle_servoWrite);
-            landing_gear_state = SUSPENDED;
-            ESP_LOGD(TAG, "Suspended Task resumed");
-        }
-        else if(state != eSuspended){
-            landing_gear_state = DESCENDING;
-            vTaskSuspend(TaskHandle_suspended);
-            vTaskDelay(5);
-            vTaskResume(TaskHandle_servoWrite);
-            ESP_LOGD(TAG, "Suspended Task suspended");
-        }
+        landing_gear_state = SUSPENDED;
+        // eTaskState state = eTaskGetState(TaskHandle_suspended);
+        // if(state == eSuspended){
+        //     vTaskResume(TaskHandle_suspended);
+        //     vTaskDelay(5);
+        //     vTaskSuspend(TaskHandle_servoWrite);
+        //     landing_gear_state = SUSPENDED;
+        //     ESP_LOGD(TAG, "Suspended Task resumed");
+        // }
+        // else if(state != eSuspended){
+        //     landing_gear_state = DESCENDING;
+        //     vTaskSuspend(TaskHandle_suspended);
+        //     vTaskDelay(5);
+        //     vTaskResume(TaskHandle_servoWrite);
+        //     ESP_LOGD(TAG, "Suspended Task suspended");
+        // }
     }
 }
 
@@ -636,7 +642,7 @@ void sendLogTask(void *pvParameter){
 void initializeTasks()
 {
     ESP_LOGD(TAG, "Initializing Tasks");
-    // xTaskCreatePinnedToCore(buttonInitTask, "button init", 2048*2, NULL, 2, NULL, 1);
+    xTaskCreatePinnedToCore(buttonInitTask, "button init", 2048*2, NULL, 2, NULL, 1);
     
     ESP_LOGD(TAG, "Initializing Servos");
     xTaskCreatePinnedToCore(initServoTask, "servo task", 6144, NULL, 2, &TaskHandle_initServo, 1);
@@ -665,5 +671,5 @@ void initializeTasks()
     xTaskCreatePinnedToCore(sendLogTask, "send log", 2048*3, NULL, 1, NULL, 0);
     
     vTaskDelay(300 / portTICK_PERIOD_MS);
-    landing_gear_state = DESCENDING;
+    landing_gear_state = SUSPENDED;
 }
